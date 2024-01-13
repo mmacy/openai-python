@@ -1,0 +1,1 @@
+::: src.openai.types.shared_params.function_definition
