@@ -1,5 +1,125 @@
 # Changelog
 
+## 1.12.0 (2024-02-08)
+
+Full Changelog: [v1.11.1...v1.12.0](https://github.com/openai/openai-python/compare/v1.11.1...v1.12.0)
+
+### Features
+
+* **api:** add `timestamp_granularities`, add `gpt-3.5-turbo-0125` model ([#1125](https://github.com/openai/openai-python/issues/1125)) ([1ecf8f6](https://github.com/openai/openai-python/commit/1ecf8f6b12323ed09fb6a2815c85b9533ee52a50))
+* **cli/images:** add support for `--model` arg ([#1132](https://github.com/openai/openai-python/issues/1132)) ([0d53866](https://github.com/openai/openai-python/commit/0d5386615cda7cd50d5db90de2119b84dba29519))
+
+
+### Bug Fixes
+
+* remove double brackets from timestamp_granularities param ([#1140](https://github.com/openai/openai-python/issues/1140)) ([3db0222](https://github.com/openai/openai-python/commit/3db022216a81fa86470b53ec1246669bc7b17897))
+* **types:** loosen most List params types to Iterable ([#1129](https://github.com/openai/openai-python/issues/1129)) ([bdb31a3](https://github.com/openai/openai-python/commit/bdb31a3b1db6ede4e02b3c951c4fd23f70260038))
+
+
+### Chores
+
+* **internal:** add lint command ([#1128](https://github.com/openai/openai-python/issues/1128)) ([4c021c0](https://github.com/openai/openai-python/commit/4c021c0ab0151c2ec092d860c9b60e22e658cd03))
+* **internal:** support serialising iterable types ([#1127](https://github.com/openai/openai-python/issues/1127)) ([98d4e59](https://github.com/openai/openai-python/commit/98d4e59afcf2d65d4e660d91eb9462240ef5cd63))
+
+
+### Documentation
+
+* add CONTRIBUTING.md ([#1138](https://github.com/openai/openai-python/issues/1138)) ([79c8f0e](https://github.com/openai/openai-python/commit/79c8f0e8bf5470e2e31e781e8d279331e89ddfbe))
+
+## 1.11.1 (2024-02-04)
+
+Full Changelog: [v1.11.0...v1.11.1](https://github.com/openai/openai-python/compare/v1.11.0...v1.11.1)
+
+### Bug Fixes
+
+* prevent crash when platform.architecture() is not allowed ([#1120](https://github.com/openai/openai-python/issues/1120)) ([9490554](https://github.com/openai/openai-python/commit/949055488488e93597cbc6c2cdd81f14f203e53b))
+
+## 1.11.0 (2024-02-03)
+
+Full Changelog: [v1.10.0...v1.11.0](https://github.com/openai/openai-python/compare/v1.10.0...v1.11.0)
+
+### Features
+
+* **client:** support parsing custom response types ([#1111](https://github.com/openai/openai-python/issues/1111)) ([da00fc3](https://github.com/openai/openai-python/commit/da00fc3f8e0ff13c6c3ca970e4bb86846304bd06))
+
+
+### Chores
+
+* **interal:** make link to api.md relative ([#1117](https://github.com/openai/openai-python/issues/1117)) ([4a10879](https://github.com/openai/openai-python/commit/4a108797e46293357601ce933e21b557a5dc6954))
+* **internal:** cast type in mocked test ([#1112](https://github.com/openai/openai-python/issues/1112)) ([99b21e1](https://github.com/openai/openai-python/commit/99b21e1fc681eb10e01d479cc043ad3c89272b1c))
+* **internal:** enable ruff type checking misuse lint rule ([#1106](https://github.com/openai/openai-python/issues/1106)) ([fa63e60](https://github.com/openai/openai-python/commit/fa63e605c82ec78f4fc27469c434b421a08fb909))
+* **internal:** support multipart data with overlapping keys ([#1104](https://github.com/openai/openai-python/issues/1104)) ([455bc9f](https://github.com/openai/openai-python/commit/455bc9f1fd018a32cd604eb4b400e05aa8d71822))
+* **internal:** support pre-release versioning ([#1113](https://github.com/openai/openai-python/issues/1113)) ([dea5b08](https://github.com/openai/openai-python/commit/dea5b08c28d47b331fd44f6920cf9fe322b68e51))
+
+## 1.10.0 (2024-01-25)
+
+Full Changelog: [v1.9.0...v1.10.0](https://github.com/openai/openai-python/compare/v1.9.0...v1.10.0)
+
+### Features
+
+* **api:** add text embeddings dimensions param ([#1103](https://github.com/openai/openai-python/issues/1103)) ([94abfa0](https://github.com/openai/openai-python/commit/94abfa0f988c199ea95a9c870c4ae9808823186d))
+* **azure:** proactively add audio/speech to deployment endpoints ([#1099](https://github.com/openai/openai-python/issues/1099)) ([fdf8742](https://github.com/openai/openai-python/commit/fdf87429b45ceb47ae6fd068ab70cc07bcb8da44))
+* **client:** enable follow redirects by default ([#1100](https://github.com/openai/openai-python/issues/1100)) ([d325b7c](https://github.com/openai/openai-python/commit/d325b7ca594c2abaada536249b5633b106943333))
+
+
+### Chores
+
+* **internal:** add internal helpers ([#1092](https://github.com/openai/openai-python/issues/1092)) ([629bde5](https://github.com/openai/openai-python/commit/629bde5800d84735e22d924db23109a141f48644))
+
+
+### Refactors
+
+* remove unnecessary builtin import ([#1094](https://github.com/openai/openai-python/issues/1094)) ([504b7d4](https://github.com/openai/openai-python/commit/504b7d4a0b4715bd49a1a076a8d4868e51fb3351))
+
+## 1.9.0 (2024-01-21)
+
+Full Changelog: [v1.8.0...v1.9.0](https://github.com/openai/openai-python/compare/v1.8.0...v1.9.0)
+
+### Features
+
+* **api:** add usage to runs and run steps ([#1090](https://github.com/openai/openai-python/issues/1090)) ([6c116df](https://github.com/openai/openai-python/commit/6c116dfbb0065d15050450df70e0e98fc8c80349))
+
+
+### Chores
+
+* **internal:** fix typing util function ([#1083](https://github.com/openai/openai-python/issues/1083)) ([3e60db6](https://github.com/openai/openai-python/commit/3e60db69f5d9187c4eb38451967259f534a36a82))
+* **internal:** remove redundant client test ([#1085](https://github.com/openai/openai-python/issues/1085)) ([947974f](https://github.com/openai/openai-python/commit/947974f5af726e252b7b12c863743e50f41b79d3))
+* **internal:** share client instances between all tests ([#1088](https://github.com/openai/openai-python/issues/1088)) ([05cd753](https://github.com/openai/openai-python/commit/05cd7531d40774d05c52b14dee54d137ac1452a3))
+* **internal:** speculative retry-after-ms support ([#1086](https://github.com/openai/openai-python/issues/1086)) ([36a7576](https://github.com/openai/openai-python/commit/36a7576a913be8509a3cf6f262543083b485136e))
+* lazy load raw resource class properties ([#1087](https://github.com/openai/openai-python/issues/1087)) ([d307127](https://github.com/openai/openai-python/commit/d30712744be07461e86763705c03c3495eadfc35))
+
+## 1.8.0 (2024-01-16)
+
+Full Changelog: [v1.7.2...v1.8.0](https://github.com/openai/openai-python/compare/v1.7.2...v1.8.0)
+
+### Features
+
+* **client:** add support for streaming raw responses ([#1072](https://github.com/openai/openai-python/issues/1072)) ([0e93c3b](https://github.com/openai/openai-python/commit/0e93c3b5bc9cfa041e91962fd82c0d9358125024))
+
+
+### Bug Fixes
+
+* **client:** ensure path params are non-empty ([#1075](https://github.com/openai/openai-python/issues/1075)) ([9a25149](https://github.com/openai/openai-python/commit/9a2514997c2ddccbec9df8be3773e83271f1dab8))
+* **proxy:** prevent recursion errors when debugging pycharm ([#1076](https://github.com/openai/openai-python/issues/1076)) ([3d78798](https://github.com/openai/openai-python/commit/3d787987cf7625b5b502cb0b63a37d55956eaf1d))
+
+
+### Chores
+
+* add write_to_file binary helper method ([#1077](https://github.com/openai/openai-python/issues/1077)) ([c622c6a](https://github.com/openai/openai-python/commit/c622c6aaf2ae7dc62bd6cdfc053204c5dc3293ac))
+
+## 1.7.2 (2024-01-12)
+
+Full Changelog: [v1.7.1...v1.7.2](https://github.com/openai/openai-python/compare/v1.7.1...v1.7.2)
+
+### Documentation
+
+* **readme:** improve api reference ([#1065](https://github.com/openai/openai-python/issues/1065)) ([745b9e0](https://github.com/openai/openai-python/commit/745b9e08ae0abb8bf4cd87ed40fa450d9ad81ede))
+
+
+### Refactors
+
+* **api:** remove deprecated endpoints ([#1067](https://github.com/openai/openai-python/issues/1067)) ([199ddcd](https://github.com/openai/openai-python/commit/199ddcdca00c136e4e0c3ff16521eff22acf2a1a))
+
 ## 1.7.1 (2024-01-10)
 
 Full Changelog: [v1.7.0...v1.7.1](https://github.com/openai/openai-python/compare/v1.7.0...v1.7.1)
