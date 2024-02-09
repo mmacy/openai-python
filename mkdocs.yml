@@ -1,25 +1,102 @@
-site_name: OpenAI Python library documentation (unofficial)
+site_name: OpenAI Python library documentation (UNOFFICIAL)
+
+site_author: Marsh Macy
+site_description: Unofficial documentation for OpenAI's Python library
+site_url: https://mmacy.github.io/openai-python/
+repo_name: openai-python
+repo_url: https://github.com/mmacy/openai-python
+watch:
+  - "docs/"
+  - "examples/"
+  - "src/"
 
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/github
+
   palette:
-    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: grey
+      accent: orange
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: grey
+      accent: orange
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
 
+  font:
+    text: Actor
+    code: Chivo Mono
+    #text: Sora # BIG!
+    #code: Martian Mono # BIG!
+
+  features:
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.prune
+    - navigation.sections
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+
+    - toc.follow
+
+    - search.suggest
+    - search.share
+
+    - header.autohide
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+extra_css:
+  - "main.css"
+
 plugins:
   - search
-  # - gen-files:
-  #     scripts:
-  #       - scripts/gen_ref_pages.py
-  - mkdocstrings
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src/resources/]
+          import:
+            - https://docs.python.org/3/objects.inv
+          options:
+            docstring_options:
+              ignore_init_summary: true
+            docstring_section_style: list
+            filters: ["!^_"]
+            heading_level: 2
+            inherited_members: false
+            merge_init_into_class: true
+            separate_signature: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_signature_annotations: true
+            show_source: false
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            signature_crossrefs: true
+            summary: true
+            unwrap_annotated: true
