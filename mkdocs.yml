@@ -108,7 +108,7 @@ nav:
   - get_started.md
   - Modules:
     - openai:
-      - openai.md
+      - __init__.md
       - pagination.md
       - version.md
     - openai.resources: resources/__init__.md

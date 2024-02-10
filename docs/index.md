@@ -4,7 +4,7 @@ Welcome to Marsh's totally unofficial and totally unsupported documentation for 
 
 <div class="grid cards" markdown>
 - :fontawesome-brands-python: [OpenAI Python library API reference][src.openai]
-- :material-clock-fast: [Get started with the library](#get-started)
+- :material-clock-fast: [Get started with the library](./get_started.md)
 </div>
 
 You can find official docs on [OpenAI's official documentation site](https://platform.openai.com) and in the upstream [openai/openai-python](https://github.com/openai/openai-python) repository on GitHub.
