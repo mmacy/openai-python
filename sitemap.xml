@@ -161,7 +161,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mmacy.github.io/openai-python/resources/__init__/</loc>
+         <loc>https://mmacy.github.io/openai-python/resources/</loc>
          <lastmod>2024-02-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -221,7 +221,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mmacy.github.io/openai-python/resources/beta/__init__/</loc>
+         <loc>https://mmacy.github.io/openai-python/resources/beta/</loc>
          <lastmod>2024-02-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -246,7 +246,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mmacy.github.io/openai-python/resources/beta/threads/__init__/</loc>
+         <loc>https://mmacy.github.io/openai-python/resources/beta/threads/</loc>
          <lastmod>2024-02-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -461,7 +461,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mmacy.github.io/openai-python/types/beta/__init__/</loc>
+         <loc>https://mmacy.github.io/openai-python/types/beta/</loc>
          <lastmod>2024-02-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -546,7 +546,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mmacy.github.io/openai-python/types/beta/threads/__init__/</loc>
+         <loc>https://mmacy.github.io/openai-python/types/beta/threads/</loc>
          <lastmod>2024-02-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
