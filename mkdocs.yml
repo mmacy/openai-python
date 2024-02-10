@@ -1,10 +1,10 @@
-site_name: OpenAI Python library documentation (UNOFFICIAL)
+site_name: OpenAI Python library documentation · UNOFFICIAL
 
 site_author: Marsh Macy
 site_description: Unofficial documentation for OpenAI's Python library
 site_url: https://mmacy.github.io/openai-python/
 repo_name: openai-python
-repo_url: https://github.com/openai/openai-python
+repo_url: https://github.com/mmacy/openai-python/tree/docs
 watch:
   - "docs/"
   - "examples/"
