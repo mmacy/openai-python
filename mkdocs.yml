@@ -88,6 +88,7 @@ plugins:
             docstring_options:
               ignore_init_summary: true
             docstring_section_style: table
+            docstring_style: google
             filters: ["!^_"]
             heading_level: 2
             inherited_members: false
@@ -113,47 +114,30 @@ nav:
       - __init__.md
       - pagination.md
       - version.md
-    - openai.resources: resources/__init__.md
-    - openai.resources.audio: resources/audio/__init__.md
-    - openai.resources.beta: resources/beta/__init__.md
-    - openai.resources.beta.assistants: resources/beta/assistants/__init__.md
-    - openai.resources.beta.threads: resources/beta/threads/__init__.md
-    - openai.resources.beta.threads.messages: resources/beta/threads/messages/__init__.md
-    - openai.resources.beta.threads.runs: resources/beta/threads/runs/__init__.md
-    - openai.resources.chat: resources/chat/__init__.md
-    - openai.resources.fine_tuning: resources/fine_tuning/__init__.md
+    - openai.resources:
+      - resources/index.md
+      - openai.resources.audio: resources/audio/__init__.md
+      - openai.resources.beta:
+        - resources/beta/index.md
+        - openai.resources.beta.assistants: resources/beta/assistants/__init__.md
+        - openai.resources.beta.threads:
+          - resources/beta/threads/index.md
+          - openai.resources.beta.threads.messages: resources/beta/threads/messages/__init__.md
+          - openai.resources.beta.threads.runs: resources/beta/threads/runs/__init__.md
+      - openai.resources.chat: resources/chat/__init__.md
+      - openai.resources.fine_tuning: resources/fine_tuning/__init__.md
     - openai.types:
       - types/index.md # was __init__.md
-      - types/completion_choice.md
-      - types/completion_create_params.md
-      - types/completion_usage.md
-      - types/completion.md
-      - types/create_embedding_response.md
-      - types/embedding_create_params.md
-      - types/embedding.md
-      - types/file_content.md
-      - types/file_create_params.md
-      - types/file_deleted.md
-      - types/file_list_params.md
-      - types/file_object.md
-      - types/image_create_variation_params.md
-      - types/image_edit_params.md
-      - types/image_generate_params.md
-      - types/image.md
-      - types/images_response.md
-      - types/model_deleted.md
-      - types/model.md
-      - types/moderation_create_params.md
-      - types/moderation_create_response.md
-      - types/moderation.md
-    - openai.types.audio: types/audio/__init__.md
-    - openai.types.beta: types/beta/__init__.md
-    - openai.types.beta.assistants: types/beta/assistants/__init__.md
-    - openai.types.beta.chat: types/beta/chat/__init__.md
-    - openai.types.beta.threads: types/beta/threads/__init__.md
-    - openai.types.beta.threads.messages: types/beta/threads/messages/__init__.md
-    - openai.types.beta.threads.runs: types/beta/threads/runs/__init__.md
-    - openai.types.chat: types/chat/__init__.md
-    - openai.types.fine_tuning: types/fine_tuning/__init__.md
-    - openai.types.shared: types/shared/__init__.md
-    - openai.types.shared_params: types/shared_params/__init__.md
+      - openai.types.audio: types/audio/__init__.md
+      - openai.types.beta:
+        - types/beta/index.md
+        - openai.types.beta.assistants: types/beta/assistants/__init__.md
+        - openai.types.beta.chat: types/beta/chat/__init__.md
+        - openai.types.beta.threads:
+          - types/beta/threads/index.md
+          - openai.types.beta.threads.messages: types/beta/threads/messages/__init__.md
+          - openai.types.beta.threads.runs: types/beta/threads/runs/__init__.md
+      - openai.types.chat: types/chat/__init__.md
+      - openai.types.fine_tuning: types/fine_tuning/__init__.md
+      - openai.types.shared: types/shared/__init__.md
+      - openai.types.shared_params: types/shared_params/__init__.md
