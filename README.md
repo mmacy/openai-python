@@ -2,35 +2,46 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/openai.svg)](https://pypi.org/project/openai/)
 
-The OpenAI Python library provides convenient access to the OpenAI REST API from any Python 3.7+
-application. The library includes type definitions for all request params and response fields,
-and offers both synchronous and asynchronous clients powered by [httpx](https://github.com/encode/httpx).
+The OpenAI Python library provides access to the OpenAI REST API from within applications based on Python 3.7 and above. The library includes type definitions for all request params and response fields, offering clients for both synchronous and asynchronous operations powered by [httpx](https://github.com/encode/httpx).
 
-It is generated from our [OpenAPI specification](https://github.com/openai/openai-openapi) with [Stainless](https://stainlessapi.com/).
+The OpenAI Python library is generated from OpenAI's [OpenAPI specification](https://github.com/openai/openai-openapi) with [Stainless](https://stainlessapi.com/).
 
-## Documentation
+## Prerequisites
 
-The REST API documentation can be found [on platform.openai.com](https://platform.openai.com/docs). The full API of this library can be found in [api.md](api.md).
+- Python 3.7+
+- [OpenAI API key](https://platform.openai.com/account/api-keys)
 
 ## Installation
 
-> [!IMPORTANT]
-> The SDK was rewritten in v1, which was released November 6th 2023. See the [v1 migration guide](https://github.com/openai/openai-python/discussions/742), which includes scripts to automatically update your code.
+You can install the [openai](https://pypi.org/project/openai/) package from PyPi with `pip`:
 
 ```sh
+# Install the package
 pip install openai
 ```
 
+### Migration
+
+Released on November 6th 2023, the OpenAI Python library was rewritten for v1. If your project used a pre-v1 version of the library, see the [v1 migration guide](https://github.com/openai/openai-python/discussions/742) for information and scripts that can help you update your code.
+
 ## Usage
 
-The full API of this library can be found in [api.md](api.md).
+To connect to the OpenAI API:
+
+1. Populate an `OPENAI_API_KEY` environment variable with your [OpenAI API key](https://platform.openai.com/account/api-keys).
+2. Create a synchronous or asynchronous `OpenAI` client object.
+
+### Synchronous client
+
+Create an instance of the [OpenAI][src.openai.OpenAI] client:
 
 ```python
 import os
 from openai import OpenAI
 
 client = OpenAI(
-    # This is the default and can be omitted
+    # This is default behavior - you can omit the 'api_key' parameter
+    # if the OPENAI_API_KEY environment variable contains a valid key.
     api_key=os.environ.get("OPENAI_API_KEY"),
 )
 
@@ -45,14 +56,13 @@ chat_completion = client.chat.completions.create(
 )
 ```
 
-While you can provide an `api_key` keyword argument,
-we recommend using [python-dotenv](https://pypi.org/project/python-dotenv/)
-to add `OPENAI_API_KEY="My API Key"` to your `.env` file
-so that your API Key is not stored in source control.
+!!! Tip
 
-## Async usage
+    To reduce the risk of committing your OpenAI API key to source control, we recommend using [python-dotenv](https://pypi.org/project/python-dotenv/) and adding `OPENAI_API_KEY="YOUR_API_KEY_HERE"` to your `.env` file.
 
-Simply import `AsyncOpenAI` instead of `OpenAI` and use `await` with each API call:
+### Asynchronous client
+
+Create an instance of the [AsyncOpenAI][src.openai.AsyncOpenAI] client and `await` each API call. Functionality between the synchronous and asynchronous clients is otherwise identical.
 
 ```python
 import os
@@ -60,7 +70,8 @@ import asyncio
 from openai import AsyncOpenAI
 
 client = AsyncOpenAI(
-    # This is the default and can be omitted
+    # This is default behavior - you can omit the 'api_key' parameter
+    # if the OPENAI_API_KEY environment variable contains a valid key.
     api_key=os.environ.get("OPENAI_API_KEY"),
 )
 
@@ -79,8 +90,6 @@ async def main() -> None:
 
 asyncio.run(main())
 ```
-
-Functionality between the synchronous and asynchronous clients is otherwise identical.
 
 ## Streaming Responses
 
@@ -123,8 +132,9 @@ asyncio.run(main())
 
 ## Module-level client
 
-> [!IMPORTANT]
-> We highly recommend instantiating client instances instead of relying on the global client.
+!!! Important
+
+    We highly recommend instantiating client instances instead of relying on the global client.
 
 We also expose a global client instance that is accessible in a similar fashion to versions prior to v1.
 

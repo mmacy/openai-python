@@ -1,1 +1,27 @@
+# openai.types
+
 ::: src.openai.types
+::: src.openai.types.completion_choice.CompletionChoice
+::: src.openai.types.completion_create_params.CompletionCreateParams
+::: src.openai.types.completion_usage.CompletionUsage
+::: src.openai.types.completion.Completion
+::: src.openai.types.create_embedding_response.CreateEmbeddingResponse
+::: src.openai.types.embedding_create_params.EmbeddingCreateParams
+::: src.openai.types.embedding.Embedding
+::: src.openai.types.file_content.FileContent
+::: src.openai.types.file_create_params.FileCreateParams
+::: src.openai.types.file_deleted.FileDeleted
+::: src.openai.types.file_list_params.FileListParams
+::: src.openai.types.file_object.FileObject
+::: src.openai.types.image_create_variation_params.ImageCreateVariationParams
+::: src.openai.types.image_edit_params.ImageEditParams
+::: src.openai.types.image_generate_params.ImageGenerateParams
+::: src.openai.types.image.Image
+::: src.openai.types.images_response.ImagesResponse
+::: src.openai.types.model_deleted.ModelDeleted
+::: src.openai.types.model.Model
+::: src.openai.types.moderation_create_params.ModerationCreateParams
+::: src.openai.types.moderation_create_response.ModerationCreateResponse
+::: src.openai.types.moderation.Moderation
+::: src.openai.types.shared.FunctionDefinition
+::: src.openai.types.shared.FunctionParameters
