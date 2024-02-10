@@ -1,4 +1,4 @@
-# Welcome
+# About these docs
 
 Welcome to Marsh's totally unofficial and totally unsupported documentation for the OpenAI Python library.
 

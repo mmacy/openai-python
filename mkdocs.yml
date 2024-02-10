@@ -4,7 +4,7 @@ site_author: Marsh Macy
 site_description: Unofficial documentation for OpenAI's Python library
 site_url: https://mmacy.github.io/openai-python/
 repo_name: openai-python
-repo_url: https://github.com/mmacy/openai-python
+repo_url: https://github.com/openai/openai-python
 watch:
   - "docs/"
   - "examples/"
@@ -81,6 +81,7 @@ plugins:
           import:
             - https://docs.python.org/3/objects.inv
             - https://docs.pydantic.dev/2.4/objects.inv
+            #- https://www.python-httpx.org/ # NO OBJECTS.INV AVAILABLE
           options:
             docstring_options:
               ignore_init_summary: true
@@ -103,11 +104,13 @@ plugins:
             unwrap_annotated: true
 
 nav:
-  - Welcome:
-    - index.md
-    - get_started.md
+  - index.md
+  - get_started.md
   - Modules:
-    - openai: __init__.md
+    - openai:
+      - openai.md
+      - pagination.md
+      - version.md
     - openai.resources: resources/__init__.md
     - openai.resources.audio: resources/audio/__init__.md
     - openai.resources.beta: resources/beta/__init__.md
@@ -117,7 +120,30 @@ nav:
     - openai.resources.beta.threads.runs: resources/beta/threads/runs/__init__.md
     - openai.resources.chat: resources/chat/__init__.md
     - openai.resources.fine_tuning: resources/fine_tuning/__init__.md
-    - openai.types: types/__init__.md
+    - openai.types:
+      - types/index.md # was __init__.md
+      - types/completion_choice.md
+      - types/completion_create_params.md
+      - types/completion_usage.md
+      - types/completion.md
+      - types/create_embedding_response.md
+      - types/embedding_create_params.md
+      - types/embedding.md
+      - types/file_content.md
+      - types/file_create_params.md
+      - types/file_deleted.md
+      - types/file_list_params.md
+      - types/file_object.md
+      - types/image_create_variation_params.md
+      - types/image_edit_params.md
+      - types/image_generate_params.md
+      - types/image.md
+      - types/images_response.md
+      - types/model_deleted.md
+      - types/model.md
+      - types/moderation_create_params.md
+      - types/moderation_create_response.md
+      - types/moderation.md
     - openai.types.audio: types/audio/__init__.md
     - openai.types.beta: types/beta/__init__.md
     - openai.types.beta.assistants: types/beta/assistants/__init__.md
