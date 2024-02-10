@@ -33,9 +33,11 @@ theme:
         name: Switch to light mode
 
   font:
-    text: Actor
-    code: Chivo Mono
     #text: Sora # BIG!
+    text: Inter
+    #text: Actor
+
+    code: Chivo Mono
     #code: Martian Mono # BIG!
 
   features:
