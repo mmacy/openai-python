@@ -31,6 +31,10 @@ To connect to the OpenAI API:
 1. Populate an `OPENAI_API_KEY` environment variable with your [OpenAI API key](https://platform.openai.com/account/api-keys).
 2. Create a synchronous or asynchronous `OpenAI` client object.
 
+!!! Tip
+
+    To reduce the risk of committing your OpenAI API key to source control, we recommend using [python-dotenv](https://pypi.org/project/python-dotenv/) and adding `OPENAI_API_KEY="YOUR_API_KEY_HERE"` to your `.env` file.
+
 ### Synchronous client
 
 Create an instance of the [OpenAI][src.openai.OpenAI] client:
@@ -56,9 +60,23 @@ chat_completion = client.chat.completions.create(
 )
 ```
 
-!!! Tip
+To stream responses from the API, include `stream=True` in your call to [Completions.create()][src.openai.resources.chat.completions.Completions.create] method call:
 
-    To reduce the risk of committing your OpenAI API key to source control, we recommend using [python-dotenv](https://pypi.org/project/python-dotenv/) and adding `OPENAI_API_KEY="YOUR_API_KEY_HERE"` to your `.env` file.
+```python
+from openai import OpenAI
+
+client = OpenAI()
+
+stream = client.chat.completions.create(
+    model="gpt-4",
+    messages=[{"role": "user", "content": "Say this is a test"}],
+    stream=True, # (1)
+)
+for chunk in stream:
+    print(chunk.choices[0].delta.content or "", end="")
+```
+
+1. Response streaming is enabling Server Side Events (SSE) in the client.
 
 ### Asynchronous client
 
@@ -91,25 +109,7 @@ async def main() -> None:
 asyncio.run(main())
 ```
 
-## Streaming Responses
-
-We provide support for streaming responses using Server Side Events (SSE).
-
-```python
-from openai import OpenAI
-
-client = OpenAI()
-
-stream = client.chat.completions.create(
-    model="gpt-4",
-    messages=[{"role": "user", "content": "Say this is a test"}],
-    stream=True,
-)
-for chunk in stream:
-    print(chunk.choices[0].delta.content or "", end="")
-```
-
-The async client uses the exact same interface.
+You can enable response streaming in the async client by including `stream=True` to the [AsyncCompletions.create()][src.openai.resources.chat.completions.AsyncCompletions.create] method:
 
 ```python
 from openai import AsyncOpenAI
@@ -130,15 +130,16 @@ async def main():
 asyncio.run(main())
 ```
 
-## Module-level client
+### Module-level global client
 
-!!! Important
+Similar to pre-v1 versions of the library, there is also a module-level client available for use in REPLs, notebooks, and other scenarios requiring quick "local loop" iteration.
 
-    We highly recommend instantiating client instances instead of relying on the global client.
-
-We also expose a global client instance that is accessible in a similar fashion to versions prior to v1.
+Do **NOT** use the module-level global client in production application code. Instead, create instances of [OpenAI][src.openai.OpenAI] or [AsyncOpenAI][src.openai.AsyncOpenAI] client objects as described earlier rather than relying on the global client.
 
 ```py
+# WARNING: Use this client instantiation technique **only** in REPLs, notebooks, or other
+#          scenarios requiring quick local-loop iteration.
+
 import openai
 
 # optional; defaults to `os.environ['OPENAI_API_KEY']`
@@ -160,11 +161,7 @@ completion = openai.chat.completions.create(
 print(completion.choices[0].message.content)
 ```
 
-The API is the exact same as the standard client instance based API.
-
-This is intended to be used within REPLs or notebooks for faster iteration, **not** in application code.
-
-We recommend that you always instantiate a client (e.g., with `client = OpenAI()`) in application code because:
+We recommend you avoid using the global module-level client as shown in the previous code snippet in your application code because:
 
 - It can be difficult to reason about where client options are configured
 - It's not possible to change certain client options without potentially causing race conditions

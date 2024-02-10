@@ -41,6 +41,7 @@ theme:
     #code: Martian Mono # BIG!
 
   features:
+    - content.code.annotate
     - navigation.footer
     - navigation.indexes
     - navigation.instant
