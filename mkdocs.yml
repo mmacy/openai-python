@@ -4,12 +4,7 @@ site_description: Unofficial documentation for OpenAI's Python library
 site_url: https://mmacy.github.io/openai-python/
 repo_name: openai-python
 repo_url: https://github.com/mmacy/openai-python/tree/docs
-
-watch:
-  - "docs/"
-  - "examples/"
-  - "src/"
-  - "."
+watch: [README.md, src/openai]
 
 theme:
   name: material
@@ -42,23 +37,21 @@ theme:
 
   features:
     - content.code.annotate
+    - header.autohide
+    - search.share
+    - search.suggest
+    - toc.follow
+
     - navigation.footer
     - navigation.indexes
     - navigation.instant
     - navigation.instant.progress
     - navigation.prune
     - navigation.sections
-    #- navigation.tabs
-    #- navigation.tabs.sticky
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
-
-    - toc.follow
-
-    - search.suggest
-    - search.share
-
-    - header.autohide
 
 markdown_extensions:
   - admonition
@@ -81,6 +74,7 @@ plugins:
       handlers:
         python:
           paths: [src]
+          load_external_modules: true # 'true' picks up __all__ from __init__.py files
           import:
             - https://docs.python.org/3/objects.inv
             - https://docs.pydantic.dev/2.4/objects.inv
@@ -88,14 +82,14 @@ plugins:
           options:
             docstring_options:
               ignore_init_summary: true
-            docstring_section_style: table
+            docstring_section_style: spacy
             docstring_style: google
             filters: ["!^_"]
             heading_level: 3
             inherited_members: false
             merge_init_into_class: true
             separate_signature: true
-            show_bases: false
+            show_bases: true
             show_if_no_docstring: true
             show_root_heading: true
             show_root_full_path: false
@@ -107,10 +101,15 @@ plugins:
             summary: true
             unwrap_annotated: true
 
+extra:
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/mmacy
+
 nav:
   - index.md
   - get_started.md
-  - Modules:
+  - API reference:
     - openai.md
     - pagination.md
     - version.md

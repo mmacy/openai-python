@@ -2,7 +2,7 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/openai.svg)](https://pypi.org/project/openai/)
 
-The OpenAI Python library provides access to the OpenAI REST API from within applications based on Python 3.7 and above. The library includes type definitions for all request params and response fields, offering clients for both synchronous and asynchronous operations powered by [httpx](https://github.com/encode/httpx).
+The OpenAI Python library provides access to the OpenAI REST API in Python applications. The library includes type definitions for all request params and response fields, offering clients for both synchronous and asynchronous operations powered by [httpx](https://github.com/encode/httpx).
 
 The OpenAI Python library is generated from OpenAI's [OpenAPI specification](https://github.com/openai/openai-openapi) with [Stainless](https://stainlessapi.com/).
 

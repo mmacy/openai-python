@@ -56,8 +56,14 @@
 ::: src.openai.BaseModel
 ::: src.openai.RequestOptions
 ::: src.openai.Stream
-<!-- ::: src.openai.Timeout -->
 
 ## Functions
 
 ::: src.openai.file_from_path
+
+
+<!--
+## Other types
+
+::: src.openai.Timeout
+    -->

@@ -1,4 +1,4 @@
-# About these docs
+# Welcome
 
 Welcome to Marsh's totally unofficial and totally unsupported documentation for the OpenAI Python library.
 
@@ -7,16 +7,20 @@ Welcome to Marsh's totally unofficial and totally unsupported documentation for 
 - :material-clock-fast: [Get started with the library](./get_started.md)
 </div>
 
-## Unofficial
+## About these docs
 
-**Neither this site nor its contents are officially endorsed by OpenAI.** Other than being a customer, I have no affiliation with OpenAI. I've published this documentation because I wanted full API reference for the Python library. (1) You might find it useful, too.
+The these docs are officially unofficial and unsupported, but you're welcome to use and improve them until OpenAI brings up their own set (1) or they ask me to take them down.
 { .annotate }
 
 1. I'll likely decommission this site when OpenAI [publishes their own Python API reference](https://community.openai.com/t/where-is-the-documentation-for-the-python-openai-sdk/583643).
 
+### Unofficial
+
+**Neither this site nor its contents are officially endorsed by OpenAI.** Other than being a customer, I have no affiliation with OpenAI. I've published this documentation because I wanted full API reference for the Python library. You might find it useful, too.
+
 You might instead prefer to use OpenAI's official docs on [OpenAI's official documentation site](https://platform.openai.com) and in the upstream [openai/openai-python](https://github.com/openai/openai-python) repository on GitHub, however.
 
-## Unsupported
+### Unsupported
 
 **The documentation on this site is provided AS-IS and with NO WARRANTY.** The API reference on this site is generated from the OpenAI Python library's code, but I make no promises nor guarantee these docs reflect the current, past, or future state of the library.
 
