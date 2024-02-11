@@ -310,6 +310,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -349,42 +353,58 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../../openai/" class="md-nav__link">
         
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../__init__/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
     openai
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
-      
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pagination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    openai.pagination
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../version/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    openai.version
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -888,11 +908,11 @@
 
 
 
-<h2 id="src.openai.types.chat.completion_create_params" class="doc doc-heading">
+<h3 id="src.openai.types.chat.completion_create_params" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>          <span class="doc doc-object-name doc-module-name">completion_create_params</span>
 
 
-</h2>
+</h3>
 
   <div class="doc doc-contents first">
 
@@ -910,7 +930,7 @@
 
 
 
-<h3 id="src.openai.types.chat.completion_create_params.CompletionCreateParams" class="doc doc-heading">
+<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParams" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">CompletionCreateParams</span>
 
   
@@ -918,7 +938,7 @@
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h3>
+</h4>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">CompletionCreateParams</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a></span><span class="p">[</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.chat.completion_create_params.CompletionCreateParamsNonStreaming" href="#src.openai.types.chat.completion_create_params.CompletionCreateParamsNonStreaming">CompletionCreateParamsNonStreaming</a></span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.chat.completion_create_params.CompletionCreateParamsStreaming" href="#src.openai.types.chat.completion_create_params.CompletionCreateParamsStreaming">CompletionCreateParamsStreaming</a></span><span class="p">,</span>
@@ -934,7 +954,7 @@
 
 
 
-<h3 id="src.openai.types.chat.completion_create_params.FunctionCall" class="doc doc-heading">
+<h4 id="src.openai.types.chat.completion_create_params.FunctionCall" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">FunctionCall</span>
 
   
@@ -942,7 +962,7 @@
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h3>
+</h4>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">FunctionCall</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a></span><span class="p">[</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n"><span title="typing_extensions.Literal">Literal</span></span><span class="p">[</span><span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="s2">&quot;auto&quot;</span><span class="p">],</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.chat.chat_completion_function_call_option_param.ChatCompletionFunctionCallOptionParam" href="../chat_completion_function_call_option_param/#src.openai.types.chat.chat_completion_function_call_option_param.ChatCompletionFunctionCallOptionParam">ChatCompletionFunctionCallOptionParam</a></span><span class="p">,</span>
@@ -959,11 +979,11 @@
 
 
 
-<h3 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase" class="doc doc-heading">
+<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">CompletionCreateParamsBase</span>
 
 
-</h3>
+</h4>
 
 
   <div class="doc doc-contents ">
@@ -984,7 +1004,7 @@
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.frequency_penalty" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.frequency_penalty" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">frequency_penalty</span>
 
   
@@ -992,7 +1012,7 @@
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">frequency_penalty</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1010,7 +1030,7 @@ text so far, decreasing the model's likelihood to repeat the same line verbatim.
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.function_call" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.function_call" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">function_call</span>
 
   
@@ -1018,7 +1038,7 @@ text so far, decreasing the model's likelihood to repeat the same line verbatim.
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">function_call</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.chat.completion_create_params.FunctionCall" href="#src.openai.types.chat.completion_create_params.FunctionCall">FunctionCall</a></span>
 </span></code></pre></div>
 
@@ -1040,7 +1060,7 @@ functions are present.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.functions" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.functions" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">functions</span>
 
   
@@ -1048,7 +1068,7 @@ functions are present.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">functions</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable">Iterable</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.chat.completion_create_params.Function" href="#src.openai.types.chat.completion_create_params.Function">Function</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1064,7 +1084,7 @@ functions are present.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.logit_bias" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.logit_bias" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">logit_bias</span>
 
   
@@ -1072,7 +1092,7 @@ functions are present.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">logit_bias</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.Dict" href="https://docs.python.org/3/library/typing.html#typing.Dict">Dict</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span><span class="p">]]</span>
 </span></code></pre></div>
 
@@ -1093,7 +1113,7 @@ or exclusive selection of the relevant token.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.logprobs" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.logprobs" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">logprobs</span>
 
   
@@ -1101,7 +1121,7 @@ or exclusive selection of the relevant token.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">logprobs</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1119,7 +1139,7 @@ or exclusive selection of the relevant token.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.max_tokens" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.max_tokens" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">max_tokens</span>
 
   
@@ -1127,7 +1147,7 @@ or exclusive selection of the relevant token.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">max_tokens</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1147,7 +1167,7 @@ for counting tokens.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.messages" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.messages" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">messages</span>
 
   
@@ -1155,7 +1175,7 @@ for counting tokens.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">messages</span><span class="p">:</span> <span class="n"><span title="typing_extensions.Required">Required</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable">Iterable</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.chat.chat_completion_message_param.ChatCompletionMessageParam" href="../chat_completion_message_param/#src.openai.types.chat.chat_completion_message_param.ChatCompletionMessageParam">ChatCompletionMessageParam</a></span><span class="p">]]</span>
 </span></code></pre></div>
 
@@ -1171,7 +1191,7 @@ for counting tokens.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.model" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.model" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">model</span>
 
   
@@ -1179,7 +1199,7 @@ for counting tokens.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">model</span><span class="p">:</span> <span class="n"><span title="typing_extensions.Required">Required</span></span><span class="p">[</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a></span><span class="p">[</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span>
@@ -1220,7 +1240,7 @@ table for details on which models work with the Chat API.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.n" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.n" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">n</span>
 
   
@@ -1228,7 +1248,7 @@ table for details on which models work with the Chat API.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">n</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1245,7 +1265,7 @@ of the choices. Keep <code>n</code> as <code>1</code> to minimize costs.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.presence_penalty" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.presence_penalty" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">presence_penalty</span>
 
   
@@ -1253,7 +1273,7 @@ of the choices. Keep <code>n</code> as <code>1</code> to minimize costs.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">presence_penalty</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1271,7 +1291,7 @@ far, increasing the model's likelihood to talk about new topics.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.response_format" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.response_format" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">response_format</span>
 
   
@@ -1279,7 +1299,7 @@ far, increasing the model's likelihood to talk about new topics.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">response_format</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.chat.completion_create_params.ResponseFormat" href="#src.openai.types.chat.completion_create_params.ResponseFormat">ResponseFormat</a></span>
 </span></code></pre></div>
 
@@ -1306,7 +1326,7 @@ max context length.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.seed" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.seed" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">seed</span>
 
   
@@ -1314,7 +1334,7 @@ max context length.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">seed</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1333,7 +1353,7 @@ in the backend.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.stop" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.stop" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">stop</span>
 
   
@@ -1341,7 +1361,7 @@ in the backend.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">stop</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">],</span> <span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">]]</span>
 </span></code></pre></div>
 
@@ -1356,7 +1376,7 @@ in the backend.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.temperature" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.temperature" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">temperature</span>
 
   
@@ -1364,7 +1384,7 @@ in the backend.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">temperature</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1382,7 +1402,7 @@ in the backend.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.tool_choice" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.tool_choice" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">tool_choice</span>
 
   
@@ -1390,7 +1410,7 @@ in the backend.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">tool_choice</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.chat.chat_completion_tool_choice_option_param.ChatCompletionToolChoiceOptionParam" href="../chat_completion_tool_choice_option_param/#src.openai.types.chat.chat_completion_tool_choice_option_param.ChatCompletionToolChoiceOptionParam">ChatCompletionToolChoiceOptionParam</a></span>
 </span></code></pre></div>
 
@@ -1412,7 +1432,7 @@ functions are present.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.tools" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.tools" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">tools</span>
 
   
@@ -1420,7 +1440,7 @@ functions are present.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">tools</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable">Iterable</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.chat.chat_completion_tool_param.ChatCompletionToolParam" href="../chat_completion_tool_param/#src.openai.types.chat.chat_completion_tool_param.ChatCompletionToolParam">ChatCompletionToolParam</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1437,7 +1457,7 @@ functions the model may generate JSON inputs for.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.top_logprobs" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.top_logprobs" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">top_logprobs</span>
 
   
@@ -1445,7 +1465,7 @@ functions the model may generate JSON inputs for.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">top_logprobs</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1462,7 +1482,7 @@ be set to <code>true</code> if this parameter is used.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.top_p" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.top_p" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">top_p</span>
 
   
@@ -1470,7 +1490,7 @@ be set to <code>true</code> if this parameter is used.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">top_p</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1488,7 +1508,7 @@ means only the tokens comprising the top 10% probability mass are considered.</p
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.user" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsBase.user" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">user</span>
 
   
@@ -1496,7 +1516,7 @@ means only the tokens comprising the top 10% probability mass are considered.</p
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">user</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span>
 </span></code></pre></div>
 
@@ -1524,11 +1544,11 @@ and detect abuse.
 
 
 
-<h3 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsNonStreaming" class="doc doc-heading">
+<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsNonStreaming" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">CompletionCreateParamsNonStreaming</span>
 
 
-</h3>
+</h4>
 
 
   <div class="doc doc-contents ">
@@ -1549,7 +1569,7 @@ and detect abuse.
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsNonStreaming.stream" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsNonStreaming.stream" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">stream</span>
 
   
@@ -1557,7 +1577,7 @@ and detect abuse.
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">stream</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><span title="typing_extensions.Literal">Literal</span></span><span class="p">[</span><span class="kc">False</span><span class="p">]]</span>
 </span></code></pre></div>
 
@@ -1588,11 +1608,11 @@ message.
 
 
 
-<h3 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsStreaming" class="doc doc-heading">
+<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsStreaming" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">CompletionCreateParamsStreaming</span>
 
 
-</h3>
+</h4>
 
 
   <div class="doc doc-contents ">
@@ -1613,7 +1633,7 @@ message.
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsStreaming.stream" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.CompletionCreateParamsStreaming.stream" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">stream</span>
 
   
@@ -1621,7 +1641,7 @@ message.
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">stream</span><span class="p">:</span> <span class="n"><span title="typing_extensions.Required">Required</span></span><span class="p">[</span><span class="n"><span title="typing_extensions.Literal">Literal</span></span><span class="p">[</span><span class="kc">True</span><span class="p">]]</span>
 </span></code></pre></div>
 
@@ -1652,11 +1672,11 @@ message.
 
 
 
-<h3 id="src.openai.types.chat.completion_create_params.Function" class="doc doc-heading">
+<h4 id="src.openai.types.chat.completion_create_params.Function" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">Function</span>
 
 
-</h3>
+</h4>
 
 
   <div class="doc doc-contents ">
@@ -1677,7 +1697,7 @@ message.
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.Function.description" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.Function.description" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">description</span>
 
   
@@ -1685,7 +1705,7 @@ message.
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">description</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span>
 </span></code></pre></div>
 
@@ -1701,7 +1721,7 @@ how to call the function.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.Function.name" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.Function.name" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">name</span>
 
   
@@ -1709,7 +1729,7 @@ how to call the function.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">name</span><span class="p">:</span> <span class="n"><span title="typing_extensions.Required">Required</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1726,7 +1746,7 @@ of 64.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.Function.parameters" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.Function.parameters" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">parameters</span>
 
   
@@ -1734,7 +1754,7 @@ of 64.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parameters</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.shared_params.FunctionParameters" href="../../shared_params/function_parameters/#src.openai.types.shared_params.function_parameters.FunctionParameters">FunctionParameters</a></span>
 </span></code></pre></div>
 
@@ -1766,11 +1786,11 @@ documentation about the format.</p>
 
 
 
-<h3 id="src.openai.types.chat.completion_create_params.ResponseFormat" class="doc doc-heading">
+<h4 id="src.openai.types.chat.completion_create_params.ResponseFormat" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">ResponseFormat</span>
 
 
-</h3>
+</h4>
 
 
   <div class="doc doc-contents ">
@@ -1791,7 +1811,7 @@ documentation about the format.</p>
 
 
 
-<h4 id="src.openai.types.chat.completion_create_params.ResponseFormat.type" class="doc doc-heading">
+<h5 id="src.openai.types.chat.completion_create_params.ResponseFormat.type" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">type</span>
 
   
@@ -1799,7 +1819,7 @@ documentation about the format.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">type</span><span class="p">:</span> <span class="n"><span title="typing_extensions.Literal">Literal</span></span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;json_object&#39;</span><span class="p">]</span>
 </span></code></pre></div>
 

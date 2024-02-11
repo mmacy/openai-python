@@ -310,6 +310,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -349,42 +353,58 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../openai/" class="md-nav__link">
         
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../__init__/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
     openai
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
-      
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    openai.pagination
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../version/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    openai.version
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -840,11 +860,11 @@
 
 
 
-<h2 id="src.openai.types.moderation" class="doc doc-heading">
+<h3 id="src.openai.types.moderation" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>          <span class="doc doc-object-name doc-module-name">moderation</span>
 
 
-</h2>
+</h3>
 
   <div class="doc doc-contents first">
 
@@ -863,11 +883,11 @@
 
 
 
-<h3 id="src.openai.types.moderation.Categories" class="doc doc-heading">
+<h4 id="src.openai.types.moderation.Categories" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">Categories</span>
 
 
-</h3>
+</h4>
 
 
   <div class="doc doc-contents ">
@@ -888,7 +908,7 @@
 
 
 
-<h4 id="src.openai.types.moderation.Categories.harassment" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Categories.harassment" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">harassment</span>
 
   
@@ -896,7 +916,7 @@
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">harassment</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span>
 </span></code></pre></div>
 
@@ -912,7 +932,7 @@ target.</p>
 
 
 
-<h4 id="src.openai.types.moderation.Categories.harassment_threatening" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Categories.harassment_threatening" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">harassment_threatening</span>
 
   
@@ -921,7 +941,7 @@ target.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">harassment_threatening</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;harassment/threatening&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
@@ -939,7 +959,7 @@ target.</p>
 
 
 
-<h4 id="src.openai.types.moderation.Categories.hate" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Categories.hate" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">hate</span>
 
   
@@ -947,7 +967,7 @@ target.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">hate</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span>
 </span></code></pre></div>
 
@@ -965,7 +985,7 @@ harassment.</p>
 
 
 
-<h4 id="src.openai.types.moderation.Categories.hate_threatening" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Categories.hate_threatening" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">hate_threatening</span>
 
   
@@ -974,7 +994,7 @@ harassment.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">hate_threatening</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s1">&#39;hate/threatening&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -991,7 +1011,7 @@ orientation, disability status, or caste.</p>
 
 
 
-<h4 id="src.openai.types.moderation.Categories.self_harm" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Categories.self_harm" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">self_harm</span>
 
   
@@ -1000,7 +1020,7 @@ orientation, disability status, or caste.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">self_harm</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s1">&#39;self-harm&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1016,7 +1036,7 @@ suicide, cutting, and eating disorders.</p>
 
 
 
-<h4 id="src.openai.types.moderation.Categories.self_harm_instructions" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Categories.self_harm_instructions" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">self_harm_instructions</span>
 
   
@@ -1025,7 +1045,7 @@ suicide, cutting, and eating disorders.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">self_harm_instructions</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;self-harm/instructions&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
@@ -1044,7 +1064,7 @@ acts.</p>
 
 
 
-<h4 id="src.openai.types.moderation.Categories.self_harm_intent" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Categories.self_harm_intent" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">self_harm_intent</span>
 
   
@@ -1053,7 +1073,7 @@ acts.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">self_harm_intent</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s1">&#39;self-harm/intent&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1069,7 +1089,7 @@ in acts of self-harm, such as suicide, cutting, and eating disorders.</p>
 
 
 
-<h4 id="src.openai.types.moderation.Categories.sexual" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Categories.sexual" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">sexual</span>
 
   
@@ -1077,7 +1097,7 @@ in acts of self-harm, such as suicide, cutting, and eating disorders.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">sexual</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span>
 </span></code></pre></div>
 
@@ -1094,7 +1114,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.Categories.sexual_minors" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Categories.sexual_minors" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">sexual_minors</span>
 
   
@@ -1103,7 +1123,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">sexual_minors</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s1">&#39;sexual/minors&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1118,7 +1138,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.Categories.violence" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Categories.violence" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">violence</span>
 
   
@@ -1126,7 +1146,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">violence</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span>
 </span></code></pre></div>
 
@@ -1141,7 +1161,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.Categories.violence_graphic" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Categories.violence_graphic" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">violence_graphic</span>
 
   
@@ -1150,7 +1170,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">violence_graphic</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s1">&#39;violence/graphic&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1176,11 +1196,11 @@ wellness).</p>
 
 
 
-<h3 id="src.openai.types.moderation.CategoryScores" class="doc doc-heading">
+<h4 id="src.openai.types.moderation.CategoryScores" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">CategoryScores</span>
 
 
-</h3>
+</h4>
 
 
   <div class="doc doc-contents ">
@@ -1201,7 +1221,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.CategoryScores.harassment" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.CategoryScores.harassment" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">harassment</span>
 
   
@@ -1209,7 +1229,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">harassment</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span>
 </span></code></pre></div>
 
@@ -1224,7 +1244,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.CategoryScores.harassment_threatening" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.CategoryScores.harassment_threatening" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">harassment_threatening</span>
 
   
@@ -1233,7 +1253,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">harassment_threatening</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;harassment/threatening&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
@@ -1250,7 +1270,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.CategoryScores.hate" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.CategoryScores.hate" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">hate</span>
 
   
@@ -1258,7 +1278,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">hate</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span>
 </span></code></pre></div>
 
@@ -1273,7 +1293,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.CategoryScores.hate_threatening" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.CategoryScores.hate_threatening" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">hate_threatening</span>
 
   
@@ -1282,7 +1302,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">hate_threatening</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s1">&#39;hate/threatening&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1297,7 +1317,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.CategoryScores.self_harm" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.CategoryScores.self_harm" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">self_harm</span>
 
   
@@ -1306,7 +1326,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">self_harm</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s1">&#39;self-harm&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1321,7 +1341,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.CategoryScores.self_harm_instructions" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.CategoryScores.self_harm_instructions" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">self_harm_instructions</span>
 
   
@@ -1330,7 +1350,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">self_harm_instructions</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;self-harm/instructions&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
@@ -1347,7 +1367,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.CategoryScores.self_harm_intent" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.CategoryScores.self_harm_intent" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">self_harm_intent</span>
 
   
@@ -1356,7 +1376,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">self_harm_intent</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s1">&#39;self-harm/intent&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1371,7 +1391,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.CategoryScores.sexual" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.CategoryScores.sexual" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">sexual</span>
 
   
@@ -1379,7 +1399,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">sexual</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span>
 </span></code></pre></div>
 
@@ -1394,7 +1414,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.CategoryScores.sexual_minors" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.CategoryScores.sexual_minors" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">sexual_minors</span>
 
   
@@ -1403,7 +1423,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">sexual_minors</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s1">&#39;sexual/minors&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1418,7 +1438,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.CategoryScores.violence" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.CategoryScores.violence" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">violence</span>
 
   
@@ -1426,7 +1446,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">violence</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span>
 </span></code></pre></div>
 
@@ -1441,7 +1461,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.CategoryScores.violence_graphic" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.CategoryScores.violence_graphic" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">violence_graphic</span>
 
   
@@ -1450,7 +1470,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">violence_graphic</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="n"><span title="pydantic.Field">Field</span></span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s1">&#39;violence/graphic&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1476,11 +1496,11 @@ wellness).</p>
 
 
 
-<h3 id="src.openai.types.moderation.Moderation" class="doc doc-heading">
+<h4 id="src.openai.types.moderation.Moderation" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">Moderation</span>
 
 
-</h3>
+</h4>
 
 
   <div class="doc doc-contents ">
@@ -1501,7 +1521,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.Moderation.categories" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Moderation.categories" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">categories</span>
 
   
@@ -1509,7 +1529,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">categories</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.moderation.Categories" href="#src.openai.types.moderation.Categories">Categories</a></span>
 </span></code></pre></div>
 
@@ -1524,7 +1544,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.Moderation.category_scores" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Moderation.category_scores" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">category_scores</span>
 
   
@@ -1532,7 +1552,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">category_scores</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.moderation.CategoryScores" href="#src.openai.types.moderation.CategoryScores">CategoryScores</a></span>
 </span></code></pre></div>
 
@@ -1547,7 +1567,7 @@ wellness).</p>
 
 
 
-<h4 id="src.openai.types.moderation.Moderation.flagged" class="doc doc-heading">
+<h5 id="src.openai.types.moderation.Moderation.flagged" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">flagged</span>
 
   
@@ -1555,7 +1575,7 @@ wellness).</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">flagged</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span>
 </span></code></pre></div>
 

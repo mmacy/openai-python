@@ -18,7 +18,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../__init__/">
+        <link rel="next" href="../openai/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -413,6 +413,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Using types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-type-checking-in-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable type checking in Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -421,6 +436,21 @@
       Pagination
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Pagination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-pagination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual pagination
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -436,7 +466,7 @@
         <li class="md-nav__item">
   <a href="#file-uploads" class="md-nav__link">
     <span class="md-ellipsis">
-      File Uploads
+      File uploads
     </span>
   </a>
   
@@ -591,6 +621,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -630,42 +664,58 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../openai/" class="md-nav__link">
         
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../__init__/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
     openai
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
-      
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pagination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    openai.pagination
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    openai.version
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -896,6 +946,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Using types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-type-checking-in-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable type checking in Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -904,6 +969,21 @@
       Pagination
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Pagination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-pagination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual pagination
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -919,7 +999,7 @@
         <li class="md-nav__item">
   <a href="#file-uploads" class="md-nav__link">
     <span class="md-ellipsis">
-      File Uploads
+      File uploads
     </span>
   </a>
   
@@ -1072,7 +1152,7 @@
 <h1 id="get-started">Get started</h1>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
-<p>What follows is a slightly modified version of the <a href="https://github.com/openai/openai-python/blob/main/README.md">README.md</a> file in the upstream repo. <em>—<a href="https://github.com/mmacy">Marsh</a></em></p>
+<p>The following is a modified version of the <a href="https://github.com/openai/openai-python/blob/main/README.md">README.md</a> file in the upstream repo. <em>—<a href="https://github.com/mmacy">Marsh</a></em></p>
 </div>
 <p><a href="https://pypi.org/project/openai/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/openai.svg" /></a></p>
 <p>The OpenAI Python library provides access to the OpenAI REST API from within applications based on Python 3.7 and above. The library includes type definitions for all request params and response fields, offering clients for both synchronous and asynchronous operations powered by <a href="https://github.com/encode/httpx">httpx</a>.</p>
@@ -1100,7 +1180,7 @@
 <p>To reduce the risk of committing your OpenAI API key to source control, we recommend using <a href="https://pypi.org/project/python-dotenv/">python-dotenv</a> and adding <code>OPENAI_API_KEY="YOUR_API_KEY_HERE"</code> to your <code>.env</code> file.</p>
 </div>
 <h3 id="synchronous-client">Synchronous client</h3>
-<p>Create an instance of the <a class="autorefs autorefs-internal" href="../__init__/#src.openai.OpenAI">OpenAI</a> client:</p>
+<p>Create an instance of the <a class="autorefs autorefs-internal" href="../openai/#src.openai.OpenAI">OpenAI</a> client:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">os</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">OpenAI</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
@@ -1134,10 +1214,10 @@
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">chunk</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">delta</span><span class="o">.</span><span class="n">content</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <ol>
-<li>Response streaming is enabling Server Side Events (SSE) in the client.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8Z"/></svg></span> This enables response streaming through Server Side Events (SSE).</li>
 </ol>
 <h3 id="asynchronous-client">Asynchronous client</h3>
-<p>Create an instance of the <a class="autorefs autorefs-internal" href="../__init__/#src.openai.AsyncOpenAI">AsyncOpenAI</a> client and <code>await</code> each API call. Functionality between the synchronous and asynchronous clients is otherwise identical.</p>
+<p>Create an instance of the <a class="autorefs autorefs-internal" href="../openai/#src.openai.AsyncOpenAI">AsyncOpenAI</a> client and <code>await</code> each API call. Functionality between the synchronous and asynchronous clients is otherwise identical.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">os</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span> <span class="nn">asyncio</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">AsyncOpenAI</span>
@@ -1173,7 +1253,7 @@
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="n">stream</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4&quot;</span><span class="p">,</span>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Say this is a test&quot;</span><span class="p">}],</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>        <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>        <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># (1)</span>
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="p">)</span>
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="k">async</span> <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">stream</span><span class="p">:</span>
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">chunk</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">delta</span><span class="o">.</span><span class="n">content</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
@@ -1181,11 +1261,14 @@
 </span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
 </span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </span></code></pre></div>
+<ol>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8Z"/></svg></span> This enables response streaming through Server Side Events (SSE).</li>
+</ol>
 <h3 id="module-level-global-client">Module-level global client</h3>
 <p>Similar to pre-v1 versions of the library, there is also a module-level client available for use in REPLs, notebooks, and other scenarios requiring quick "local loop" iteration.</p>
-<p>Do <strong>NOT</strong> use the module-level global client in production application code. Instead, create instances of <a class="autorefs autorefs-internal" href="../__init__/#src.openai.OpenAI">OpenAI</a> or <a class="autorefs autorefs-internal" href="../__init__/#src.openai.AsyncOpenAI">AsyncOpenAI</a> client objects as described earlier rather than relying on the global client.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># WARNING: Use this client instantiation technique **only** in REPLs, notebooks, or other</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">#          scenarios requiring quick local-loop iteration.</span>
+<p>Do <strong>NOT</strong> use the module-level global client in production application code. Instead, create instances of <a class="autorefs autorefs-internal" href="../openai/#src.openai.OpenAI">OpenAI</a> or <a class="autorefs autorefs-internal" href="../openai/#src.openai.AsyncOpenAI">AsyncOpenAI</a> client objects as described earlier rather than relying on the global client.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># WARNING: Use this client instantiation technique **only** in REPLs, notebooks,</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">#          or other scenarios requiring quick local-loop iteration.</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kn">import</span> <span class="nn">openai</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
@@ -1207,23 +1290,25 @@
 </span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="p">)</span>
 </span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">completion</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 </span></code></pre></div>
-<p>We recommend you avoid using the global module-level client as shown in the previous code snippet in your application code because:</p>
+<p>We recommend you <em>avoid</em> using this module-level client your application code because:</p>
 <ul>
-<li>It can be difficult to reason about where client options are configured</li>
-<li>It's not possible to change certain client options without potentially causing race conditions</li>
-<li>It's harder to mock for testing purposes</li>
-<li>It's not possible to control cleanup of network connections</li>
+<li>It can be difficult to reason about where client options are configured.</li>
+<li>It's impossible to change certain client options without causing the potential for race conditions.</li>
+<li>It's harder to mock for testing purposes.</li>
+<li>It's impossible to control cleanup of network connections.</li>
 </ul>
 <h2 id="using-types">Using types</h2>
-<p>Nested request parameters are <a href="https://docs.python.org/3/library/typing.html#typing.TypedDict">TypedDicts</a>. Responses are <a href="https://docs.pydantic.dev">Pydantic models</a>, which provide helper methods for things like:</p>
+<p>Nested request parameters are <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#typing.TypedDict">TypedDicts</a>. Responses are <a href="https://docs.pydantic.dev">Pydantic models</a>, which provide helper methods for things like:</p>
 <ul>
-<li>Serializing back into JSON, <code>model.model_dump_json(indent=2, exclude_unset=True)</code></li>
-<li>Converting to a dictionary, <code>model.model_dump(exclude_unset=True)</code></li>
+<li>Serializing back into JSON: <a class="autorefs autorefs-internal" href="../openai/#src.openai.BaseModel.model_dump_json"><code>model.model_dump_json</code></a><code>(indent=2, exclude_unset=True)</code></li>
+<li>Converting to a dictionary: <a class="autorefs autorefs-internal" href="../openai/#src.openai.BaseModel.model_dump_json"><code>model.model_dump</code></a><code>(exclude_unset=True)</code></li>
 </ul>
-<p>Typed requests and responses provide autocomplete and documentation within your editor. If you would like to see type errors in VS Code to help catch bugs earlier, set <code>python.analysis.typeCheckingMode</code> to <code>basic</code>.</p>
+<h3 id="enable-type-checking-in-visual-studio-code">Enable type checking in Visual Studio Code</h3>
+<p>Typed requests and responses provide autocomplete and documentation in your editor.</p>
+<p>To help catch bugs earlier, enable <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance">type checking in Pylance</a> in VS Code by setting <code>python.analysis.typeCheckingMode</code> to <code>basic</code> as described in <strong>Settings and Customization</strong> on the Marketplace page for Pylance.</p>
 <h2 id="pagination">Pagination</h2>
-<p>List methods in the OpenAI API are paginated.</p>
-<p>This library provides auto-paginating iterators with each list response, so you do not have to request successive pages manually:</p>
+<p>List methods in the OpenAI API are paginated and Python library provides auto-paginating iterators on list responses - you don't need to request manually request successive pages.</p>
+<p>This example shows using auto-pagination when <a class="autorefs autorefs-internal" href="../resources/fine_tuning/__init__/#src.openai.resources.fine_tuning.Jobs.list">listing fine tuning jobs</a>:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">openai</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">()</span>
@@ -1237,7 +1322,7 @@
 </span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    <span class="n">all_jobs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
 </span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">all_jobs</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Or, asynchronously:</p>
+<p>Auto-pagination is also supported when <a class="autorefs autorefs-internal" href="../resources/fine_tuning/__init__/#src.openai.resources.fine_tuning.AsyncJobs.list">listing asynchrous fine tuning jobs</a>:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">import</span> <span class="nn">openai</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
@@ -1256,7 +1341,8 @@
 </span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
 </span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </span></code></pre></div>
-<p>Alternatively, you can use the <code>.has_next_page()</code>, <code>.next_page_info()</code>, or <code>.get_next_page()</code> methods for more granular control working with pages:</p>
+<h3 id="manual-pagination">Manual pagination</h3>
+<p>For more granular control of pagination, you can instead choose to use the <code>.has_next_page()</code>, <a class="autorefs autorefs-internal" href="../pagination/#src.openai.pagination.SyncCursorPage.next_page_info"><code>.next_page_info()</code></a>, or <code>.get_next_page()</code> methods:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">first_page</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">fine_tuning</span><span class="o">.</span><span class="n">jobs</span><span class="o">.</span><span class="n">list</span><span class="p">(</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span>
@@ -1267,7 +1353,7 @@
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="c1"># Remove `await` for non-async usage.</span>
 </span></code></pre></div>
-<p>Or just work directly with the returned data:</p>
+<p>Or, you can work directly with the data returned:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">first_page</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">fine_tuning</span><span class="o">.</span><span class="n">jobs</span><span class="o">.</span><span class="n">list</span><span class="p">(</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span>
@@ -1279,7 +1365,7 @@
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1"># Remove `await` for non-async usage.</span>
 </span></code></pre></div>
 <h2 id="nested-params">Nested params</h2>
-<p>Nested parameters are dictionaries, typed using <code>TypedDict</code>, for example:</p>
+<p>Nested parameters are dictionaries, typed using <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/typing.html#typing.TypedDict">TypedDict</a>, for example:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">OpenAI</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">()</span>
@@ -1295,8 +1381,8 @@
 </span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>    <span class="n">response_format</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;json_object&quot;</span><span class="p">},</span>
 </span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="p">)</span>
 </span></code></pre></div>
-<h2 id="file-uploads">File Uploads</h2>
-<p>Request parameters that correspond to file uploads can be passed as <code>bytes</code>, a <a href="https://docs.python.org/3/library/os.html#os.PathLike"><code>PathLike</code></a> instance or a tuple of <code>(filename, contents, media type)</code>.</p>
+<h2 id="file-uploads">File uploads</h2>
+<p>Request parameters that correspond to file uploads can be passed as <code>bytes</code>, a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/os.html#os.PathLike"><code>PathLike</code></a> instance or a tuple of <code>(filename, contents, media type)</code>.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">OpenAI</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
@@ -1307,12 +1393,12 @@
 </span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="n">purpose</span><span class="o">=</span><span class="s2">&quot;fine-tune&quot;</span><span class="p">,</span>
 </span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="p">)</span>
 </span></code></pre></div>
-<p>The async client uses the exact same interface. If you pass a <a href="https://docs.python.org/3/library/os.html#os.PathLike"><code>PathLike</code></a> instance, the file contents will be read asynchronously automatically.</p>
+<p>The async client uses the exact same interface. If you pass a <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/os.html#os.PathLike"><code>PathLike</code></a> instance, the file contents will be read asynchronously automatically.</p>
 <h2 id="handling-errors">Handling errors</h2>
-<p>When the library is unable to connect to the API (for example, due to network connection problems or a timeout), a subclass of <code>openai.APIConnectionError</code> is raised.</p>
+<p>When the library is unable to connect to the API (for example, due to network connection problems or a timeout), a subclass of <a class="autorefs autorefs-internal" href="../openai/#src.openai.APIConnectionError"><code>openai.APIConnectionError</code></a> is raised.</p>
 <p>When the API returns a non-success status code (that is, 4xx or 5xx
-response), a subclass of <code>openai.APIStatusError</code> is raised, containing <code>status_code</code> and <code>response</code> properties.</p>
-<p>All errors inherit from <code>openai.APIError</code>.</p>
+response), a subclass of <a class="autorefs autorefs-internal" href="../openai/#src.openai.APIStatusError"><code>openai.APIStatusError</code></a> is raised, containing <code>status_code</code> and <code>response</code> properties.</p>
+<p>All errors inherit from <a class="autorefs autorefs-internal" href="../openai/#src.openai.APIError"><code>openai.APIError</code></a>.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">openai</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">OpenAI</span>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
@@ -1605,7 +1691,7 @@ won't always be correct.</p>
         
         
           
-          <a href="../__init__/" class="md-footer__link md-footer__link--next" aria-label="Next: openai">
+          <a href="../openai/" class="md-footer__link md-footer__link--next" aria-label="Next: openai">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next

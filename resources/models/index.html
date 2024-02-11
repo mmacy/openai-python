@@ -310,6 +310,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -349,42 +353,58 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../openai/" class="md-nav__link">
         
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../__init__/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
     openai
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+      </a>
+    </li>
   
 
-      
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    openai.pagination
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../version/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    openai.version
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -858,11 +878,11 @@
 
 
 
-<h2 id="src.openai.resources.models" class="doc doc-heading">
+<h3 id="src.openai.resources.models" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>          <span class="doc doc-object-name doc-module-name">models</span>
 
 
-</h2>
+</h3>
 
   <div class="doc doc-contents first">
 
@@ -881,12 +901,12 @@
 
 
 
-<h3 id="src.openai.resources.models.AsyncModels" class="doc doc-heading">
+<h4 id="src.openai.resources.models.AsyncModels" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">AsyncModels</span>
 
 
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">AsyncModels</span><span class="p">(</span><span class="n">client</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._client.AsyncOpenAI" href="../../_client/#src.openai._client.AsyncOpenAI">AsyncOpenAI</a></span><span class="p">)</span>
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">AsyncModels</span><span class="p">(</span><span class="n">client</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._client.AsyncOpenAI" href="../../openai/#src.openai.AsyncOpenAI">AsyncOpenAI</a></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -910,7 +930,7 @@
 
 
 
-<h4 id="src.openai.resources.models.AsyncModels.delete" class="doc doc-heading">
+<h5 id="src.openai.resources.models.AsyncModels.delete" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">delete</span>
 
   
@@ -918,14 +938,14 @@
       <small class="doc doc-label doc-label-async"><code>async</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">delete</span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">model</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">*</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">extra_headers</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Headers" href="../../_types/#src.openai._types.Headers">Headers</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">extra_query</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Query" href="../../_types/#src.openai._types.Query">Query</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">extra_body</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Body" href="../../_types/#src.openai._types.Body">Body</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">|</span> <span class="n"><span title="httpx.Timeout">Timeout</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.NotGiven" href="../../_types/#src.openai._types.NotGiven">NotGiven</a></span> <span class="o">=</span> <span class="n">NOT_GIVEN</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">extra_headers</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Headers">Headers</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">extra_query</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Query">Query</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">extra_body</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Body">Body</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">|</span> <span class="n"><span title="httpx.Timeout">Timeout</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><span title="src.openai._types.NotGiven">NotGiven</span></span> <span class="o">=</span> <span class="n">NOT_GIVEN</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.ModelDeleted" href="../../types/model_deleted/#src.openai.types.model_deleted.ModelDeleted">ModelDeleted</a></span>
 </span></code></pre></div>
 
@@ -951,7 +971,7 @@ delete a model.</p>
         <tr>
           <td><code>extra_headers</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.Headers" href="../../_types/#src.openai._types.Headers">Headers</a> | None</code>
+                <code><span title="src.openai._types.Headers">Headers</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -965,7 +985,7 @@ delete a model.</p>
         <tr>
           <td><code>extra_query</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.Query" href="../../_types/#src.openai._types.Query">Query</a> | None</code>
+                <code><span title="src.openai._types.Query">Query</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -979,7 +999,7 @@ delete a model.</p>
         <tr>
           <td><code>extra_body</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.Body" href="../../_types/#src.openai._types.Body">Body</a> | None</code>
+                <code><span title="src.openai._types.Body">Body</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -993,7 +1013,7 @@ delete a model.</p>
         <tr>
           <td><code>timeout</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a> | <span title="httpx.Timeout">Timeout</span> | None | <a class="autorefs autorefs-internal" title="src.openai._types.NotGiven" href="../../_types/#src.openai._types.NotGiven">NotGiven</a></code>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a> | <span title="httpx.Timeout">Timeout</span> | None | <span title="src.openai._types.NotGiven">NotGiven</span></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1001,7 +1021,7 @@ delete a model.</p>
             </div>
           </td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.NOT_GIVEN" href="../../_types/#src.openai._types.NOT_GIVEN">NOT_GIVEN</a></code>
+                <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
           </td>
         </tr>
     </tbody>
@@ -1016,18 +1036,18 @@ delete a model.</p>
 
 
 
-<h4 id="src.openai.resources.models.AsyncModels.list" class="doc doc-heading">
+<h5 id="src.openai.resources.models.AsyncModels.list" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">list</span>
 
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">list</span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="o">*</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">extra_headers</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Headers" href="../../_types/#src.openai._types.Headers">Headers</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">extra_query</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Query" href="../../_types/#src.openai._types.Query">Query</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">extra_body</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Body" href="../../_types/#src.openai._types.Body">Body</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">|</span> <span class="n"><span title="httpx.Timeout">Timeout</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.NotGiven" href="../../_types/#src.openai._types.NotGiven">NotGiven</a></span> <span class="o">=</span> <span class="n">NOT_GIVEN</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._base_client.AsyncPaginator" href="../../_base_client/#src.openai._base_client.AsyncPaginator">AsyncPaginator</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.Model" href="../../types/model/#src.openai.types.model.Model">Model</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.pagination.AsyncPage" href="../../pagination/#src.openai.pagination.AsyncPage">AsyncPage</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.Model" href="../../types/model/#src.openai.types.model.Model">Model</a></span><span class="p">]]</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">extra_headers</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Headers">Headers</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">extra_query</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Query">Query</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">extra_body</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Body">Body</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">|</span> <span class="n"><span title="httpx.Timeout">Timeout</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><span title="src.openai._types.NotGiven">NotGiven</span></span> <span class="o">=</span> <span class="n">NOT_GIVEN</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="src.openai._base_client.AsyncPaginator">AsyncPaginator</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.Model" href="../../types/model/#src.openai.types.model.Model">Model</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.pagination.AsyncPage" href="../../pagination/#src.openai.pagination.AsyncPage">AsyncPage</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.Model" href="../../types/model/#src.openai.types.model.Model">Model</a></span><span class="p">]]</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1044,7 +1064,7 @@ one such as the owner and availability.</p>
 
 
 
-<h4 id="src.openai.resources.models.AsyncModels.retrieve" class="doc doc-heading">
+<h5 id="src.openai.resources.models.AsyncModels.retrieve" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">retrieve</span>
 
   
@@ -1052,14 +1072,14 @@ one such as the owner and availability.</p>
       <small class="doc doc-label doc-label-async"><code>async</code></small>
   </span>
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">retrieve</span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">model</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">*</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">extra_headers</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Headers" href="../../_types/#src.openai._types.Headers">Headers</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">extra_query</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Query" href="../../_types/#src.openai._types.Query">Query</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">extra_body</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Body" href="../../_types/#src.openai._types.Body">Body</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">|</span> <span class="n"><span title="httpx.Timeout">Timeout</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.NotGiven" href="../../_types/#src.openai._types.NotGiven">NotGiven</a></span> <span class="o">=</span> <span class="n">NOT_GIVEN</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">extra_headers</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Headers">Headers</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">extra_query</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Query">Query</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">extra_body</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Body">Body</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">|</span> <span class="n"><span title="httpx.Timeout">Timeout</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><span title="src.openai._types.NotGiven">NotGiven</span></span> <span class="o">=</span> <span class="n">NOT_GIVEN</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.Model" href="../../types/model/#src.openai.types.model.Model">Model</a></span>
 </span></code></pre></div>
 
@@ -1084,7 +1104,7 @@ the owner and permissioning.</p>
         <tr>
           <td><code>extra_headers</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.Headers" href="../../_types/#src.openai._types.Headers">Headers</a> | None</code>
+                <code><span title="src.openai._types.Headers">Headers</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1098,7 +1118,7 @@ the owner and permissioning.</p>
         <tr>
           <td><code>extra_query</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.Query" href="../../_types/#src.openai._types.Query">Query</a> | None</code>
+                <code><span title="src.openai._types.Query">Query</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1112,7 +1132,7 @@ the owner and permissioning.</p>
         <tr>
           <td><code>extra_body</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.Body" href="../../_types/#src.openai._types.Body">Body</a> | None</code>
+                <code><span title="src.openai._types.Body">Body</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1126,7 +1146,7 @@ the owner and permissioning.</p>
         <tr>
           <td><code>timeout</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a> | <span title="httpx.Timeout">Timeout</span> | None | <a class="autorefs autorefs-internal" title="src.openai._types.NotGiven" href="../../_types/#src.openai._types.NotGiven">NotGiven</a></code>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a> | <span title="httpx.Timeout">Timeout</span> | None | <span title="src.openai._types.NotGiven">NotGiven</span></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1134,7 +1154,7 @@ the owner and permissioning.</p>
             </div>
           </td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.NOT_GIVEN" href="../../_types/#src.openai._types.NOT_GIVEN">NOT_GIVEN</a></code>
+                <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
           </td>
         </tr>
     </tbody>
@@ -1149,11 +1169,11 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.AsyncModels.with_raw_response" class="doc doc-heading">
+<h5 id="src.openai.resources.models.AsyncModels.with_raw_response" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">with_raw_response</span>
 
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">with_raw_response</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.resources.models.AsyncModelsWithRawResponse" href="#src.openai.resources.models.AsyncModelsWithRawResponse">AsyncModelsWithRawResponse</a></span>
 </span></code></pre></div>
 
@@ -1168,11 +1188,11 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.AsyncModels.with_streaming_response" class="doc doc-heading">
+<h5 id="src.openai.resources.models.AsyncModels.with_streaming_response" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">with_streaming_response</span>
 
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">with_streaming_response</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n"><a class="autorefs autorefs-internal" title="src.openai.resources.models.AsyncModelsWithStreamingResponse" href="#src.openai.resources.models.AsyncModelsWithStreamingResponse">AsyncModelsWithStreamingResponse</a></span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
@@ -1197,11 +1217,11 @@ the owner and permissioning.</p>
 
 
 
-<h3 id="src.openai.resources.models.AsyncModelsWithRawResponse" class="doc doc-heading">
+<h4 id="src.openai.resources.models.AsyncModelsWithRawResponse" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">AsyncModelsWithRawResponse</span>
 
 
-</h3>
+</h4>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">AsyncModelsWithRawResponse</span><span class="p">(</span><span class="n">models</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.resources.models.AsyncModels" href="#src.openai.resources.models.AsyncModels">AsyncModels</a></span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1223,7 +1243,7 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.AsyncModelsWithRawResponse.delete" class="doc doc-heading">
+<h5 id="src.openai.resources.models.AsyncModelsWithRawResponse.delete" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">delete</span>
 
   
@@ -1231,8 +1251,8 @@ the owner and permissioning.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">delete</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._legacy_response.async_to_raw_response_wrapper" href="../../_legacy_response/#src.openai._legacy_response.async_to_raw_response_wrapper">async_to_raw_response_wrapper</a></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.delete">delete</span></span><span class="p">)</span>
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">delete</span> <span class="o">=</span> <span class="n"><span title="src.openai._legacy_response.async_to_raw_response_wrapper">async_to_raw_response_wrapper</span></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.delete">delete</span></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1244,7 +1264,7 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.AsyncModelsWithRawResponse.list" class="doc doc-heading">
+<h5 id="src.openai.resources.models.AsyncModelsWithRawResponse.list" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">list</span>
 
   
@@ -1252,8 +1272,8 @@ the owner and permissioning.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._legacy_response.async_to_raw_response_wrapper" href="../../_legacy_response/#src.openai._legacy_response.async_to_raw_response_wrapper">async_to_raw_response_wrapper</a></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.list">list</span></span><span class="p">)</span>
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="n"><span title="src.openai._legacy_response.async_to_raw_response_wrapper">async_to_raw_response_wrapper</span></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.list">list</span></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1265,7 +1285,7 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.AsyncModelsWithRawResponse.retrieve" class="doc doc-heading">
+<h5 id="src.openai.resources.models.AsyncModelsWithRawResponse.retrieve" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">retrieve</span>
 
   
@@ -1273,8 +1293,8 @@ the owner and permissioning.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">retrieve</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._legacy_response.async_to_raw_response_wrapper" href="../../_legacy_response/#src.openai._legacy_response.async_to_raw_response_wrapper">async_to_raw_response_wrapper</a></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.retrieve">retrieve</span></span><span class="p">)</span>
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">retrieve</span> <span class="o">=</span> <span class="n"><span title="src.openai._legacy_response.async_to_raw_response_wrapper">async_to_raw_response_wrapper</span></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.retrieve">retrieve</span></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1297,11 +1317,11 @@ the owner and permissioning.</p>
 
 
 
-<h3 id="src.openai.resources.models.AsyncModelsWithStreamingResponse" class="doc doc-heading">
+<h4 id="src.openai.resources.models.AsyncModelsWithStreamingResponse" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">AsyncModelsWithStreamingResponse</span>
 
 
-</h3>
+</h4>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">AsyncModelsWithStreamingResponse</span><span class="p">(</span><span class="n">models</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.resources.models.AsyncModels" href="#src.openai.resources.models.AsyncModels">AsyncModels</a></span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1323,7 +1343,7 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.AsyncModelsWithStreamingResponse.delete" class="doc doc-heading">
+<h5 id="src.openai.resources.models.AsyncModelsWithStreamingResponse.delete" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">delete</span>
 
   
@@ -1331,8 +1351,8 @@ the owner and permissioning.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">delete</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._response.async_to_streamed_response_wrapper" href="../../_response/#src.openai._response.async_to_streamed_response_wrapper">async_to_streamed_response_wrapper</a></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.delete">delete</span></span><span class="p">)</span>
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">delete</span> <span class="o">=</span> <span class="n"><span title="src.openai._response.async_to_streamed_response_wrapper">async_to_streamed_response_wrapper</span></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.delete">delete</span></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1344,7 +1364,7 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.AsyncModelsWithStreamingResponse.list" class="doc doc-heading">
+<h5 id="src.openai.resources.models.AsyncModelsWithStreamingResponse.list" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">list</span>
 
   
@@ -1352,8 +1372,8 @@ the owner and permissioning.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._response.async_to_streamed_response_wrapper" href="../../_response/#src.openai._response.async_to_streamed_response_wrapper">async_to_streamed_response_wrapper</a></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.list">list</span></span><span class="p">)</span>
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="n"><span title="src.openai._response.async_to_streamed_response_wrapper">async_to_streamed_response_wrapper</span></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.list">list</span></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1365,7 +1385,7 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.AsyncModelsWithStreamingResponse.retrieve" class="doc doc-heading">
+<h5 id="src.openai.resources.models.AsyncModelsWithStreamingResponse.retrieve" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">retrieve</span>
 
   
@@ -1373,8 +1393,8 @@ the owner and permissioning.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">retrieve</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._response.async_to_streamed_response_wrapper" href="../../_response/#src.openai._response.async_to_streamed_response_wrapper">async_to_streamed_response_wrapper</a></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.retrieve">retrieve</span></span><span class="p">)</span>
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">retrieve</span> <span class="o">=</span> <span class="n"><span title="src.openai._response.async_to_streamed_response_wrapper">async_to_streamed_response_wrapper</span></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.retrieve">retrieve</span></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1397,12 +1417,12 @@ the owner and permissioning.</p>
 
 
 
-<h3 id="src.openai.resources.models.Models" class="doc doc-heading">
+<h4 id="src.openai.resources.models.Models" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">Models</span>
 
 
-</h3>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Models</span><span class="p">(</span><span class="n">client</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._client.OpenAI" href="../../_client/#src.openai._client.OpenAI">OpenAI</a></span><span class="p">)</span>
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Models</span><span class="p">(</span><span class="n">client</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._client.OpenAI" href="../../openai/#src.openai.OpenAI">OpenAI</a></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1426,18 +1446,18 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.Models.delete" class="doc doc-heading">
+<h5 id="src.openai.resources.models.Models.delete" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">delete</span>
 
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">delete</span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">model</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">*</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">extra_headers</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Headers" href="../../_types/#src.openai._types.Headers">Headers</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">extra_query</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Query" href="../../_types/#src.openai._types.Query">Query</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">extra_body</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Body" href="../../_types/#src.openai._types.Body">Body</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">|</span> <span class="n"><span title="httpx.Timeout">Timeout</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.NotGiven" href="../../_types/#src.openai._types.NotGiven">NotGiven</a></span> <span class="o">=</span> <span class="n">NOT_GIVEN</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">extra_headers</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Headers">Headers</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">extra_query</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Query">Query</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">extra_body</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Body">Body</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">|</span> <span class="n"><span title="httpx.Timeout">Timeout</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><span title="src.openai._types.NotGiven">NotGiven</span></span> <span class="o">=</span> <span class="n">NOT_GIVEN</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.ModelDeleted" href="../../types/model_deleted/#src.openai.types.model_deleted.ModelDeleted">ModelDeleted</a></span>
 </span></code></pre></div>
 
@@ -1463,7 +1483,7 @@ delete a model.</p>
         <tr>
           <td><code>extra_headers</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.Headers" href="../../_types/#src.openai._types.Headers">Headers</a> | None</code>
+                <code><span title="src.openai._types.Headers">Headers</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1477,7 +1497,7 @@ delete a model.</p>
         <tr>
           <td><code>extra_query</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.Query" href="../../_types/#src.openai._types.Query">Query</a> | None</code>
+                <code><span title="src.openai._types.Query">Query</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1491,7 +1511,7 @@ delete a model.</p>
         <tr>
           <td><code>extra_body</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.Body" href="../../_types/#src.openai._types.Body">Body</a> | None</code>
+                <code><span title="src.openai._types.Body">Body</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1505,7 +1525,7 @@ delete a model.</p>
         <tr>
           <td><code>timeout</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a> | <span title="httpx.Timeout">Timeout</span> | None | <a class="autorefs autorefs-internal" title="src.openai._types.NotGiven" href="../../_types/#src.openai._types.NotGiven">NotGiven</a></code>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a> | <span title="httpx.Timeout">Timeout</span> | None | <span title="src.openai._types.NotGiven">NotGiven</span></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1513,7 +1533,7 @@ delete a model.</p>
             </div>
           </td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.NOT_GIVEN" href="../../_types/#src.openai._types.NOT_GIVEN">NOT_GIVEN</a></code>
+                <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
           </td>
         </tr>
     </tbody>
@@ -1528,17 +1548,17 @@ delete a model.</p>
 
 
 
-<h4 id="src.openai.resources.models.Models.list" class="doc doc-heading">
+<h5 id="src.openai.resources.models.Models.list" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">list</span>
 
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">list</span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="o">*</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">extra_headers</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Headers" href="../../_types/#src.openai._types.Headers">Headers</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">extra_query</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Query" href="../../_types/#src.openai._types.Query">Query</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">extra_body</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Body" href="../../_types/#src.openai._types.Body">Body</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">|</span> <span class="n"><span title="httpx.Timeout">Timeout</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.NotGiven" href="../../_types/#src.openai._types.NotGiven">NotGiven</a></span> <span class="o">=</span> <span class="n">NOT_GIVEN</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">extra_headers</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Headers">Headers</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">extra_query</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Query">Query</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">extra_body</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Body">Body</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">|</span> <span class="n"><span title="httpx.Timeout">Timeout</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><span title="src.openai._types.NotGiven">NotGiven</span></span> <span class="o">=</span> <span class="n">NOT_GIVEN</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.pagination.SyncPage" href="../../pagination/#src.openai.pagination.SyncPage">SyncPage</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.Model" href="../../types/model/#src.openai.types.model.Model">Model</a></span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1556,18 +1576,18 @@ one such as the owner and availability.</p>
 
 
 
-<h4 id="src.openai.resources.models.Models.retrieve" class="doc doc-heading">
+<h5 id="src.openai.resources.models.Models.retrieve" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">retrieve</span>
 
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">retrieve</span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">model</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">*</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">extra_headers</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Headers" href="../../_types/#src.openai._types.Headers">Headers</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">extra_query</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Query" href="../../_types/#src.openai._types.Query">Query</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">extra_body</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.Body" href="../../_types/#src.openai._types.Body">Body</a></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">|</span> <span class="n"><span title="httpx.Timeout">Timeout</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._types.NotGiven" href="../../_types/#src.openai._types.NotGiven">NotGiven</a></span> <span class="o">=</span> <span class="n">NOT_GIVEN</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">extra_headers</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Headers">Headers</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">extra_query</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Query">Query</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">extra_body</span><span class="p">:</span> <span class="n"><span title="src.openai._types.Body">Body</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">|</span> <span class="n"><span title="httpx.Timeout">Timeout</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><span title="src.openai._types.NotGiven">NotGiven</span></span> <span class="o">=</span> <span class="n">NOT_GIVEN</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.types.Model" href="../../types/model/#src.openai.types.model.Model">Model</a></span>
 </span></code></pre></div>
 
@@ -1592,7 +1612,7 @@ the owner and permissioning.</p>
         <tr>
           <td><code>extra_headers</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.Headers" href="../../_types/#src.openai._types.Headers">Headers</a> | None</code>
+                <code><span title="src.openai._types.Headers">Headers</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1606,7 +1626,7 @@ the owner and permissioning.</p>
         <tr>
           <td><code>extra_query</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.Query" href="../../_types/#src.openai._types.Query">Query</a> | None</code>
+                <code><span title="src.openai._types.Query">Query</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1620,7 +1640,7 @@ the owner and permissioning.</p>
         <tr>
           <td><code>extra_body</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.Body" href="../../_types/#src.openai._types.Body">Body</a> | None</code>
+                <code><span title="src.openai._types.Body">Body</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1634,7 +1654,7 @@ the owner and permissioning.</p>
         <tr>
           <td><code>timeout</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a> | <span title="httpx.Timeout">Timeout</span> | None | <a class="autorefs autorefs-internal" title="src.openai._types.NotGiven" href="../../_types/#src.openai._types.NotGiven">NotGiven</a></code>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a> | <span title="httpx.Timeout">Timeout</span> | None | <span title="src.openai._types.NotGiven">NotGiven</span></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1642,7 +1662,7 @@ the owner and permissioning.</p>
             </div>
           </td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="src.openai._types.NOT_GIVEN" href="../../_types/#src.openai._types.NOT_GIVEN">NOT_GIVEN</a></code>
+                <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
           </td>
         </tr>
     </tbody>
@@ -1657,11 +1677,11 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.Models.with_raw_response" class="doc doc-heading">
+<h5 id="src.openai.resources.models.Models.with_raw_response" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">with_raw_response</span>
 
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">with_raw_response</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.resources.models.ModelsWithRawResponse" href="#src.openai.resources.models.ModelsWithRawResponse">ModelsWithRawResponse</a></span>
 </span></code></pre></div>
 
@@ -1676,11 +1696,11 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.Models.with_streaming_response" class="doc doc-heading">
+<h5 id="src.openai.resources.models.Models.with_streaming_response" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">with_streaming_response</span>
 
 
-</h4>
+</h5>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">with_streaming_response</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.resources.models.ModelsWithStreamingResponse" href="#src.openai.resources.models.ModelsWithStreamingResponse">ModelsWithStreamingResponse</a></span>
 </span></code></pre></div>
 
@@ -1703,11 +1723,11 @@ the owner and permissioning.</p>
 
 
 
-<h3 id="src.openai.resources.models.ModelsWithRawResponse" class="doc doc-heading">
+<h4 id="src.openai.resources.models.ModelsWithRawResponse" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">ModelsWithRawResponse</span>
 
 
-</h3>
+</h4>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ModelsWithRawResponse</span><span class="p">(</span><span class="n">models</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.resources.models.Models" href="#src.openai.resources.models.Models">Models</a></span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1729,7 +1749,7 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.ModelsWithRawResponse.delete" class="doc doc-heading">
+<h5 id="src.openai.resources.models.ModelsWithRawResponse.delete" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">delete</span>
 
   
@@ -1737,8 +1757,8 @@ the owner and permissioning.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">delete</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._legacy_response.to_raw_response_wrapper" href="../../_legacy_response/#src.openai._legacy_response.to_raw_response_wrapper">to_raw_response_wrapper</a></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.delete">delete</span></span><span class="p">)</span>
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">delete</span> <span class="o">=</span> <span class="n"><span title="src.openai._legacy_response.to_raw_response_wrapper">to_raw_response_wrapper</span></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.delete">delete</span></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1750,7 +1770,7 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.ModelsWithRawResponse.list" class="doc doc-heading">
+<h5 id="src.openai.resources.models.ModelsWithRawResponse.list" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">list</span>
 
   
@@ -1758,8 +1778,8 @@ the owner and permissioning.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._legacy_response.to_raw_response_wrapper" href="../../_legacy_response/#src.openai._legacy_response.to_raw_response_wrapper">to_raw_response_wrapper</a></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.list">list</span></span><span class="p">)</span>
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="n"><span title="src.openai._legacy_response.to_raw_response_wrapper">to_raw_response_wrapper</span></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.list">list</span></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1771,7 +1791,7 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.ModelsWithRawResponse.retrieve" class="doc doc-heading">
+<h5 id="src.openai.resources.models.ModelsWithRawResponse.retrieve" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">retrieve</span>
 
   
@@ -1779,8 +1799,8 @@ the owner and permissioning.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">retrieve</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._legacy_response.to_raw_response_wrapper" href="../../_legacy_response/#src.openai._legacy_response.to_raw_response_wrapper">to_raw_response_wrapper</a></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.retrieve">retrieve</span></span><span class="p">)</span>
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">retrieve</span> <span class="o">=</span> <span class="n"><span title="src.openai._legacy_response.to_raw_response_wrapper">to_raw_response_wrapper</span></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.retrieve">retrieve</span></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1803,11 +1823,11 @@ the owner and permissioning.</p>
 
 
 
-<h3 id="src.openai.resources.models.ModelsWithStreamingResponse" class="doc doc-heading">
+<h4 id="src.openai.resources.models.ModelsWithStreamingResponse" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">ModelsWithStreamingResponse</span>
 
 
-</h3>
+</h4>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ModelsWithStreamingResponse</span><span class="p">(</span><span class="n">models</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai.resources.models.Models" href="#src.openai.resources.models.Models">Models</a></span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1829,7 +1849,7 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.ModelsWithStreamingResponse.delete" class="doc doc-heading">
+<h5 id="src.openai.resources.models.ModelsWithStreamingResponse.delete" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">delete</span>
 
   
@@ -1837,8 +1857,8 @@ the owner and permissioning.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">delete</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._response.to_streamed_response_wrapper" href="../../_response/#src.openai._response.to_streamed_response_wrapper">to_streamed_response_wrapper</a></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.delete">delete</span></span><span class="p">)</span>
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">delete</span> <span class="o">=</span> <span class="n"><span title="src.openai._response.to_streamed_response_wrapper">to_streamed_response_wrapper</span></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.delete">delete</span></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1850,7 +1870,7 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.ModelsWithStreamingResponse.list" class="doc doc-heading">
+<h5 id="src.openai.resources.models.ModelsWithStreamingResponse.list" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">list</span>
 
   
@@ -1858,8 +1878,8 @@ the owner and permissioning.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._response.to_streamed_response_wrapper" href="../../_response/#src.openai._response.to_streamed_response_wrapper">to_streamed_response_wrapper</a></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.list">list</span></span><span class="p">)</span>
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="n"><span title="src.openai._response.to_streamed_response_wrapper">to_streamed_response_wrapper</span></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.list">list</span></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1871,7 +1891,7 @@ the owner and permissioning.</p>
 
 
 
-<h4 id="src.openai.resources.models.ModelsWithStreamingResponse.retrieve" class="doc doc-heading">
+<h5 id="src.openai.resources.models.ModelsWithStreamingResponse.retrieve" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <span class="doc doc-object-name doc-attribute-name">retrieve</span>
 
   
@@ -1879,8 +1899,8 @@ the owner and permissioning.</p>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-</h4>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">retrieve</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="src.openai._response.to_streamed_response_wrapper" href="../../_response/#src.openai._response.to_streamed_response_wrapper">to_streamed_response_wrapper</a></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.retrieve">retrieve</span></span><span class="p">)</span>
+</h5>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">retrieve</span> <span class="o">=</span> <span class="n"><span title="src.openai._response.to_streamed_response_wrapper">to_streamed_response_wrapper</span></span><span class="p">(</span><span class="n"><span title="src.openai.resources.models.retrieve">retrieve</span></span><span class="p">)</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
