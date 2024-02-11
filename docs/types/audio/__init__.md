@@ -1,8 +1,8 @@
 # openai.types.audio
 
 ::: src.openai.types.audio
-::: src.openai.types.audio.speech_create_params
-::: src.openai.types.audio.transcription
-::: src.openai.types.audio.transcription_create_params
-::: src.openai.types.audio.translation
-::: src.openai.types.audio.translation_create_params
+::: src.openai.types.audio.SpeechCreateParams
+::: src.openai.types.audio.Transcription
+::: src.openai.types.audio.TranscriptionCreateParams
+::: src.openai.types.audio.Translation
+::: src.openai.types.audio.TranslationCreateParams
