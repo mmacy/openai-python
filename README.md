@@ -44,9 +44,7 @@ import os
 from openai import OpenAI
 
 client = OpenAI(
-    # This is default behavior - you can omit the 'api_key' parameter
-    # if the OPENAI_API_KEY environment variable contains a valid key.
-    api_key=os.environ.get("OPENAI_API_KEY"),
+    api_key=os.environ.get("OPENAI_API_KEY"), # (1)
 )
 
 chat_completion = client.chat.completions.create(
@@ -59,6 +57,8 @@ chat_completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
 )
 ```
+
+1. You can **omit** this parameter if the `OPENAI_API_KEY` environment variable is set and contains a valid key. By default, the [OpenAI()][src.openai.OpenAI] client attempts to read the `OPENAI_API_KEY` env var upon instantiation.
 
 To stream responses from the API, include `stream=True` in your call to [Completions.create()][src.openai.resources.chat.completions.Completions.create] method call:
 
@@ -88,9 +88,7 @@ import asyncio
 from openai import AsyncOpenAI
 
 client = AsyncOpenAI(
-    # This is default behavior - you can omit the 'api_key' parameter
-    # if the OPENAI_API_KEY environment variable contains a valid key.
-    api_key=os.environ.get("OPENAI_API_KEY"),
+    api_key=os.environ.get("OPENAI_API_KEY"), # (1)
 )
 
 
@@ -108,6 +106,8 @@ async def main() -> None:
 
 asyncio.run(main())
 ```
+
+1. You can **omit** this parameter if the `OPENAI_API_KEY` environment variable is set and contains a valid key. By default, the [AsyncOpenAI()][src.openai.AsyncOpenAI] client attempts to read the `OPENAI_API_KEY` env var upon instantiation.
 
 You can enable response streaming in the async client by including `stream=True` to the [AsyncCompletions.create()][src.openai.resources.chat.completions.AsyncCompletions.create] method:
 
@@ -507,16 +507,16 @@ client = OpenAI(
 
 ### Managing HTTP resources
 
-By default the library closes underlying HTTP connections whenever the client is [garbage collected](https://docs.python.org/3/reference/datamodel.html#object.__del__). You can manually close the client using the `.close()` method if desired, or with a context manager that closes when exiting.
+By default, the library closes underlying HTTP connections whenever the client is [garbage collected](https://docs.python.org/3/reference/datamodel.html#object.__del__). You can manually close the client using the `.close()` method if desired, or with a context manager that closes when exiting.
 
 ## Microsoft Azure OpenAI
 
 To use this library with [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview), use the `AzureOpenAI`
 class instead of the `OpenAI` class.
 
-> [!IMPORTANT]
-> The Azure API shape differs from the core API shape which means that the static types for responses / params
-> won't always be correct.
+!!! important
+
+    The API surface of the Azure API differs from that of the core API. The static types for responses / params won't always be correct.
 
 ```py
 from openai import AzureOpenAI
