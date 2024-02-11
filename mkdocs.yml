@@ -1,10 +1,10 @@
 site_name: OpenAI Python library documentation · UNOFFICIAL
-
 site_author: Marsh Macy
 site_description: Unofficial documentation for OpenAI's Python library
 site_url: https://mmacy.github.io/openai-python/
 repo_name: openai-python
 repo_url: https://github.com/mmacy/openai-python/tree/docs
+
 watch:
   - "docs/"
   - "examples/"
@@ -91,7 +91,7 @@ plugins:
             docstring_section_style: table
             docstring_style: google
             filters: ["!^_"]
-            heading_level: 2
+            heading_level: 3
             inherited_members: false
             merge_init_into_class: true
             separate_signature: true
@@ -111,10 +111,9 @@ nav:
   - index.md
   - get_started.md
   - Modules:
-    - openai:
-      - __init__.md
-      - pagination.md
-      - version.md
+    - openai.md
+    - pagination.md
+    - version.md
     - openai.resources:
       - resources/index.md
       - openai.resources.audio: resources/audio/__init__.md

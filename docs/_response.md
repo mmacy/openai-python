@@ -1,1 +1,0 @@
-::: src.openai._response

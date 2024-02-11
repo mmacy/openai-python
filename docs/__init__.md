@@ -1,3 +1,0 @@
-# openai
-
-::: src.openai

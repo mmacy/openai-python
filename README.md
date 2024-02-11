@@ -76,7 +76,7 @@ for chunk in stream:
     print(chunk.choices[0].delta.content or "", end="")
 ```
 
-1. Response streaming is enabling Server Side Events (SSE) in the client.
+1. :material-chat: This enables response streaming through Server Side Events (SSE).
 
 ### Asynchronous client
 
@@ -121,7 +121,7 @@ async def main():
     stream = await client.chat.completions.create(
         model="gpt-4",
         messages=[{"role": "user", "content": "Say this is a test"}],
-        stream=True,
+        stream=True, # (1)
     )
     async for chunk in stream:
         print(chunk.choices[0].delta.content or "", end="")
@@ -130,6 +130,8 @@ async def main():
 asyncio.run(main())
 ```
 
+1. :material-chat: This enables response streaming through Server Side Events (SSE).
+
 ### Module-level global client
 
 Similar to pre-v1 versions of the library, there is also a module-level client available for use in REPLs, notebooks, and other scenarios requiring quick "local loop" iteration.
@@ -137,8 +139,8 @@ Similar to pre-v1 versions of the library, there is also a module-level client a
 Do **NOT** use the module-level global client in production application code. Instead, create instances of [OpenAI][src.openai.OpenAI] or [AsyncOpenAI][src.openai.AsyncOpenAI] client objects as described earlier rather than relying on the global client.
 
 ```py
-# WARNING: Use this client instantiation technique **only** in REPLs, notebooks, or other
-#          scenarios requiring quick local-loop iteration.
+# WARNING: Use this client instantiation technique **only** in REPLs, notebooks,
+#          or other scenarios requiring quick local-loop iteration.
 
 import openai
 
@@ -161,27 +163,31 @@ completion = openai.chat.completions.create(
 print(completion.choices[0].message.content)
 ```
 
-We recommend you avoid using the global module-level client as shown in the previous code snippet in your application code because:
+We recommend you *avoid* using this module-level client your application code because:
 
-- It can be difficult to reason about where client options are configured
-- It's not possible to change certain client options without potentially causing race conditions
-- It's harder to mock for testing purposes
-- It's not possible to control cleanup of network connections
+- It can be difficult to reason about where client options are configured.
+- It's impossible to change certain client options without causing the potential for race conditions.
+- It's harder to mock for testing purposes.
+- It's impossible to control cleanup of network connections.
 
 ## Using types
 
-Nested request parameters are [TypedDicts](https://docs.python.org/3/library/typing.html#typing.TypedDict). Responses are [Pydantic models](https://docs.pydantic.dev), which provide helper methods for things like:
+Nested request parameters are [TypedDicts][typing.TypedDict]. Responses are [Pydantic models](https://docs.pydantic.dev), which provide helper methods for things like:
 
-- Serializing back into JSON, `model.model_dump_json(indent=2, exclude_unset=True)`
-- Converting to a dictionary, `model.model_dump(exclude_unset=True)`
+- Serializing back into JSON: [`model.model_dump_json`][src.openai.BaseModel.model_dump_json]`(indent=2, exclude_unset=True)`
+- Converting to a dictionary: [`model.model_dump`][src.openai.BaseModel.model_dump_json]`(exclude_unset=True)`
 
-Typed requests and responses provide autocomplete and documentation within your editor. If you would like to see type errors in VS Code to help catch bugs earlier, set `python.analysis.typeCheckingMode` to `basic`.
+### Enable type checking in Visual Studio Code
+
+Typed requests and responses provide autocomplete and documentation in your editor.
+
+To help catch bugs earlier, enable [type checking in Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) in VS Code by setting `python.analysis.typeCheckingMode` to `basic` as described in **Settings and Customization** on the Marketplace page for Pylance.
 
 ## Pagination
 
-List methods in the OpenAI API are paginated.
+List methods in the OpenAI API are paginated and Python library provides auto-paginating iterators on list responses - you don't need to request manually request successive pages.
 
-This library provides auto-paginating iterators with each list response, so you do not have to request successive pages manually:
+This example shows using auto-pagination when [listing fine tuning jobs][src.openai.resources.fine_tuning.Jobs.list]:
 
 ```python
 import openai
@@ -198,7 +204,7 @@ for job in client.fine_tuning.jobs.list(
 print(all_jobs)
 ```
 
-Or, asynchronously:
+Auto-pagination is also supported when [listing asynchrous fine tuning jobs][src.openai.resources.fine_tuning.AsyncJobs.list]:
 
 ```python
 import asyncio
@@ -220,7 +226,9 @@ async def main() -> None:
 asyncio.run(main())
 ```
 
-Alternatively, you can use the `.has_next_page()`, `.next_page_info()`, or `.get_next_page()` methods for more granular control working with pages:
+### Manual pagination
+
+For more granular control of pagination, you can instead choose to use the `.has_next_page()`, [`.next_page_info()`][src.openai.pagination.SyncCursorPage.next_page_info], or `.get_next_page()` methods:
 
 ```python
 first_page = await client.fine_tuning.jobs.list(
@@ -234,7 +242,7 @@ if first_page.has_next_page():
 # Remove `await` for non-async usage.
 ```
 
-Or just work directly with the returned data:
+Or, you can work directly with the data returned:
 
 ```python
 first_page = await client.fine_tuning.jobs.list(
@@ -250,7 +258,7 @@ for job in first_page.data:
 
 ## Nested params
 
-Nested parameters are dictionaries, typed using `TypedDict`, for example:
+Nested parameters are dictionaries, typed using [TypedDict][typing.TypedDict], for example:
 
 ```python
 from openai import OpenAI
@@ -269,9 +277,9 @@ completion = client.chat.completions.create(
 )
 ```
 
-## File Uploads
+## File uploads
 
-Request parameters that correspond to file uploads can be passed as `bytes`, a [`PathLike`](https://docs.python.org/3/library/os.html#os.PathLike) instance or a tuple of `(filename, contents, media type)`.
+Request parameters that correspond to file uploads can be passed as `bytes`, a [`PathLike`][os.PathLike] instance or a tuple of `(filename, contents, media type)`.
 
 ```python
 from pathlib import Path
@@ -285,16 +293,16 @@ client.files.create(
 )
 ```
 
-The async client uses the exact same interface. If you pass a [`PathLike`](https://docs.python.org/3/library/os.html#os.PathLike) instance, the file contents will be read asynchronously automatically.
+The async client uses the exact same interface. If you pass a [`PathLike`][os.PathLike] instance, the file contents will be read asynchronously automatically.
 
 ## Handling errors
 
-When the library is unable to connect to the API (for example, due to network connection problems or a timeout), a subclass of `openai.APIConnectionError` is raised.
+When the library is unable to connect to the API (for example, due to network connection problems or a timeout), a subclass of [`openai.APIConnectionError`][src.openai.APIConnectionError] is raised.
 
 When the API returns a non-success status code (that is, 4xx or 5xx
-response), a subclass of `openai.APIStatusError` is raised, containing `status_code` and `response` properties.
+response), a subclass of [`openai.APIStatusError`][src.openai.APIStatusError] is raised, containing `status_code` and `response` properties.
 
-All errors inherit from `openai.APIError`.
+All errors inherit from [`openai.APIError`][src.openai.APIError].
 
 ```python
 import openai

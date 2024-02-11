@@ -3,7 +3,7 @@
 Welcome to Marsh's totally unofficial and totally unsupported documentation for the OpenAI Python library.
 
 <div class="grid cards" markdown>
-- :fontawesome-brands-python: [OpenAI Python library reference][src.openai]
+- :fontawesome-brands-python: [OpenAI Python library reference](openai.md)
 - :material-clock-fast: [Get started with the library](./get_started.md)
 </div>
 
