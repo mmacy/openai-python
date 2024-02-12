@@ -4,14 +4,15 @@ from pathlib import Path
 
 import mkdocs_gen_files
 
-nav = mkdocs_gen_files.Nav()
+nav = mkdocs_gen_files.nav.Nav()
 mod_symbol = '<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code>'
 
 src = Path(__file__).parent.parent / "src"
 
 for path in sorted(src.rglob("*.py")):
     module_path = path.relative_to(src).with_suffix("")
-    doc_path = path.relative_to(src / "mkdocstrings").with_suffix(".md")
+    #doc_path = path.relative_to(src / "mkdocstrings").with_suffix(".md")
+    doc_path = path.relative_to(src / "openai").with_suffix(".md")
     full_doc_path = Path("reference", doc_path)
 
     parts = tuple(module_path.parts)

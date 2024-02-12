@@ -70,6 +70,11 @@ markdown_extensions:
 
 plugins:
   - search
+  - gen-files:
+      scripts:
+      - scripts/gen_ref_nav.py
+  - literate-nav:
+      nav_file: SUMMARY.md
   - mkdocstrings:
       handlers:
         python:
@@ -111,34 +116,35 @@ extra:
 nav:
   - index.md
   - get_started.md
-  - API reference:
-    - openai.md
-    - pagination.md
-    - version.md
-    - openai.resources:
-      - resources/index.md
-      - openai.resources.audio: resources/audio/__init__.md
-      - openai.resources.beta:
-        - resources/beta/index.md
-        - openai.resources.beta.assistants: resources/beta/assistants/__init__.md
-        - openai.resources.beta.threads:
-          - resources/beta/threads/index.md
-          - openai.resources.beta.threads.messages: resources/beta/threads/messages/__init__.md
-          - openai.resources.beta.threads.runs: resources/beta/threads/runs/__init__.md
-      - openai.resources.chat: resources/chat/__init__.md
-      - openai.resources.fine_tuning: resources/fine_tuning/__init__.md
-    - openai.types:
-      - types/index.md # was __init__.md
-      - openai.types.audio: types/audio/__init__.md
-      - openai.types.beta:
-        - types/beta/index.md
-        - openai.types.beta.assistants: types/beta/assistants/__init__.md
-        - openai.types.beta.chat: types/beta/chat/__init__.md
-        - openai.types.beta.threads:
-          - types/beta/threads/index.md
-          - openai.types.beta.threads.messages: types/beta/threads/messages/__init__.md
-          - openai.types.beta.threads.runs: types/beta/threads/runs/__init__.md
-      - openai.types.chat: types/chat/__init__.md
-      - openai.types.fine_tuning: types/fine_tuning/__init__.md
-      - openai.types.shared: types/shared/__init__.md
-      - openai.types.shared_params: types/shared_params/__init__.md
+  - API reference: reference/
+  # - API reference:
+  #   - openai.md
+  #   - pagination.md
+  #   - version.md
+  #   - openai.resources:
+  #     - resources/index.md
+  #     - openai.resources.audio: resources/audio/__init__.md
+  #     - openai.resources.beta:
+  #       - resources/beta/index.md
+  #       - openai.resources.beta.assistants: resources/beta/assistants/__init__.md
+  #       - openai.resources.beta.threads:
+  #         - resources/beta/threads/index.md
+  #         - openai.resources.beta.threads.messages: resources/beta/threads/messages/__init__.md
+  #         - openai.resources.beta.threads.runs: resources/beta/threads/runs/__init__.md
+  #     - openai.resources.chat: resources/chat/__init__.md
+  #     - openai.resources.fine_tuning: resources/fine_tuning/__init__.md
+  #   - openai.types:
+  #     - types/index.md # was __init__.md
+  #     - openai.types.audio: types/audio/__init__.md
+  #     - openai.types.beta:
+  #       - types/beta/index.md
+  #       - openai.types.beta.assistants: types/beta/assistants/__init__.md
+  #       - openai.types.beta.chat: types/beta/chat/__init__.md
+  #       - openai.types.beta.threads:
+  #         - types/beta/threads/index.md
+  #         - openai.types.beta.threads.messages: types/beta/threads/messages/__init__.md
+  #         - openai.types.beta.threads.runs: types/beta/threads/runs/__init__.md
+  #     - openai.types.chat: types/chat/__init__.md
+  #     - openai.types.fine_tuning: types/fine_tuning/__init__.md
+  #     - openai.types.shared: types/shared/__init__.md
+  #     - openai.types.shared_params: types/shared_params/__init__.md

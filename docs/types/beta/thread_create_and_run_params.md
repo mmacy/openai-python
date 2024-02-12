@@ -1,1 +1,0 @@
-::: src.openai.types.beta.thread_create_and_run_params

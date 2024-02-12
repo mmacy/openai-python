@@ -1,1 +1,0 @@
-::: src.openai.types.image_edit_params
