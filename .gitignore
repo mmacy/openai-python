@@ -12,3 +12,6 @@ dist
 .env
 .envrc
 codegen.log
+
+# Ignore the MkDocs build artifact directory
+site/
