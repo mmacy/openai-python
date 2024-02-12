@@ -84,6 +84,8 @@ plugins:
               ignore_init_summary: true
             docstring_section_style: spacy
             docstring_style: google
+            extensions:
+              - griffe_inherited_docstrings
             filters: ["!^_"]
             heading_level: 3
             inherited_members: false
@@ -91,8 +93,8 @@ plugins:
             separate_signature: true
             show_bases: true
             show_if_no_docstring: true
-            show_root_heading: true
             show_root_full_path: false
+            show_root_heading: true
             show_signature_annotations: true
             show_source: false
             show_symbol_type_heading: true

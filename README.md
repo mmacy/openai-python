@@ -170,95 +170,11 @@ We recommend you *avoid* using this module-level client your application code be
 - It's harder to mock for testing purposes.
 - It's impossible to control cleanup of network connections.
 
-## Using types
+## Request types
 
-Nested request parameters are [TypedDicts][typing.TypedDict]. Responses are [Pydantic models](https://docs.pydantic.dev), which provide helper methods for things like:
+Nested **request** parameters are Python [TypedDicts][typing.TypedDict].
 
-- Serializing back into JSON: [`model.model_dump_json`][src.openai.BaseModel.model_dump_json]`(indent=2, exclude_unset=True)`
-- Converting to a dictionary: [`model.model_dump`][src.openai.BaseModel.model_dump_json]`(exclude_unset=True)`
-
-### Enable type checking in Visual Studio Code
-
-Typed requests and responses provide autocomplete and documentation in your editor.
-
-To help catch bugs earlier, enable [type checking in Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) in VS Code by setting `python.analysis.typeCheckingMode` to `basic` as described in **Settings and Customization** on the Marketplace page for Pylance.
-
-## Pagination
-
-List methods in the OpenAI API are paginated and Python library provides auto-paginating iterators on list responses - you don't need to request manually request successive pages.
-
-This example shows using auto-pagination when [listing fine tuning jobs][src.openai.resources.fine_tuning.Jobs.list]:
-
-```python
-import openai
-
-client = OpenAI()
-
-all_jobs = []
-# Automatically fetches more pages as needed.
-for job in client.fine_tuning.jobs.list(
-    limit=20,
-):
-    # Do something with job here
-    all_jobs.append(job)
-print(all_jobs)
-```
-
-Auto-pagination is also supported when [listing asynchrous fine tuning jobs][src.openai.resources.fine_tuning.AsyncJobs.list]:
-
-```python
-import asyncio
-import openai
-
-client = AsyncOpenAI()
-
-
-async def main() -> None:
-    all_jobs = []
-    # Iterate through items across all pages, issuing requests as needed.
-    async for job in client.fine_tuning.jobs.list(
-        limit=20,
-    ):
-        all_jobs.append(job)
-    print(all_jobs)
-
-
-asyncio.run(main())
-```
-
-### Manual pagination
-
-For more granular control of pagination, you can instead choose to use the `.has_next_page()`, [`.next_page_info()`][src.openai.pagination.SyncCursorPage.next_page_info], or `.get_next_page()` methods:
-
-```python
-first_page = await client.fine_tuning.jobs.list(
-    limit=20,
-)
-if first_page.has_next_page():
-    print(f"will fetch next page using these details: {first_page.next_page_info()}")
-    next_page = await first_page.get_next_page()
-    print(f"number of items we just fetched: {len(next_page.data)}")
-
-# Remove `await` for non-async usage.
-```
-
-Or, you can work directly with the data returned:
-
-```python
-first_page = await client.fine_tuning.jobs.list(
-    limit=20,
-)
-
-print(f"next page cursor: {first_page.after}")  # => "next page cursor: ..."
-for job in first_page.data:
-    print(job.id)
-
-# Remove `await` for non-async usage.
-```
-
-## Nested params
-
-Nested parameters are dictionaries, typed using [TypedDict][typing.TypedDict], for example:
+For example, the user message in the following [`chat.completions.create()`][src.openai.resources.chat.completions.Completions.create] request is a [`ChatCompletionUserMessageParam`][src.openai.types.chat.chat_completion_user_message_param.ChatCompletionUserMessageParam], which has a base type of [`TypedDict`][typing.TypedDict]:
 
 ```python
 from openai import OpenAI
@@ -269,7 +185,7 @@ completion = client.chat.completions.create(
     messages=[
         {
             "role": "user",
-            "content": "Can you generate an example json object describing a fruit?",
+            "content": "Can you generate an example JSON object describing a fruit?",
         }
     ],
     model="gpt-3.5-turbo-1106",
@@ -277,9 +193,9 @@ completion = client.chat.completions.create(
 )
 ```
 
-## File uploads
+### File upload request types
 
-Request parameters that correspond to file uploads can be passed as `bytes`, a [`PathLike`][os.PathLike] instance or a tuple of `(filename, contents, media type)`.
+Request parameters that correspond to file uploads can be passed as [`bytes`][bytes], a [`PathLike`][os.PathLike] instance, or a tuple of `(filename, contents, media type)`.
 
 ```python
 from pathlib import Path
@@ -293,7 +209,18 @@ client.files.create(
 )
 ```
 
-The async client uses the exact same interface. If you pass a [`PathLike`][os.PathLike] instance, the file contents will be read asynchronously automatically.
+The async client uses the same interface. If you pass a [`PathLike`][os.PathLike] instance, the file contents will be read asynchronously automatically.
+
+## Response types
+
+**Responses** are [Pydantic](https://docs.pydantic.dev) models that include their helper methods for things like:
+
+- Serializing the object to JSON: [`example_response_object.model_dump_json`][src.openai.BaseModel.model_dump_json]`(indent=2, exclude_unset=True)`
+- Converting the object to a dictionary: [`example_response_object.model_dump`][src.openai.BaseModel.model_dump]`(exclude_unset=True)`
+
+!!! Tip
+
+    Typed requests and responses enable type checking, autocompletion, and hover-help documentation in editors that support those features. In Visual Studio Code, for example, you can [enable type checking in Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) by setting `python.analysis.typeCheckingMode` to `basic` as described in that article's **Settings and Customization** section.
 
 ## Handling errors
 
