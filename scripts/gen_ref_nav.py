@@ -27,7 +27,10 @@ for path in sorted(src.rglob("*.py")):
 
     with mkdocs_gen_files.open(full_doc_path, "w") as fd:
         ident = ".".join(parts)
-        fd.write(f"::: src.{ident}")
+        if "openai.lib.azure" not in ident:
+            fd.write(f"::: src.{ident}")
+        else:
+            fd.write(f"<!-- ::: {ident} -->") # azure.py busts the doc build
 
     mkdocs_gen_files.set_edit_path(full_doc_path, ".." / path)
 
