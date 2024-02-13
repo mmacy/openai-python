@@ -36,6 +36,51 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mmacy.github.io/openai-python/examples/assistant/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/examples/async_demo/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/examples/audio/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/examples/azure/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/examples/azure_ad/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/examples/demo/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/examples/module_client/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/examples/picture/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/examples/streaming/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mmacy.github.io/openai-python/reference/</loc>
          <lastmod>2024-02-13</lastmod>
          <changefreq>daily</changefreq>
@@ -72,6 +117,66 @@
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/_utils/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/reference/cli/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/reference/cli/_api/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/reference/cli/_api/audio/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/reference/cli/_api/completions/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/reference/cli/_api/files/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/reference/cli/_api/image/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/reference/cli/_api/models/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/reference/cli/_api/chat/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/reference/cli/_api/chat/completions/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/reference/cli/_tools/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/reference/cli/_tools/fine_tunes/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mmacy.github.io/openai-python/reference/cli/_tools/migrate/</loc>
          <lastmod>2024-02-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
