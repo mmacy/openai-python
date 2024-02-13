@@ -36,12 +36,12 @@ If your project used a pre-v1 version of the library, see the [v1 migration guid
 
 To connect to the OpenAI API:
 
-1. Populate an `OPENAI_API_KEY` environment variable with your [OpenAI API key](https://platform.openai.com/account/api-keys).
+1. Populate an `OPENAI_API_KEY` environment variable with your [OpenAI API key](https://platform.openai.com/account/api-keys)
 2. Create a synchronous or asynchronous `OpenAI` client object.
 
-!!! Tip
 
-    To reduce the risk of committing your OpenAI API key to source control, we recommend using [python-dotenv](https://pypi.org/project/python-dotenv/) and adding `OPENAI_API_KEY="YOUR_API_KEY_HERE"` to your `.env` file.
+!!! Tip
+    To reduce the risk of committing your OpenAI API key to source control, you can use [python-dotenv](https://pypi.org/project/python-dotenv/) and add `OPENAI_API_KEY="YOUR_API_KEY_HERE"` to your `.env` file.
 
 ## Synchronous client
 

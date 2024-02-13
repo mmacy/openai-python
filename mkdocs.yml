@@ -87,7 +87,8 @@ plugins:
           options:
             docstring_options:
               ignore_init_summary: true
-            docstring_section_style: spacy
+              summary: true
+            docstring_section_style: table
             docstring_style: google
             extensions:
               - griffe_inherited_docstrings
@@ -122,7 +123,7 @@ nav:
       - get_started.md
       - connect.md
       - request-response.md
-      - handle-errors.md
-      - log-and-debug.md
+      - error-handling.md
+      - debugging.md
       - advanced.md
   - API reference: reference/
