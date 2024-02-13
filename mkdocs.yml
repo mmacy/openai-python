@@ -119,6 +119,7 @@ nav:
   - Welcome:
     - index.md
     - Get started: get_started.md
+    - Examples: examples/index.md
     - API reference: reference/index.md
   - Get started:
       - get_started.md
@@ -127,5 +128,5 @@ nav:
       - error-handling.md
       - debugging.md
       - advanced.md
-      - Examples: examples/
+  - Examples: examples/
   - API reference: reference/
