@@ -5,8 +5,6 @@ from pathlib import Path
 import mkdocs_gen_files
 
 nav = mkdocs_gen_files.nav.Nav()
-#mod_symbol = '<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code>'
-mod_symbol = ''
 
 src = Path(__file__).parent.parent / "src"
 
