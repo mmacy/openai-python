@@ -80,7 +80,7 @@ plugins:
       handlers:
         python:
           paths: [src]
-          load_external_modules: true # 'true' picks up __all__ from __init__.py files
+          load_external_modules: false # 'true' picks up __all__ from __init__.py files
           import:
             - https://docs.python.org/3/objects.inv
             - https://docs.pydantic.dev/2.4/objects.inv
@@ -127,4 +127,5 @@ nav:
       - error-handling.md
       - debugging.md
       - advanced.md
+      - Examples: examples/
   - API reference: reference/
