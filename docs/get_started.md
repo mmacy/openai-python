@@ -1,7 +1,3 @@
-# Get started
+# Install
 
-!!! quote
-
-    The following is a modified version of the [README.md](https://github.com/openai/openai-python/blob/main/README.md) file in the upstream repo. *—[Marsh](https://github.com/mmacy)*
-
---8<-- "./README.md:2"
+--8<-- "./README.md:get-started"

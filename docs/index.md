@@ -4,7 +4,7 @@ Welcome to Marsh's totally unofficial and totally unsupported documentation for 
 
 <div class="grid cards" markdown>
 - :material-clock-fast: [Get started with the library](./get_started.md)
-- :fontawesome-brands-python: [OpenAI Python library reference](openai.md)
+- :fontawesome-brands-python: [OpenAI Python library reference](reference/index.md)
 </div>
 
 ## About these docs

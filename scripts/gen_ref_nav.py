@@ -5,13 +5,13 @@ from pathlib import Path
 import mkdocs_gen_files
 
 nav = mkdocs_gen_files.nav.Nav()
-mod_symbol = '<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code>'
+#mod_symbol = '<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code>'
+mod_symbol = ''
 
 src = Path(__file__).parent.parent / "src"
 
 for path in sorted(src.rglob("*.py")):
     module_path = path.relative_to(src).with_suffix("")
-    #doc_path = path.relative_to(src / "mkdocstrings").with_suffix(".md")
     doc_path = path.relative_to(src / "openai").with_suffix(".md")
     full_doc_path = Path("reference", doc_path)
 
@@ -24,7 +24,7 @@ for path in sorted(src.rglob("*.py")):
     elif parts[-1].startswith("_"):
         continue
 
-    nav_parts = [f"{mod_symbol} {part}" for part in parts]
+    nav_parts = [part for part in parts]
     nav[tuple(nav_parts)] = doc_path.as_posix()
 
     with mkdocs_gen_files.open(full_doc_path, "w") as fd:

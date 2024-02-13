@@ -118,5 +118,11 @@ nav:
     - index.md
     - Get started: get_started.md
     - API reference: reference/index.md
-  - Get started: get_started.md
+  - Get started:
+      - get_started.md
+      - connect.md
+      - request-response.md
+      - handle-errors.md
+      - log-and-debug.md
+      - advanced.md
   - API reference: reference/
