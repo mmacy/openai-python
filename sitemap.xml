@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mmacy.github.io/openai-python/examples/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mmacy.github.io/openai-python/examples/assistant/</loc>
          <lastmod>2024-02-13</lastmod>
          <changefreq>daily</changefreq>
