@@ -1,1 +1,0 @@
-::: src.openai.types.beta.threads.runs.function_tool_call

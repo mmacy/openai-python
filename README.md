@@ -2,7 +2,9 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/openai.svg)](https://pypi.org/project/openai/)
 
-The OpenAI Python library provides access to the OpenAI REST API in Python applications. The library includes type definitions for all request params and response fields, offering clients for both synchronous and asynchronous operations powered by [httpx](https://github.com/encode/httpx).
+<!-- ---8<--- [start:get-started] -->
+
+The OpenAI Python library provides access to the OpenAI REST API in Python applications. It includes type definitions for all request params and response fields and has clients for both synchronous and asynchronous operations powered by [httpx](https://github.com/encode/httpx).
 
 The OpenAI Python library is generated from OpenAI's [OpenAPI specification](https://github.com/openai/openai-openapi) with [Stainless](https://stainlessapi.com/).
 
@@ -11,31 +13,37 @@ The OpenAI Python library is generated from OpenAI's [OpenAPI specification](htt
 - [Python](https://www.python.org/) 3.7+
 - [OpenAI API key](https://platform.openai.com/account/api-keys)
 
-## Installation
+## Install the package
 
-You can install the [openai](https://pypi.org/project/openai/) package from PyPi with `pip`:
+You can the [openai](https://pypi.org/project/openai/) package from PyPi with `pip`:
 
 ```sh
 # Install the package
 pip install openai
 ```
 
-### Migration
+## Migrate from earlier versions
 
-Released on November 6th 2023, the OpenAI Python library was rewritten for v1. If your project used a pre-v1 version of the library, see the [v1 migration guide](https://github.com/openai/openai-python/discussions/742) for information and scripts that can help you update your code.
+Released on November 6th 2023, the OpenAI Python library was rewritten for version `1.0.0`.
 
-## Usage
+If your project used a pre-v1 version of the library, see the [v1 migration guide](https://github.com/openai/openai-python/discussions/742) for information and scripts that can help you update your code.
+
+<!-- ---8<--- [end:get-started] -->
+
+## Connect
+
+<!-- ---8<--- [start:connect] -->
 
 To connect to the OpenAI API:
 
-1. Populate an `OPENAI_API_KEY` environment variable with your [OpenAI API key](https://platform.openai.com/account/api-keys).
+1. Populate an `OPENAI_API_KEY` environment variable with your [OpenAI API key](https://platform.openai.com/account/api-keys)
 2. Create a synchronous or asynchronous `OpenAI` client object.
 
+
 !!! Tip
+    To reduce the risk of committing your OpenAI API key to source control, you can use [python-dotenv](https://pypi.org/project/python-dotenv/) and add `OPENAI_API_KEY="YOUR_API_KEY_HERE"` to your `.env` file.
 
-    To reduce the risk of committing your OpenAI API key to source control, we recommend using [python-dotenv](https://pypi.org/project/python-dotenv/) and adding `OPENAI_API_KEY="YOUR_API_KEY_HERE"` to your `.env` file.
-
-### Synchronous client
+## Synchronous client
 
 Create an instance of the [OpenAI][src.openai.OpenAI] client:
 
@@ -78,7 +86,7 @@ for chunk in stream:
 
 1. :material-chat: This enables response streaming through Server Side Events (SSE).
 
-### Asynchronous client
+## Asynchronous client
 
 Create an instance of the [AsyncOpenAI][src.openai.AsyncOpenAI] client and `await` each API call. Functionality between the synchronous and asynchronous clients is otherwise identical.
 
@@ -132,7 +140,7 @@ asyncio.run(main())
 
 1. :material-chat: This enables response streaming through Server Side Events (SSE).
 
-### Module-level global client
+## Module-level global client
 
 Similar to pre-v1 versions of the library, there is also a module-level client available for use in REPLs, notebooks, and other scenarios requiring quick "local loop" iteration.
 
@@ -163,14 +171,17 @@ completion = openai.chat.completions.create(
 print(completion.choices[0].message.content)
 ```
 
-We recommend you *avoid* using this module-level client your application code because:
+We recommend you _avoid_ using this module-level client your application code because:
 
 - It can be difficult to reason about where client options are configured.
 - It's impossible to change certain client options without causing the potential for race conditions.
 - It's harder to mock for testing purposes.
 - It's impossible to control cleanup of network connections.
+<!-- ---8<--- [end:connect] -->
 
 ## Request types
+
+<!-- ---8<--- [start:request-response] -->
 
 Nested **request** parameters are Python [TypedDicts][typing.TypedDict].
 
@@ -222,7 +233,11 @@ The async client uses the same interface. If you pass a [`PathLike`][os.PathLike
 
     Typed requests and responses enable type checking, autocompletion, and hover-help documentation in editors that support those features. In Visual Studio Code, for example, you can [enable type checking in Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) by setting `python.analysis.typeCheckingMode` to `basic` as described in that article's **Settings and Customization** section.
 
+<!-- ---8<--- [end:request-response] -->
+
 ## Handling errors
+
+<!-- ---8<--- [start:handle-errors] -->
 
 When the library is unable to connect to the API (for example, due to network connection problems or a timeout), a subclass of [`openai.APIConnectionError`][src.openai.APIConnectionError] is raised.
 
@@ -255,22 +270,23 @@ except openai.APIStatusError as e:
 
 Error codes are as followed:
 
-| Status Code | Error Type                 |
-| ----------- | -------------------------- |
-| 400         | `BadRequestError`          |
-| 401         | `AuthenticationError`      |
-| 403         | `PermissionDeniedError`    |
-| 404         | `NotFoundError`            |
-| 422         | `UnprocessableEntityError` |
-| 429         | `RateLimitError`           |
-| >=500       | `InternalServerError`      |
-| N/A         | `APIConnectionError`       |
+| Status Code | Error Type                                                        |
+| :---------: | ----------------------------------------------------------------- |
+|     400     | [`BadRequestError`][src.openai.BadRequestError]                   |
+|     401     | [`AuthenticationError`][src.openai.AuthenticationError]           |
+|     403     | [`PermissionDeniedError`][src.openai.PermissionDeniedError]       |
+|     404     | [`NotFoundError`][src.openai.NotFoundError]                       |
+|     409     | [`ConflictError`][src.openai.ConflictError]                       |
+|     422     | [`UnprocessableEntityError`][src.openai.UnprocessableEntityError] |
+|     429     | [`RateLimitError`][src.openai.RateLimitError]                     |
+|    >=500    | [`InternalServerError`][src.openai.InternalServerError]           |
+|     N/A     | [`APIConnectionError`][src.openai.APIConnectionError]             |
 
-### Retries
+## Retries
 
 Certain errors are automatically retried 2 times by default, with a short exponential backoff.
-Connection errors (for example, due to a network connectivity problem), 408 Request Timeout, 409 Conflict,
-429 Rate Limit, and >=500 Internal errors are all retried by default.
+
+Connection errors (for example, due to a network connectivity problem), 408 Request Timeout, 409 Conflict, 429 Rate Limit, and >=500 Internal errors are all retried by default.
 
 You can use the `max_retries` option to configure or disable retry settings:
 
@@ -295,7 +311,7 @@ client.with_options(max_retries=5).chat.completions.create(
 )
 ```
 
-### Timeouts
+## Timeouts
 
 By default requests time out after 10 minutes. You can configure this with a `timeout` option,
 which accepts a float or an [`httpx.Timeout`](https://www.python-httpx.org/advanced/#fine-tuning-the-configuration) object:
@@ -330,9 +346,13 @@ On timeout, an `APITimeoutError` is thrown.
 
 Note that requests that time out are [retried twice by default](#retries).
 
+<!-- ---8<--- [end:handle-errors] -->
+
 ## Advanced
 
 ### Logging
+
+<!-- ---8<--- [start:debugging] -->
 
 We use the standard library [`logging`](https://docs.python.org/3/library/logging.html) module.
 
@@ -354,9 +374,9 @@ if response.my_field is None:
     print('Got json like {"my_field": null}.')
 ```
 
-### Accessing raw response data (e.g. headers)
+### Accessing raw response data (headers)
 
-The "raw" Response object can be accessed by prefixing `.with_raw_response.` to any HTTP method call, e.g.,
+The "raw" Response object can be accessed by prefixing `.with_raw_response.` to any HTTP method call, for example:
 
 ```py
 from openai import OpenAI
@@ -410,7 +430,11 @@ with client.chat.completions.with_streaming_response.create(
 
 The context manager is required so that the response will reliably be closed.
 
+<!-- ---8<--- [end:debugging] -->
+
 ### Configuring the HTTP client
+
+<!-- ---8<--- [start:advanced] -->
 
 You can directly override the [httpx client](https://www.python-httpx.org/api/#client) to customize it for your use case, including:
 
@@ -489,3 +513,5 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
 We are keen for your feedback; please open an [issue](https://www.github.com/openai/openai-python/issues) with questions, bugs, or suggestions.
+
+<!-- ---8<--- [end:advanced] -->

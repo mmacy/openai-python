@@ -57,6 +57,7 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -70,6 +71,11 @@ markdown_extensions:
 
 plugins:
   - search
+  # - gen-files:
+  #     scripts:
+  #     - scripts/gen_ref_nav.py # Can't run automatically because the src/openai/lib/azure.py busts the build
+  - literate-nav:
+      nav_file: SUMMARY.md
   - mkdocstrings:
       handlers:
         python:
@@ -82,7 +88,8 @@ plugins:
           options:
             docstring_options:
               ignore_init_summary: true
-            docstring_section_style: spacy
+              summary: true
+            docstring_section_style: table
             docstring_style: google
             extensions:
               - griffe_inherited_docstrings
@@ -94,7 +101,7 @@ plugins:
             show_bases: true
             show_if_no_docstring: true
             show_root_full_path: false
-            show_root_heading: true
+            show_root_heading: false
             show_signature_annotations: true
             show_source: false
             show_symbol_type_heading: true
@@ -109,36 +116,15 @@ extra:
     link: https://github.com/mmacy
 
 nav:
-  - index.md
-  - get_started.md
-  - API reference:
-    - openai.md
-    - pagination.md
-    - version.md
-    - openai.resources:
-      - resources/index.md
-      - openai.resources.audio: resources/audio/__init__.md
-      - openai.resources.beta:
-        - resources/beta/index.md
-        - openai.resources.beta.assistants: resources/beta/assistants/__init__.md
-        - openai.resources.beta.threads:
-          - resources/beta/threads/index.md
-          - openai.resources.beta.threads.messages: resources/beta/threads/messages/__init__.md
-          - openai.resources.beta.threads.runs: resources/beta/threads/runs/__init__.md
-      - openai.resources.chat: resources/chat/__init__.md
-      - openai.resources.fine_tuning: resources/fine_tuning/__init__.md
-    - openai.types:
-      - types/index.md # was __init__.md
-      - openai.types.audio: types/audio/__init__.md
-      - openai.types.beta:
-        - types/beta/index.md
-        - openai.types.beta.assistants: types/beta/assistants/__init__.md
-        - openai.types.beta.chat: types/beta/chat/__init__.md
-        - openai.types.beta.threads:
-          - types/beta/threads/index.md
-          - openai.types.beta.threads.messages: types/beta/threads/messages/__init__.md
-          - openai.types.beta.threads.runs: types/beta/threads/runs/__init__.md
-      - openai.types.chat: types/chat/__init__.md
-      - openai.types.fine_tuning: types/fine_tuning/__init__.md
-      - openai.types.shared: types/shared/__init__.md
-      - openai.types.shared_params: types/shared_params/__init__.md
+  - Welcome:
+    - index.md
+    - Get started: get_started.md
+    - API reference: reference/index.md
+  - Get started:
+      - get_started.md
+      - connect.md
+      - request-response.md
+      - error-handling.md
+      - debugging.md
+      - advanced.md
+  - API reference: reference/

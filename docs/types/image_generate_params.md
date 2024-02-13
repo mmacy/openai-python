@@ -1,1 +1,0 @@
-::: src.openai.types.image_generate_params

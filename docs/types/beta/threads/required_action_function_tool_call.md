@@ -1,1 +1,0 @@
-::: src.openai.types.beta.threads.required_action_function_tool_call

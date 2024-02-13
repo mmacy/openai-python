@@ -1,1 +1,0 @@
-::: src.openai.types.chat.chat_completion_user_message_param

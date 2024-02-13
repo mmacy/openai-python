@@ -1,1 +1,0 @@
-::: src.openai.types.fine_tuning.job_list_params

@@ -14,10 +14,12 @@ MarkupSafe==2.1.5
 mergedeep==1.3.4
 mkdocs==1.5.3
 mkdocs-autorefs==0.5.0
+mkdocs-gen-files==0.5.0
+mkdocs-literate-nav==0.6.1
 mkdocs-material==9.5.8
 mkdocs-material-extensions==1.3.1
 mkdocstrings==0.24.0
-mkdocstrings-python==1.8.0
+mkdocstrings-python @ git+ssh://git@github.com/pawamoy-insiders/mkdocstrings-python.git@157224dddefd2f2b979f9e92f0506e44c1548f64
 mypy-extensions==1.0.0
 packaging==23.2
 paginate==0.5.6

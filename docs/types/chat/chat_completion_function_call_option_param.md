@@ -1,1 +1,0 @@
-::: src.openai.types.chat.chat_completion_function_call_option_param

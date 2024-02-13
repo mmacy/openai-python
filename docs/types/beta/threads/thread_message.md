@@ -1,1 +1,0 @@
-::: src.openai.types.beta.threads.thread_message
