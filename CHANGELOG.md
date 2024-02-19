@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.13.0 (2024-02-17)
+## 1.13.0 (2024-02-19)
 
 Full Changelog: [v1.12.0...v1.13.0](https://github.com/openai/openai-python/compare/v1.12.0...v1.13.0)
 
