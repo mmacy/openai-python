@@ -47,6 +47,64 @@ __all__ = [
 
 
 class OpenAI(SyncAPIClient):
+    """Provides the client interface for interacting with the services (resources) provided by the OpenAI API.
+
+        An instance of the `OpenAI` class is the top-level object you interact with to make synchronous calls to the
+        OpenAI API. The client provides access to OpenAI's services, or *resources*, like text completion, chat,
+        embeddings, image and audio processing, and managing the files used by these resources.
+
+        The API authorizes requests to its endpoints by validating your API key, which you
+        provide to the `OpenAI` client object in one of two ways:
+
+        - [x] Set an  **environment variable** named `OPENAI_API_KEY` that contains your API key and then instantiate the
+          client *without* passing the `api_key` parameter. This is the preferred method.
+        - [ ] Pass the `api_key` parameter explicitly when you instantiate the client object. Choose this method *only* if
+          you're unable or unwilling to use a more secure method like setting the `OPENAI_API_KEY` environment variable.
+
+        For Azure AD-based authentication (only), provide your Azure AD tenant ID in the `azure_tenant_id` parameter in
+        addition to providing your API key.
+
+        Danger:
+            To prevent unauthorized access to OpenAI services, securely manage credentials like your OpenAI API key.
+
+        Examples:
+            The following code examples each create an instance of the `OpenAI` class ready to call the API. To interact
+            with an OpenAI service, called a [`resource`][src.openai.resources] in the API, you access the appropriate
+            attribute on the initialized client object (named *client* in the code snippets) and call the the methods on
+            the resource. For example, to use the chat completion service, you'd call the [src.openai.resources.Chat.create]method on the `client.chat` attribute.
+
+        - **Environment variable** - API key is obtained by the client automatically from the `OPENAI_API_KEY`
+            environment variable.
+
+            ```python
+            from openai import OpenAI
+
+            # Instantiate the client with NO 'api_key' param so the client will
+            # read the OPENAI_API_KEY environment variable automatically
+            client = OpenAI()
+            ```
+
+        - **Explicit API key** - Instantiate a client object by explicitly passing the API key as an argument to the
+            `OpenAI` constructor. :material-warning: This instantiation method can pose a **security risk** by increasing the chance of
+            exposing your API key in source code.
+
+            ```python
+            from openai import OpenAI
+
+            # Instantiate the client and pass the API key explicitly - USE WITH CAUTION!
+            client = OpenAI(api_key='your_api_key_here')
+            ```
+
+        - Active Directory authentication - Instantiate a client object with Entra ID authentication:
+
+            ```python
+            from openai import OpenAI
+
+            # For organizations that use Entra ID for identity and access management, replace 'your_tenant_id' with your
+            # Azure AD tenant ID.
+            client = OpenAI(azure_tenant_id='your_tenant_id')
+            ```
+    """
     completions: resources.Completions
     chat: resources.Chat
     embeddings: resources.Embeddings
@@ -86,11 +144,22 @@ class OpenAI(SyncAPIClient):
         # part of our public interface in the future.
         _strict_response_validation: bool = False,
     ) -> None:
-        """Construct a new synchronous openai client instance.
+        """Creates a synchronous `OpenAI` client instance.
 
-        This automatically infers the following arguments from their corresponding environment variables if they are not provided:
-        - `api_key` from `OPENAI_API_KEY`
-        - `organization` from `OPENAI_ORG_ID`
+        Args:
+            api_key (str | None, optional): OpenAI API key to use for authorization. Do **NOT** use this arg if you set
+                the `OPENAI_API_KEY` environment variable. Defaults to None.
+            organization (str | None, optional): _description_. Defaults to None.
+            base_url (str | httpx.URL | None, optional): _description_. Defaults to None.
+            timeout (Union[float, Timeout, None, NotGiven], optional): _description_. Defaults to NOT_GIVEN.
+            max_retries (int, optional): _description_. Defaults to DEFAULT_MAX_RETRIES.
+            default_headers (Mapping[str, str] | None, optional): _description_. Defaults to None.
+            default_query (Mapping[str, object] | None, optional): _description_. Defaults to None.
+            http_client (httpx.Client | None, optional): _description_. Defaults to None.
+            _strict_response_validation (bool, optional): _description_. Defaults to False.
+
+        Raises:
+            OpenAIError: If the `OPENAI_API_KEY` environment variable isn't set and `api_key` wasn't provided.
         """
         if api_key is None:
             api_key = os.environ.get("OPENAI_API_KEY")
@@ -171,8 +240,7 @@ class OpenAI(SyncAPIClient):
         set_default_query: Mapping[str, object] | None = None,
         _extra_kwargs: Mapping[str, Any] = {},
     ) -> Self:
-        """
-        Create a new client instance re-using the same options given to the current client with optional overriding.
+        """Create a new client instance re-using the same options given to the current client with optional overriding.
         """
         if default_headers is not None and set_default_headers is not None:
             raise ValueError("The `default_headers` and `set_default_headers` arguments are mutually exclusive")
@@ -369,8 +437,7 @@ class AsyncOpenAI(AsyncAPIClient):
         set_default_query: Mapping[str, object] | None = None,
         _extra_kwargs: Mapping[str, Any] = {},
     ) -> Self:
-        """
-        Create a new client instance re-using the same options given to the current client with optional overriding.
+        """Create a new client instance re-using the same options given to the current client with optional overriding.
         """
         if default_headers is not None and set_default_headers is not None:
             raise ValueError("The `default_headers` and `set_default_headers` arguments are mutually exclusive")

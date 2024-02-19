@@ -147,8 +147,7 @@ class PageInfo:
 
 
 class BasePage(GenericModel, Generic[_T]):
-    """
-    Defines the core interface for pagination.
+    """Defines the core interface for pagination.
 
     Type Args:
         ModelT: The pydantic model that represents an item in the response.
@@ -419,8 +418,7 @@ class BaseClient(Generic[_HttpxClientT, _DefaultStreamT]):
         return headers
 
     def _prepare_url(self, url: str) -> URL:
-        """
-        Merge a URL argument together with any 'base_url' on the client,
+        """Merge a URL argument together with any 'base_url' on the client,
         to create the URL used for the outgoing request.
         """
         # Copied from httpx's `_merge_url` method.

@@ -1,0 +1,49 @@
+---
+doc_type: include
+doc_purpose: Central location for descriptions of the services (resources) provided by the OpenAI API.
+---
+
+<!--
+--8<-- [start:type]
+--8<-- [end:type]
+-->
+
+--8<-- [start:audio]
+Offers **audio generation, analysis, and transformation** services. Capabilities range from synthesizing speech from text (text-to-speech) and transforming speech styles to generating music or sound effects. Useful for applications in entertainment, education, accessibility, and digital content creation.
+--8<-- [end:audio]
+
+--8<-- [start:beta]
+Gain **early access to experimental features** and APIs under development. Provides an opportunity to test, provide feedback, and potentially influence the evolution of new OpenAI functionalities. Ideal for developers looking to explore cutting-edge AI technologies and contribute to their refinement.
+--8<-- [end:beta]
+
+--8<-- [start:chat]
+Enables the creation of sophisticated **conversational AI models**. Perfect for designing advanced chatbots, virtual assistants, and interactive customer support solutions. Supports nuanced dialogues and can maintain context over extended conversations.
+--8<-- [end:chat]
+
+--8<-- [start:completions]
+Generates **real-time text completions** and suggestions from given prompts. Ideal for developing features like auto-completion, dynamic content generation, interactive storytelling, and more. Supports customizable parameters for tone, style, and context alignment.
+--8<-- [end:completions]
+
+--8<-- [start:embeddings]
+Generates **numerical representations (embeddings) from text inputs**, capturing semantic meaning for use in machine learning tasks. Essential for semantic search, content categorization, similarity comparison, and clustering applications. Offers multiple embedding models tailored to different domains.
+--8<-- [end:embeddings]
+
+--8<-- [start:files]
+Facilitates **file uploads for batch processing, training custom models, and data storage**. Supports text, images, and potentially other formats for various AI-driven tasks. Enables operations like bulk content analysis, model training data management, and retrieval of stored data.
+--8<-- [end:files]
+
+--8<-- [start:fine_tuning]
+Enables **customizing and enhancing AI model performance** on specific tasks or datasets through fine-tuning. Supports creating more accurate and domain-specific models by training on your data, improving outcomes in areas like targeted content generation, specialized data analysis, and unique application needs.
+--8<-- [end:fine_tuning]
+
+--8<-- [start:images]
+Provides tools for ***generating, editing, and analyzing images** using AI. Capabilities include creating new images from textual descriptions (DALL·E), editing images with natural language commands, and analyzing image content. Suitable for content creation, graphic design, and automated image moderation.
+--8<-- [end:images]
+
+--8<-- [start:models]
+**Access information and perform operations on various AI models** available through OpenAI. This includes listing models, understanding their capabilities, and obtaining performance metrics. Enables informed decision-making for selecting the right model for specific tasks.
+--8<-- [end:models]
+
+--8<-- [start:moderations]
+Automates the **detection and filtering of inappropriate or unsafe content** across text, images, and audio. Supports customizable thresholds for content sensitivity, helping ensure user-generated content aligns with community guidelines or regulatory standards.
+--8<-- [end:moderations]
