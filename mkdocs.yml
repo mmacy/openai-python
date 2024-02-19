@@ -9,7 +9,7 @@ watch: [README.md, src/openai]
 theme:
   name: material
   icon:
-    repo: fontawesome/brands/github
+    repo: fontawesome/brands/git-alt
 
   palette:
     - media: "(prefers-color-scheme: light)"

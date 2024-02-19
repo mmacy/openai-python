@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless.
-
+"""--8<-- 'docs/reference/include/openai.resources.include:chat'"""
 from __future__ import annotations
 
 from ..._compat import cached_property

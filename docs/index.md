@@ -10,7 +10,7 @@ Welcome to Marsh's totally unofficial and totally unsupported documentation for 
 
 ## About these docs
 
-These docs are officially unofficial and unsupported, but you're welcome to use and improve them until OpenAI brings up their own (1) or they ask me to take them down.
+These docs are officially unofficial, but you're welcome to use and improve them until OpenAI brings up their own (1) or they ask me to take them down.
 { .annotate }
 
 1. I'll likely decommission this site when OpenAI [publishes their own Python API reference](https://community.openai.com/t/where-is-the-documentation-for-the-python-openai-sdk/583643).

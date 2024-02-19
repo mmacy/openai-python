@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless.
-
+"""--8<-- 'docs/reference/include/openai.resources.include:beta'"""
 from __future__ import annotations
 
 from .threads import (

@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless.
-
+"""--8<-- 'docs/reference/include/openai.resources.include:images'"""
 from __future__ import annotations
 
 from typing import Union, Mapping, Optional, cast

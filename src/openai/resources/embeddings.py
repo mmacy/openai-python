@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless.
-
+"""--8<-- 'docs/reference/include/openai.resources.include:embeddings'"""
 from __future__ import annotations
 
 import base64
