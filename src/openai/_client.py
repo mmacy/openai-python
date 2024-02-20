@@ -324,7 +324,7 @@ class OpenAI(SyncAPIClient):
             return _exceptions.InternalServerError(err_msg, response=response, body=data)
         return APIStatusError(err_msg, response=response, body=data)
 
-client = OpenAI()
+
 class AsyncOpenAI(AsyncAPIClient):
     completions: resources.AsyncCompletions
     chat: resources.AsyncChat
