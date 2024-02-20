@@ -47,6 +47,58 @@ __all__ = [
 
 
 class OpenAI(SyncAPIClient):
+    """Primary synchronous client interface for interacting with the services (resources) provided by the OpenAI API.
+
+        An instance of the `OpenAI` class is the top-level object you interact with to make synchronous calls to the
+        OpenAI API. The client provides access to OpenAI's services, or *resources*, like text completion, chat,
+        embeddings, image and audio processing, and managing the files used by these resources.
+
+        The API authenticates requests to its endpoints by validating your API key, which you provide to the `OpenAI`
+        client object in one of two ways:
+
+        :material-checkbox-marked-circle-outline: **Set an  environment variable** named `OPENAI_API_KEY` that contains
+        your API key and then instantiate the client *without* passing the `api_key` parameter. This is the preferred
+        method.
+
+        :material-alert: **Pass the `api_key` parameter explicitly** when you instantiate the client object. Choose this
+        method *only* if you're unwilling or unable to use a more secure method like setting the `OPENAI_API_KEY`
+        environment variable.
+
+        Danger:
+            To prevent unauthorized access to OpenAI services, securely manage credentials like your OpenAI API key.
+
+        Examples:
+            The following code snippets each create an instance of the `OpenAI` class ready to call the API. To interact
+            with an OpenAI service (a [`resource`][src.openai.resources] in the API), you access the appropriate
+            attribute on the initialized client object and call the the methods provided by that resource.
+
+        - Create client using **inferred API key** ⁠— The API key is obtained by the `OpenAI` client automatically from
+            the `OPENAI_API_KEY` environment variable if you *omit* the `api_key` constructor argument.
+
+            ```python
+            from openai import OpenAI
+
+            # Instantiate the client with NO 'api_key' param so the client will
+            # read the OPENAI_API_KEY variable from the environment automatically
+            client = OpenAI()
+            ```
+
+        - Create client using **explicit API key** ⁠— Passing the API key explicitly directs the `OpenAI` client to use
+            that key instead of the `OPENAI_API_KEY` environment variable (if set).
+
+            :material-alert: This instantiation method can pose an increased **security risk**. For example, by
+            instantiating the client this way in your code, it's easier to accidentally commit your API key to version
+            control, which you should *never* do.
+
+            ```python
+            from openai import OpenAI
+
+            # !!! USE WITH CAUTION !!!
+
+            # Instantiate the client and pass the API key explicitly
+            client = OpenAI(api_key='your_api_key_here')
+            ```
+    """
     completions: resources.Completions
     chat: resources.Chat
     embeddings: resources.Embeddings
@@ -86,11 +138,41 @@ class OpenAI(SyncAPIClient):
         # part of our public interface in the future.
         _strict_response_validation: bool = False,
     ) -> None:
-        """Construct a new synchronous openai client instance.
+        """Initializes a new instance of the OpenAI client for making synchronous API requests.
 
-        This automatically infers the following arguments from their corresponding environment variables if they are not provided:
-        - `api_key` from `OPENAI_API_KEY`
-        - `organization` from `OPENAI_ORG_ID`
+        Args:
+            api_key (str | None, optional): The API key used for authenticating requests to OpenAI. If not provided, the
+                client attempts to retrieve the API key from the `OPENAI_API_KEY` environment variable. Defaults to None.
+            organization (str | None, optional): The ID of the organization under which the API calls are made. This is
+                optional and typically used for OpenAI services that require organization-level access control. If not
+                provided, the client attempts to retrieve the organization ID from the `OPENAI_ORG_ID` environment
+                variable. Defaults to None.
+            base_url (str | httpx.URL | None, optional): The base URL for the OpenAI API. This allows for custom API
+                endpoints like those used for testing or specific API versions. If not provided, defaults to the
+                official OpenAI API URL.
+            timeout (Union[float, Timeout, None, NotGiven], optional): The timeout for API requests. This can be
+                specified as a float representing seconds, a `httpx.Timeout` object for fine-grained control, or `None`
+                to use the default timeout. Defaults to `NOT_GIVEN`, which utilizes the `httpx` default timeout settings.
+            max_retries (int, optional): The maximum number of retries for failed requests. This can help handle
+                transient network issues or rate limit errors gracefully. Defaults to a predefined constant
+                `DEFAULT_MAX_RETRIES`.
+            default_headers (Mapping[str, str] | None, optional): Default headers to include with every request. This
+                can be used to set global headers like `User-Agent` or custom headers required for integration.
+                Defaults to None.
+            default_query (Mapping[str, object] | None, optional): Default query parameters to include with every
+                request. This is useful for setting global parameters that should be included in all API calls. Defaults
+                to None.
+            http_client (httpx.Client | None, optional): An instance of `httpx.Client` to be used for making HTTP
+                requests. This allows for custom configuration of the HTTP client, like setting proxies or client-side
+                SSL certificates. If not provided, a default `httpx.Client` instance is used. Defaults to None.
+            _strict_response_validation (bool, optional): Enables or disables strict validation of API responses against
+                the expected schema. This is primarily used for development and debugging purposes to ensure the API
+                responses match the expected format. Note that this argument may be removed or changed in future releases.
+                Defaults to False.
+
+        Raises:
+            OpenAIError: If neither the `api_key` is provided nor the `OPENAI_API_KEY` environment variable is set,
+                indicating that the client's requests to the OpenAI API would fail authentication.
         """
         if api_key is None:
             api_key = os.environ.get("OPENAI_API_KEY")
@@ -171,8 +253,7 @@ class OpenAI(SyncAPIClient):
         set_default_query: Mapping[str, object] | None = None,
         _extra_kwargs: Mapping[str, Any] = {},
     ) -> Self:
-        """
-        Create a new client instance re-using the same options given to the current client with optional overriding.
+        """Create a new client instance re-using the same options given to the current client with optional overriding.
         """
         if default_headers is not None and set_default_headers is not None:
             raise ValueError("The `default_headers` and `set_default_headers` arguments are mutually exclusive")
@@ -369,8 +450,7 @@ class AsyncOpenAI(AsyncAPIClient):
         set_default_query: Mapping[str, object] | None = None,
         _extra_kwargs: Mapping[str, Any] = {},
     ) -> Self:
-        """
-        Create a new client instance re-using the same options given to the current client with optional overriding.
+        """Create a new client instance re-using the same options given to the current client with optional overriding.
         """
         if default_headers is not None and set_default_headers is not None:
             raise ValueError("The `default_headers` and `set_default_headers` arguments are mutually exclusive")

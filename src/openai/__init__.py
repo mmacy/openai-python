@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless.
-
+""" --8<-- 'docs/reference/include/openai_init.py:openai' """
 from __future__ import annotations
 
 import os as _os

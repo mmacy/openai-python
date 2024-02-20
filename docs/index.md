@@ -10,7 +10,7 @@ Welcome to Marsh's totally unofficial and totally unsupported documentation for 
 
 ## About these docs
 
-These docs are officially unofficial and unsupported, but you're welcome to use and improve them until OpenAI brings up their own (1) or they ask me to take them down.
+These docs are officially unofficial, but you're welcome to use and improve them until OpenAI brings up their own (1) or they ask me to take them down.
 { .annotate }
 
 1. I'll likely decommission this site when OpenAI [publishes their own Python API reference](https://community.openai.com/t/where-is-the-documentation-for-the-python-openai-sdk/583643).
@@ -30,4 +30,4 @@ That said, I use these docs myself and thus intend to keep them (mostly) current
 
 1. That means you might encounter inaccuracies or you might not find what you think should be here. In either case, you should refer to [openai/openai-python](https://github.com/openai/openai-python) as the source of truth.
 
-:material-hand-wave: *Enjoy!* —[Marsh](https://github.com/mmacy)
+:material-peace: *Enjoy!* —[Marsh](https://github.com/mmacy)
