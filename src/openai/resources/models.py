@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless.
-"""--8<-- 'docs/reference/include/openai.resources.include:models'"""
+""" --8<-- 'docs/reference/include/openai.resources.py:models' """
 from __future__ import annotations
 
 import httpx

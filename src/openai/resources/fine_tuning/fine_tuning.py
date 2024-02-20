@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless.
-"""--8<-- 'docs/reference/include/openai.resources.include:fine_tuning'"""
+""" --8<-- 'docs/reference/include/openai.resources.py:fine_tuning' """
 from __future__ import annotations
 
 from .jobs import (

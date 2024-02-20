@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless.
-"""--8<-- 'docs/reference/include/openai.resources.include:chat_completions'"""
+""" --8<-- 'docs/reference/include/openai.resources.py:chat_completions' """
 from __future__ import annotations
 
 from typing import Dict, List, Union, Iterable, Optional, overload
@@ -1390,8 +1390,6 @@ class AsyncCompletions(AsyncAPIResource):
             functions (Optional[Iterable[Function]]): Deprecated. Originally provided a list of functions the
                 model could choose to call during generation. Like `function_call`, this parameter has been
                 superseded by `tools`.
-            instance_id (Optional[str]): Identifier for a custom instance to execute the request, for users with
-                access. This allows for targeting specific computational resources or configurations.
             logit_bias (Optional[Dicst[str, int]]): Modifies token likelihood, mapping token IDs to bias values
                 (-100 to 100), influencing selection. This mechanism allows for fine-tuning the presence or
                 avoidance of specific words or phrases in the generated text.
