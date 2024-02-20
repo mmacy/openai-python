@@ -9,6 +9,11 @@ Full Changelog: [v1.12.0...v1.13.0](https://github.com/openai/openai-python/comp
 * **api:** updates ([#1146](https://github.com/openai/openai-python/issues/1146)) ([79b7675](https://github.com/openai/openai-python/commit/79b7675e51fb7d269a6ea281a568bc7812ba2ace))
 
 
+### Bug Fixes
+
+* **api:** remove non-GA instance_id param ([#1164](https://github.com/openai/openai-python/issues/1164)) ([1abe139](https://github.com/openai/openai-python/commit/1abe139b1a5f5cc41263738fc12856056dce5697))
+
+
 ### Chores
 
 * **ci:** move github release logic to github app ([#1155](https://github.com/openai/openai-python/issues/1155)) ([67cfac2](https://github.com/openai/openai-python/commit/67cfac2564dfb718da0465e34b90ac6928fa962a))
