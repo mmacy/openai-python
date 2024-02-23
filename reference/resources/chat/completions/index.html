@@ -3098,7 +3098,7 @@ preventing excessively long waits or premature termination of requests.</p>
             <td><code><a class="autorefs autorefs-internal" title="src.openai.resources.chat.completions.Completions.create" href="#src.openai.resources.chat.completions.Completions.create">create</a></code></td>
             <td class="doc-function-details">
               <div class="doc-md-description">
-                
+                <p>Creates a model response for the given chat conversation, tailored by a variety of customizable parameters.</p>
               </div>
             </td>
           </tr>
@@ -3392,6 +3392,542 @@ preventing excessively long waits or premature termination of requests.</p>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
+  
+      <p>Creates a model response for the given chat conversation, tailored by a variety of customizable parameters.</p>
+<p>This method allows for detailed control over the chat completion process, including model selection,
+response formatting, and dynamic interaction through streaming.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>messages</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Messages comprising the conversation so far. Example Python code available at
+<a href="https://cookbook.openai.com/examples/how_to_format_inputs_to_chatgpt_models">How to format inputs to ChatGPT models</a>.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-internal" title="src.openai.types.chat.ChatCompletionMessageParam" href="../../../types/chat/chat_completion_message_param/#src.openai.types.chat.chat_completion_message_param.ChatCompletionMessageParam">ChatCompletionMessageParam</a>]</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>model</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>ID of the model to use. Refer to the <a href="https://platform.openai.com/docs/models/model-endpoint-compatibility">model endpoint compatibility</a>
+table for details on which models are compatible with the Chat API.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <span title="typing_extensions.Literal">Literal</span>[...]</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>stream</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>If True, enables streaming of message deltas. Tokens are sent as server-sent events as they become available,
+terminating with a <code>data: [DONE]</code> message. See <a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Event_stream_format">Using server-sent events</a>
+for more on this format and <a href="https://cookbook.openai.com/examples/how_to_stream_completions">How to stream completions</a>
+for example Python code.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing_extensions.Literal">Literal</span>[True]</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>frequency_penalty</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Adjusts token generation frequency to discourage repetition, with a range between -2.0 and 2.0.
+More details at <a href="https://platform.openai.com/docs/guides/text-generation/parameter-details">frequency and presence penalties</a>.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>Optional[float], default=NOT_GIVEN</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>function_call</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Deprecated in favor of <code>tool_choice</code>. Controls the function call behavior within the model.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="src.openai.types.chat.completion_create_params.FunctionCall" href="../../../types/chat/completion_create_params/#src.openai.types.chat.completion_create_params.FunctionCall">FunctionCall</a></code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>functions</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Deprecated in favor of <code>tools</code>. Lists functions the model can call.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-internal" title="src.openai.types.chat.completion_create_params.Function" href="../../../types/chat/completion_create_params/#src.openai.types.chat.completion_create_params.Function">Function</a>]</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>logit_bias</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Modifies the likelihood of specified tokens. Accepts a dict mapping token IDs to bias values (-100 to 100).</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>Optional[Dict[str, int]], default=NOT_GIVEN</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>logprobs</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Includes log probabilities of output tokens when True. Not available for <code>gpt-4-vision-preview</code>.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>Optional[bool], default=NOT_GIVEN</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>max_tokens</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Sets the maximum token count for the chat completion. See <a href="https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken">How to count tokens with TikToken</a>
+for token counting examples.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>Optional[int], default=NOT_GIVEN</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>n</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Number of chat completion choices to generate for each message. Affects cost.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>Optional[int], default=NOT_GIVEN</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>presence_penalty</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Adjusts for token presence to promote topic diversity, with a range between -2.0 and 2.0.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>Optional[float], default=NOT_GIVEN</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>response_format</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Specifies the model output format, compatible with GPT-4 Turbo and GPT-3.5 Turbo models newer than
+<code>gpt-3.5-turbo-1106</code>. JSON mode ensures valid JSON output.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="src.openai.types.chat.completion_create_params.ResponseFormat" href="../../../types/chat/completion_create_params/#src.openai.types.chat.completion_create_params.ResponseFormat">ResponseFormat</a></code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>seed</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Seeds the RNG for deterministic outputs. Beta feature.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>Optional[int], default=NOT_GIVEN</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>stop</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Sequences indicating when to halt token generation.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>Union[Optional[str], List[str]], default=NOT_GIVEN</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>temperature</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Controls output randomness. Recommended to adjust this or <code>top_p</code>, but not both.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>Optional[float], default=NOT_GIVEN</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>tool_choice</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Selects a tool or function for the model to use.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="src.openai.types.chat.ChatCompletionToolChoiceOptionParam" href="../../../types/chat/chat_completion_tool_choice_option_param/#src.openai.types.chat.chat_completion_tool_choice_option_param.ChatCompletionToolChoiceOptionParam">ChatCompletionToolChoiceOptionParam</a></code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>tools</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Specifies available tools for the model, currently limited to functions.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-internal" title="src.openai.types.chat.ChatCompletionToolParam" href="../../../types/chat/chat_completion_tool_param/#src.openai.types.chat.chat_completion_tool_param.ChatCompletionToolParam">ChatCompletionToolParam</a>]</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>top_logprobs</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Returns top log probabilities for each token position. Requires <code>logprobs</code> to be True.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>Optional[int], default=NOT_GIVEN</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>top_p</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Nucleus sampling parameter, considering only the top probability mass for generation.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>Optional[float], default=NOT_GIVEN</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>user</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Unique identifier for the end-user, assisting in abuse monitoring. Learn more at
+<a href="https://platform.openai.com/docs/guides/safety-best-practices/end-user-ids">End-user IDs</a>.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | <span title="src.openai._types.NotGiven">NotGiven</span></code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>extra_headers</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Additional HTTP headers for the request.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="src.openai._types.Headers">Headers</span></code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>extra_query</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Additional query parameters for the request.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="src.openai._types.Query">Query</span></code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>extra_body</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Additional body content for the request.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="src.openai._types.Body">Body</span></code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <code>timeout</code>
+          </td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Custom timeout for this request, overriding the default settings.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>float | httpx.Timeout | None | NotGiven, default=NOT_GIVEN</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code><span title="src.openai._types.NOT_GIVEN">NOT_GIVEN</span></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <span class="doc-returns-annotation">
+                  <code><a class="autorefs autorefs-internal" title="src.openai.types.chat.ChatCompletion" href="../../../types/chat/chat_completion/#src.openai.types.chat.chat_completion.ChatCompletion">ChatCompletion</a> | <a class="autorefs autorefs-internal" title="src.openai._streaming.Stream" href="../../../#src.openai.Stream">Stream</a>[<a class="autorefs autorefs-internal" title="src.openai.types.chat.ChatCompletionChunk" href="../../../types/chat/chat_completion_chunk/#src.openai.types.chat.chat_completion_chunk.ChatCompletionChunk">ChatCompletionChunk</a>]</code>
+              </span>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>Stream[ChatCompletionChunk]: A stream of chat completion chunks for real-time interaction.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">... </span>    <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello, world!&quot;</span><span class="p">}],</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">... </span>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-3.5-turbo&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">... </span>    <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gp">... </span>    <span class="n">frequency_penalty</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gp">... </span>    <span class="c1"># Additional parameters...</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="gp">... </span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="go">&lt;Stream of ChatCompletionChunk&gt;</span>
+</span></code></pre></div>
 
   </div>
 

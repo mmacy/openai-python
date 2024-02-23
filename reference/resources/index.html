@@ -3799,6 +3799,15 @@
 
 <a id="src.openai.resources"></a>
   <div class="doc doc-contents first">
+  
+      <p>The <code>resources</code> module aggregates classes and functions for interacting with the OpenAI API into several submodules,
+each representing a specific resource or feature of the API.</p>
+<p>The submodules' classes mirror the structure of the API's endpoints and offer synchronous and asynchronous
+communication with the API.</p>
+<p>Each resource is accessible as an attribute on the <a class="autorefs autorefs-internal" href="../#src.openai.OpenAI"><code>OpenAI</code></a> and <a class="autorefs autorefs-internal" href="../#src.openai.AsyncOpenAI"><code>AsyncOpenAI</code></a>
+clients. To work with a resource, initialize an instance of one of the clients and access the resource as an attribute
+on the client instance. For example, to work with the <code>chat</code> resource, create an instance of the <code>OpenAI</code> client and
+access the attributes and methods on <code>your_client_instance.chat</code>.</p>
 
 
 
@@ -3835,7 +3844,7 @@
           <td>
             <div class="doc-md-description">
               <p>The <code>chat</code> module provides classes for creating and managing chat sessions that leverage OpenAI's language models to generate conversational responses.</p>
-<p>The module supports both synchronous and asynchronous operations, offering interfaces for direct interaction with the completion endpoints tailored for chat applications. Designed for developers looking to integrate AI-powered chat functionalities into their applicationsand features like raw and streaming response handling for more flexible integration.</p>
+<p>The module supports both synchronous and asynchronous operations, offering interfaces for direct interaction with the completion endpoints tailored for chat applications. Designed for developers looking to integrate AI-powered chat functionalities into their applications and features like raw and streaming response handling for more flexible integration.</p>
             </div>
           </td>
         </tr>

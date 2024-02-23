@@ -2081,14 +2081,31 @@ resources that provide access to its AI <a href="https://platform.openai.com/doc
 including large language models (LLMs) like GPT-4 and models for working with images and audio. The <code>openai</code> package
 provides both synchronous and asynchronous API clients, options to configure their behavior, and modules that provide
 Python code with an API surface to interact with the OpenAI platform.</p>
-<p>To get started, check out the documentation for the module representing the <a class="autorefs autorefs-internal" href="resources/#src.openai.resources">resource</a> you're interested in using for your
-project. For example, the <a class="autorefs autorefs-internal" href="resources/chat/completions/#src.openai.resources.chat.completions"><code>resources.chat.completions</code></a> module is what you'd use
+<p>To get started, read the submodule descriptions in <a class="autorefs autorefs-internal" href="resources/#src.openai.resources"><code>resources</code></a> to determine which best fits your
+project. For example, the <a class="autorefs autorefs-internal" href="resources/chat/#src.openai.resources.chat"><code>resources.chat</code></a> submodule description indicates it's a good fit
 for conversational chat-style interactions with an LLM like <a href="https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo">GPT-4 Turbo</a>.
-Or, maybe you need the <a class="autorefs autorefs-internal" href="resources/audio/#src.openai.resources.audio"><code>resources.audio</code></a> module for performing audio transcription, translation, and
-speech synthesis in your app.</p>
-<p>Documentation for the library's main API client classes, <a class="autorefs autorefs-internal" href="#src.openai.OpenAI"><code>OpenAI</code></a> and
-<a class="autorefs autorefs-internal" href="#src.openai.AsyncOpenAI"><code>AsyncOpenAI</code></a>, is another good place to start. The clients are the primary contact point for
-your code that needs to work with any of the resources available on OpenAI API endpoints.</p>
+Or, maybe you need the <a class="autorefs autorefs-internal" href="resources/audio/#src.openai.resources.audio"><code>resources.audio</code></a> module to perform audio transcription,
+translation, and speech synthesis in your app.</p>
+<p>Once you've determined the resource to use, create an <a class="autorefs autorefs-internal" href="#src.openai.OpenAI"><code>OpenAI</code></a> or <a class="autorefs autorefs-internal" href="#src.openai.AsyncOpenAI"><code>AsyncOpenAI</code></a>
+client instance and access the instance attribute for that resource on the client object. For example, if you instantiate
+an <code>OpenAI</code> client object named <code>client</code>, you'd access the <a class="autorefs autorefs-internal" href="#src.openai.OpenAI.chat"><code>OpenAI.chat</code></a> instance attribute:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">OpenAI</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Reads API key from OPENAI_API_KEY environment variable</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">()</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Use the `chat` resource to interact with the OpenAI chat completions endpoint</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">completion</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4&quot;</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="p">{</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Say this is a test&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="p">},</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="p">],</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">completion</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</span></code></pre></div>
 <p>For more information about the REST API this package talks to or to find client libraries for other programming
 languages, see:</p>
 <ul>
@@ -2128,7 +2145,14 @@ languages, see:</p>
           <td><code><a class="autorefs autorefs-internal" title="src.openai.resources" href="resources/#src.openai.resources">resources</a></code></td>
           <td class="doc-module-details">
             <div class="doc-md-description">
-              
+              <p>The <code>resources</code> module aggregates classes and functions for interacting with the OpenAI API into several submodules,
+each representing a specific resource or feature of the API.</p>
+<p>The submodules' classes mirror the structure of the API's endpoints and offer synchronous and asynchronous
+communication with the API.</p>
+<p>Each resource is accessible as an attribute on the <a class="autorefs autorefs-internal" href="#src.openai.OpenAI"><code>OpenAI</code></a> and <a class="autorefs autorefs-internal" href="#src.openai.AsyncOpenAI"><code>AsyncOpenAI</code></a>
+clients. To work with a resource, initialize an instance of one of the clients and access the resource as an attribute
+on the client instance. For example, to work with the <code>chat</code> resource, create an instance of the <code>OpenAI</code> client and
+access the attributes and methods on <code>your_client_instance.chat</code>.</p>
             </div>
           </td>
         </tr>
