@@ -8,6 +8,7 @@
 #   with-sources: false
 
 -e file:.
+    # via file:///-
 annotated-types==0.6.0
     # via pydantic
 anyio==4.1.0
@@ -96,6 +97,7 @@ pydantic-core==2.10.1
     # via pydantic
 pyjwt==2.8.0
     # via msal
+    # via pyjwt
 pyright==1.1.332
 pytest==7.1.1
     # via pytest-asyncio
@@ -111,8 +113,6 @@ requests==2.31.0
     # via msal
 respx==0.20.2
 ruff==0.1.9
-setuptools==68.2.2
-    # via nodeenv
 six==1.16.0
     # via azure-core
     # via python-dateutil
@@ -143,3 +143,5 @@ virtualenv==20.24.5
     # via nox
 zipp==3.17.0
     # via importlib-metadata
+setuptools==68.2.2
+    # via nodeenv
