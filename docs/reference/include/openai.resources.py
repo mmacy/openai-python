@@ -1,5 +1,18 @@
 """Snippets in this docstring are ingested by other documentation (including library docstrings) during the MkDocs build process.
 
+# --8<-- [start:resources]
+The `resources` module aggregates classes and functions for interacting with the OpenAI API into several submodules,
+each representing a specific resource or feature of the API.
+
+The submodules' classes mirror the structure of the API's endpoints and offer synchronous and asynchronous
+communication with the API.
+
+Each resource is accessible as an attribute on the [`OpenAI`][src.openai.OpenAI] and [`AsyncOpenAI`][src.openai.AsyncOpenAI]
+clients. To work with a resource, initialize an instance of one of the clients and access the resource as an attribute
+on the client instance. For example, to work with the `chat` resource, create an instance of the `OpenAI` client and
+access the attributes and methods on `your_client_instance.chat`.
+# --8<-- [end:resources]
+
 # --8<-- [start:audio]
 The `audio` module provides classes for handling various audio processing operations, including transcription of audio to text, translation of spoken content, and speech synthesis.
 
@@ -15,7 +28,7 @@ The module aggregates the beta functionalities related to features like yet cons
 # --8<-- [start:chat]
 The `chat` module provides classes for creating and managing chat sessions that leverage OpenAI's language models to generate conversational responses.
 
-The module supports both synchronous and asynchronous operations, offering interfaces for direct interaction with the completion endpoints tailored for chat applications. Designed for developers looking to integrate AI-powered chat functionalities into their applicationsand features like raw and streaming response handling for more flexible integration.
+The module supports both synchronous and asynchronous operations, offering interfaces for direct interaction with the completion endpoints tailored for chat applications. Designed for developers looking to integrate AI-powered chat functionalities into their applications and features like raw and streaming response handling for more flexible integration.
 # --8<-- [end:chat]
 
 # --8<-- [start:chat_completions]

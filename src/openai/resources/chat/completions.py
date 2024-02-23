@@ -660,6 +660,83 @@ class Completions(SyncAPIResource):
         extra_body: Body | None = None,
         timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
     ) -> ChatCompletion | Stream[ChatCompletionChunk]:
+        """Creates a model response for the given chat conversation, tailored by a variety of customizable parameters.
+
+        This method allows for detailed control over the chat completion process, including model selection,
+        response formatting, and dynamic interaction through streaming.
+
+        Args:
+            messages (Iterable[ChatCompletionMessageParam]):
+                Messages comprising the conversation so far. Example Python code available at
+                [How to format inputs to ChatGPT models](https://cookbook.openai.com/examples/how_to_format_inputs_to_chatgpt_models).
+            model (str | Literal[...]):
+                ID of the model to use. Refer to the [model endpoint compatibility](https://platform.openai.com/docs/models/model-endpoint-compatibility)
+                table for details on which models are compatible with the Chat API.
+            stream (Literal[True]):
+                If True, enables streaming of message deltas. Tokens are sent as server-sent events as they become available,
+                terminating with a `data: [DONE]` message. See [Using server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Event_stream_format)
+                for more on this format and [How to stream completions](https://cookbook.openai.com/examples/how_to_stream_completions)
+                for example Python code.
+            frequency_penalty (Optional[float], default=NOT_GIVEN):
+                Adjusts token generation frequency to discourage repetition, with a range between -2.0 and 2.0.
+                More details at [frequency and presence penalties](https://platform.openai.com/docs/guides/text-generation/parameter-details).
+            function_call (completion_create_params.FunctionCall, optional):
+                Deprecated in favor of `tool_choice`. Controls the function call behavior within the model.
+            functions (Iterable[completion_create_params.Function], optional):
+                Deprecated in favor of `tools`. Lists functions the model can call.
+            logit_bias (Optional[Dict[str, int]], default=NOT_GIVEN):
+                Modifies the likelihood of specified tokens. Accepts a dict mapping token IDs to bias values (-100 to 100).
+            logprobs (Optional[bool], default=NOT_GIVEN):
+                Includes log probabilities of output tokens when True. Not available for `gpt-4-vision-preview`.
+            max_tokens (Optional[int], default=NOT_GIVEN):
+                Sets the maximum token count for the chat completion. See [How to count tokens with TikToken](https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken)
+                for token counting examples.
+            n (Optional[int], default=NOT_GIVEN):
+                Number of chat completion choices to generate for each message. Affects cost.
+            presence_penalty (Optional[float], default=NOT_GIVEN):
+                Adjusts for token presence to promote topic diversity, with a range between -2.0 and 2.0.
+            response_format (completion_create_params.ResponseFormat, optional):
+                Specifies the model output format, compatible with GPT-4 Turbo and GPT-3.5 Turbo models newer than
+                `gpt-3.5-turbo-1106`. JSON mode ensures valid JSON output.
+            seed (Optional[int], default=NOT_GIVEN):
+                Seeds the RNG for deterministic outputs. Beta feature.
+            stop (Union[Optional[str], List[str]], default=NOT_GIVEN):
+                Sequences indicating when to halt token generation.
+            temperature (Optional[float], default=NOT_GIVEN):
+                Controls output randomness. Recommended to adjust this or `top_p`, but not both.
+            tool_choice (ChatCompletionToolChoiceOptionParam, optional):
+                Selects a tool or function for the model to use.
+            tools (Iterable[ChatCompletionToolParam], optional):
+                Specifies available tools for the model, currently limited to functions.
+            top_logprobs (Optional[int], default=NOT_GIVEN):
+                Returns top log probabilities for each token position. Requires `logprobs` to be True.
+            top_p (Optional[float], default=NOT_GIVEN):
+                Nucleus sampling parameter, considering only the top probability mass for generation.
+            user (str | NotGiven):
+                Unique identifier for the end-user, assisting in abuse monitoring. Learn more at
+                [End-user IDs](https://platform.openai.com/docs/guides/safety-best-practices/end-user-ids).
+            extra_headers (Headers, optional):
+                Additional HTTP headers for the request.
+            extra_query (Query, optional):
+                Additional query parameters for the request.
+            extra_body (Body, optional):
+                Additional body content for the request.
+            timeout (float | httpx.Timeout | None | NotGiven, default=NOT_GIVEN):
+                Custom timeout for this request, overriding the default settings.
+
+        Returns:
+            Stream[ChatCompletionChunk]: A stream of chat completion chunks for real-time interaction.
+
+        Examples:
+            >>> create(
+            ...     messages=[{"role": "user", "content": "Hello, world!"}],
+            ...     model="gpt-3.5-turbo",
+            ...     stream=True,
+            ...     frequency_penalty=0.5,
+            ...     # Additional parameters...
+            ... )
+            <Stream of ChatCompletionChunk>
+        """
         return self._post(
             "/chat/completions",
             body=maybe_transform(
