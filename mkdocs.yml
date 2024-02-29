@@ -121,8 +121,9 @@ nav:
   - Welcome:
     - index.md
     - Get started: get_started.md
-    - Examples: examples/index.md
     - API reference: reference/index.md
+    - Examples: examples/index.md
+    - Changelog: changelog.md
   - Get started:
       - get_started.md
       - connect.md
@@ -130,5 +131,6 @@ nav:
       - error-handling.md
       - debugging.md
       - advanced.md
-  - Examples: examples/
   - API reference: reference/
+  - Example code: examples/
+  - Changelog: changelog.md
