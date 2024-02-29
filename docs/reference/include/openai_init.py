@@ -16,7 +16,7 @@ translation, and speech synthesis in your app.
 
 Once you've determined the resource to use, create an [`OpenAI`][src.openai.OpenAI] or [`AsyncOpenAI`][src.openai.AsyncOpenAI]
 client instance and access the instance attribute for that resource on the client object. For example, if you instantiate
-an `OpenAI` client object named `client`, youd access the [`OpenAI.chat`][src.openai.OpenAI.chat] instance attribute:
+an `OpenAI` client object named `client`, you'd access the [`OpenAI.chat`][src.openai.OpenAI.chat] instance attribute:
 
 ```python
 from openai import OpenAI

@@ -1,19 +1,21 @@
 # Welcome
 
-Welcome to Marsh's totally unofficial and totally unsupported documentation for the OpenAI Python library.
+Welcome to Marsh's totally unofficial documentation for the OpenAI Python library!
 
 <div class="grid cards" markdown>
-- :material-clock-fast: [Get started with the library](./get_started.md)
-- :octicons-file-code-16: [Examples](./examples/index.md)
 - :simple-python: [OpenAI Python library reference](reference/index.md)
+- :material-clock-fast: [Get started with the library](./get_started.md)
+- :octicons-file-code-16: [Example code](./examples/index.md)
+- :octicons-versions-16: [Library `CHANGELOG`](./changelog.md)
 </div>
+
 
 ## About these docs
 
-These docs are officially unofficial, but you're welcome to use and improve them until OpenAI brings up their own (1) or they ask me to take them down.
+Though this documentation is officially unofficial, you're welcome to use and improve it until OpenAI brings up their own (1) or they ask me to take them down.
 { .annotate }
 
-1. I'll likely decommission this site when OpenAI [publishes their own Python API reference](https://community.openai.com/t/where-is-the-documentation-for-the-python-openai-sdk/583643).
+1. When OpenAI [publishes their own Python API reference](https://community.openai.com/t/where-is-the-documentation-for-the-python-openai-sdk/583643), I might decommission this site.
 
 ### Unofficial
 
