@@ -8,15 +8,29 @@ The submodules' classes mirror the structure of the API's endpoints and offer sy
 communication with the API.
 
 Each resource is accessible as an attribute on the [`OpenAI`][src.openai.OpenAI] and [`AsyncOpenAI`][src.openai.AsyncOpenAI]
-clients. To work with a resource, initialize an instance of one of the clients and access the resource as an attribute
+clients. To work with a resource, initialize an instance of a client and then access the resource as an attribute
 on the client instance. For example, to work with the `chat` resource, create an instance of the `OpenAI` client and
 access the attributes and methods on `your_client_instance.chat`.
 # --8<-- [end:resources]
 
 # --8<-- [start:audio]
-The `audio` module provides classes for handling various audio processing operations, including transcription of audio to text, translation of spoken content, and speech synthesis.
+The `audio` module provides classes for audio processing operations like transcription, translation, and speech synthesis.
 
-This module supports synchronous and asynchronous operations, and offers interfaces for direct interaction with audio data, as well as handling of raw and streaming responses. Designed for applications that require audio input processing like automated transcription services, real-time translation of spoken language, and generating spoken content from text.
+Use the `audio` module by accessing the [`OpenAI.audio`][src.openai.OpenAI.audio] attribute on the client object, and
+then access the attribute for the feature you'd like to use:
+
+- [`OpenAI.audio.transcriptions`][src.openai.resources.Audio.transcriptions] - Transcribe spoken audio to text
+- [`OpenAI.audio.translations`][src.openai.resources.Audio.translations] - Translate spoken audio to English
+- [`OpenAI.audio.speech`][src.openai.resources.Audio.speech] - Generate spoken audio from text
+
+Examples:
+    ```python
+    --8<-- "./examples/audio_docs.py:common_imports"
+
+    --8<-- "./examples/audio_docs.py:common_setup"
+
+    --8<-- "./examples/audio_docs.py:speech"
+    ```
 # --8<-- [end:audio]
 
 # --8<-- [start:beta]
@@ -40,11 +54,11 @@ This module interacts with the `/v1/chat/completions` endpoint and replaces the 
 # --8<-- [end:chat_completions]
 
 # --8<-- [start:completions]
-The `completions` module provides access to the legacy completions endpoint of the OpenAI API. Use the [`chat.completions`][src.openai.resources.chat.completions] module instead for new applications.
+The `completions` module provides access to the [legacy](https://platform.openai.com/docs/deprecations) chat endpoint, `/v1/completions`. Use the [`chat.completions`][src.openai.resources.chat.completions] module instead for new applications.
 
-This module interacts with a [legacy](https://platform.openai.com/docs/deprecations) endpoint,  `/v1/completions`, indicating that the endpoint no longer receives updates and is expected to be deprecated. This module is for use only in applications that require compatibility with the legacy endpoint and should **not** be used for new projects.
+You should **not** use this module for new projects. The legacy `/v1/completions` endpoint this module interacts with no longer receives updates and is expected to be deprecated. Use this module only in applications that require compatibility with the legacy endpoint.
 
-You're *strongly encouraged* to migrate existing applications to the [`chat.completions`][src.openai.resources.chat.completions] module⁠—which interacts with the current (non-legacy) `/v1/chat/completions` endpoint—prior to the [deprecation](https://platform.openai.com/docs/deprecations) of the `/v1/completions` endpoint.
+You're *strongly* encouraged to migrate existing applications to the [`chat.completions`][src.openai.resources.chat.completions] module⁠—which interacts with the current (non-legacy) `/v1/chat/completions` endpoint—prior to the [deprecation](https://platform.openai.com/docs/deprecations) of the `/v1/completions` endpoint.
 # --8<-- [end:completions]
 
 # --8<-- [start:embeddings]

@@ -2,812 +2,812 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mmacy.github.io/openai-python/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/advanced/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/changelog/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/connect/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/debugging/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/error-handling/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/get_started/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/request-response/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/examples/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/examples/assistant/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/examples/async_demo/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/examples/audio/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/examples/azure/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/examples/azure_ad/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/examples/demo/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/examples/module_client/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/examples/picture/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/examples/streaming/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/SUMMARY/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/pagination/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/version/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/_extras/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/_extras/numpy_proxy/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/_extras/pandas_proxy/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/_utils/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/lib/azure/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/completions/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/embeddings/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/files/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/images/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/models/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/moderations/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/audio/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/audio/audio/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/audio/speech/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/audio/transcriptions/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/audio/translations/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/beta/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/assistants/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/assistants/assistants/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/assistants/files/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/threads/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/threads/threads/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/threads/messages/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/threads/messages/files/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/threads/messages/messages/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/threads/runs/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/threads/runs/runs/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/beta/threads/runs/steps/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/chat/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/chat/chat/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/chat/completions/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/fine_tuning/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/fine_tuning/fine_tuning/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/resources/fine_tuning/jobs/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/completion/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/completion_choice/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/completion_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/completion_usage/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/create_embedding_response/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/embedding/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/embedding_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/file_content/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/file_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/file_deleted/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/file_list_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/file_object/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/image/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/image_create_variation_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/image_edit_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/image_generate_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/images_response/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/model/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/model_deleted/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/moderation/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/moderation_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/moderation_create_response/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/audio/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/audio/speech_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/audio/transcription/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/audio/transcription_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/audio/translation/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/audio/translation_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/assistant/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/assistant_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/assistant_deleted/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/assistant_list_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/assistant_update_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/thread/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/thread_create_and_run_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/thread_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/thread_deleted/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/thread_update_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/assistants/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/assistants/assistant_file/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/assistants/file_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/assistants/file_delete_response/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/assistants/file_list_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/chat/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/message_content_image_file/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/message_content_text/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/message_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/message_list_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/message_update_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/required_action_function_tool_call/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/run/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/run_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/run_list_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/run_submit_tool_outputs_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/run_update_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/thread_message/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/messages/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/messages/file_list_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/messages/message_file/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/runs/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/runs/code_tool_call/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/runs/function_tool_call/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/runs/message_creation_step_details/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/runs/retrieval_tool_call/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/runs/run_step/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/runs/step_list_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/beta/threads/runs/tool_calls_step_details/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_assistant_message_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_chunk/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_content_part_image_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_content_part_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_content_part_text_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_function_call_option_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_function_message_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_message/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_message_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_message_tool_call/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_message_tool_call_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_named_tool_choice_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_role/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_system_message_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_token_logprob/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_tool_choice_option_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_tool_message_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_tool_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/chat_completion_user_message_param/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/chat/completion_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/fine_tuning/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/fine_tuning/fine_tuning_job/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/fine_tuning/fine_tuning_job_event/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/fine_tuning/job_create_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/fine_tuning/job_list_events_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/fine_tuning/job_list_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/shared/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/shared/function_definition/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/shared/function_parameters/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/shared_params/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/shared_params/function_definition/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mmacy.github.io/openai-python/reference/types/shared_params/function_parameters/</loc>
-         <lastmod>2024-02-29</lastmod>
+         <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
