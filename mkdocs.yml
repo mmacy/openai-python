@@ -1,4 +1,4 @@
-site_name: OpenAI Python library documentation · UNOFFICIAL
+site_name: OpenAI Python library · UNOFFICIAL DOCS
 site_author: Marsh Macy
 site_description: Unofficial documentation for OpenAI's Python library
 site_url: https://mmacy.github.io/openai-python/
@@ -116,6 +116,8 @@ extra:
   social:
   - icon: fontawesome/brands/github
     link: https://github.com/mmacy
+#  version:
+#    provider: mike
 
 nav:
   - Welcome:
