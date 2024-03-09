@@ -8,6 +8,7 @@ watch: [README.md, src/openai]
 
 theme:
   name: material
+  custom_dir: docs/overrides
   icon:
     repo: fontawesome/brands/git-alt
 
@@ -28,12 +29,8 @@ theme:
         name: Switch to light mode
 
   font:
-    #text: Sora # BIG!
     text: Inter
-    #text: Actor
-
     code: Chivo Mono
-    #code: Martian Mono # BIG!
 
   features:
     - content.code.annotate
@@ -116,8 +113,8 @@ extra:
   social:
   - icon: fontawesome/brands/github
     link: https://github.com/mmacy
-#  version:
-#    provider: mike
+  version:
+    provider: mike
 
 nav:
   - Welcome:
