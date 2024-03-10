@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.13.4 (2024-03-09)
+## 1.13.4 (2024-03-10)
 
 Full Changelog: [v1.13.3...v1.13.4](https://github.com/openai/openai-python/compare/v1.13.3...v1.13.4)
 
