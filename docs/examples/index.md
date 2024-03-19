@@ -3,6 +3,8 @@
 The following examples are taken from the [`examples/`](https://github.com/openai/openai-python/tree/main/examples) directory in the root of the [openai/openai-python](https://github.com/openai/openai-python) repository.
 
 - [assistant.py](./assistant.md)
+- [assistant_stream.py](./assistant_stream.md)
+- [assistant_stream_helpers.py](./assistant_stream_helpers.md)
 - [async_demo.py](./async_demo.md)
 - [audio.py](./audio.md)
 - [azure.py](./azure.md)
