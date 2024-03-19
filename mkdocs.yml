@@ -130,6 +130,7 @@ nav:
       - error-handling.md
       - debugging.md
       - advanced.md
+      - streaming_helpers.md
   - API reference: reference/
   - Example code: examples/
   - Changelog: changelog.md
