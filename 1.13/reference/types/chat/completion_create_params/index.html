@@ -91,6 +91,18 @@
     
       <div data-md-color-scheme="default" data-md-component="outdated" hidden>
         
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  This document is for a version of the library other than the latest (current) version.
+  <a href="../../../../..">
+    <strong>Take me to the current version's docs.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
       </div>
     
     
@@ -467,6 +479,8 @@
       
         
       
+        
+      
     
     
       
@@ -578,6 +592,8 @@
       
         
       
+        
+      
     
     
       
@@ -624,6 +640,59 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lib/azure/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lib
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
               
             
               
@@ -803,7 +872,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_5" checked>
         
           
           
@@ -819,14 +888,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_1_4" id="__nav_3_1_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_1_5" id="__nav_3_1_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_1_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_5">
             <span class="md-nav__icon md-icon"></span>
             types
           </label>
@@ -921,7 +990,25 @@
         
       
         
+      
+        
+      
+        
+      
+        
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1045,7 +1132,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_5_4" checked>
         
           
           
@@ -1061,14 +1148,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_1_4_4" id="__nav_3_1_4_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_1_5_4" id="__nav_3_1_5_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_4_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_1_4_4">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_5_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_5_4">
             <span class="md-nav__icon md-icon"></span>
             chat
           </label>
@@ -2428,6 +2515,8 @@
       
         
       
+        
+      
     
     
       
@@ -2573,6 +2662,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -3392,7 +3485,7 @@
           </td>
           <td>
             <div class="doc-md-description">
-              <p>An integer between 0 and 5 specifying the number of most likely tokens to return</p>
+              <p>An integer between 0 and 20 specifying the number of most likely tokens to</p>
             </div>
           </td>
         </tr>
@@ -3880,7 +3973,8 @@ functions are present.</p>
   
       <p>A list of tools the model may call.</p>
 <p>Currently, only functions are supported as a tool. Use this to provide a list of
-functions the model may generate JSON inputs for.</p>
+functions the model may generate JSON inputs for. A max of 128 functions are
+supported.</p>
   </div>
 
 </div>
@@ -3903,9 +3997,9 @@ functions the model may generate JSON inputs for.</p>
 
   <div class="doc doc-contents ">
   
-      <p>An integer between 0 and 5 specifying the number of most likely tokens to return
-at each token position, each with an associated log probability. <code>logprobs</code> must
-be set to <code>true</code> if this parameter is used.</p>
+      <p>An integer between 0 and 20 specifying the number of most likely tokens to
+return at each token position, each with an associated log probability.
+<code>logprobs</code> must be set to <code>true</code> if this parameter is used.</p>
   </div>
 
 </div>

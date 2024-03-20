@@ -91,6 +91,18 @@
     
       <div data-md-color-scheme="default" data-md-component="outdated" hidden>
         
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  This document is for a version of the library other than the latest (current) version.
+  <a href="../../../../..">
+    <strong>Take me to the current version's docs.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
       </div>
     
     
@@ -467,6 +479,8 @@
       
         
       
+        
+      
     
     
       
@@ -578,6 +592,8 @@
       
         
       
+        
+      
     
     
       
@@ -624,6 +640,59 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lib/azure/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lib
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
               
             
               
@@ -803,7 +872,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_5" checked>
         
           
           
@@ -819,14 +888,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_1_4" id="__nav_3_1_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_1_5" id="__nav_3_1_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_1_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_5">
             <span class="md-nav__icon md-icon"></span>
             types
           </label>
@@ -873,7 +942,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_5_2" checked>
         
           
           
@@ -889,14 +958,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_1_4_2" id="__nav_3_1_4_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_1_5_2" id="__nav_3_1_5_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_4_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_1_4_2">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_5_2">
             <span class="md-nav__icon md-icon"></span>
             audio
           </label>
@@ -1148,7 +1217,25 @@
         
       
         
+      
+        
+      
+        
+      
+        
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1834,6 +1921,8 @@
       
         
       
+        
+      
     
     
       
@@ -1979,6 +2068,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -2267,11 +2360,11 @@
         <tr>
           <td><code><a class="autorefs autorefs-internal" title="src.openai.types.audio.speech_create_params.SpeechCreateParams.response_format" href="#src.openai.types.audio.speech_create_params.SpeechCreateParams.response_format">response_format</a></code></td>
           <td>
-                <code><span title="typing_extensions.Literal">Literal</span>[&#39;mp3&#39;, &#39;opus&#39;, &#39;aac&#39;, &#39;flac&#39;, &#39;pcm&#39;, &#39;wav&#39;]</code>
+                <code><span title="typing_extensions.Literal">Literal</span>[&#39;mp3&#39;, &#39;opus&#39;, &#39;aac&#39;, &#39;flac&#39;, &#39;wav&#39;, &#39;pcm&#39;]</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The format to return audio in.</p>
+              <p>The format to audio in.</p>
             </div>
           </td>
         </tr>
@@ -2372,16 +2465,14 @@
 
 </h4>
 <div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">response_format</span><span class="p">:</span> <span class="n"><span title="typing_extensions.Literal">Literal</span></span><span class="p">[</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="s2">&quot;mp3&quot;</span><span class="p">,</span> <span class="s2">&quot;opus&quot;</span><span class="p">,</span> <span class="s2">&quot;aac&quot;</span><span class="p">,</span> <span class="s2">&quot;flac&quot;</span><span class="p">,</span> <span class="s2">&quot;pcm&quot;</span><span class="p">,</span> <span class="s2">&quot;wav&quot;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="s2">&quot;mp3&quot;</span><span class="p">,</span> <span class="s2">&quot;opus&quot;</span><span class="p">,</span> <span class="s2">&quot;aac&quot;</span><span class="p">,</span> <span class="s2">&quot;flac&quot;</span><span class="p">,</span> <span class="s2">&quot;wav&quot;</span><span class="p">,</span> <span class="s2">&quot;pcm&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">]</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>The format to return audio in.</p>
-<p>Supported formats are <code>mp3</code>, <code>opus</code>, <code>aac</code>, <code>flac</code>, <code>pcm</code>, and <code>wav</code>.</p>
-<p>The <code>pcm</code> audio format, similar to <code>wav</code> but without a header, utilizes a 24kHz
-sample rate, mono channel, and 16-bit depth in signed little-endian format.</p>
+      <p>The format to audio in.</p>
+<p>Supported formats are <code>mp3</code>, <code>opus</code>, <code>aac</code>, <code>flac</code>, <code>wav</code>, and <code>pcm</code>.</p>
   </div>
 
 </div>
