@@ -1,0 +1,1 @@
+::: src.openai.types.beta.code_interpreter_tool_param

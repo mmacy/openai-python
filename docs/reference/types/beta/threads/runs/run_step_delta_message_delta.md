@@ -1,0 +1,1 @@
+::: src.openai.types.beta.threads.runs.run_step_delta_message_delta

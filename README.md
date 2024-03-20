@@ -18,7 +18,7 @@ The OpenAI Python library is generated from OpenAI's [OpenAPI specification](htt
 You can the [openai](https://pypi.org/project/openai/) package from PyPi with `pip`:
 
 ```sh
-# Install the package
+# install from PyPI
 pip install openai
 ```
 

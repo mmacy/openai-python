@@ -1,0 +1,1 @@
+::: src.openai.types.beta.threads.runs.tool_call_delta_object
