@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to Marsh's totally unofficial documentation for the OpenAI Python library!
+Welcome to the totally unofficial documentation for the OpenAI Python library!
 
 <div class="grid cards" markdown>
 - :simple-python: [OpenAI Python library reference](reference/index.md)
@@ -12,10 +12,10 @@ Welcome to Marsh's totally unofficial documentation for the OpenAI Python librar
 
 ## About these docs
 
-Though this documentation is officially unofficial, you're welcome to use and improve it until OpenAI brings up their own (1) or they ask me to take them down.
+Though this documentation is officially unofficial, you're welcome to use and improve it until OpenAI brings up their own. (1)
 { .annotate }
 
-1. When OpenAI [publishes their own Python API reference](https://community.openai.com/t/where-is-the-documentation-for-the-python-openai-sdk/583643), I might decommission this site.
+1. For more information, see [Where is the documentation for the Python OpenAI SDK?](https://community.openai.com/t/where-is-the-documentation-for-the-python-openai-sdk/583643) in the OpenAI developer forum.
 
 ### Unofficial
 

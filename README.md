@@ -68,23 +68,23 @@ chat_completion = client.chat.completions.create(
 
 1. You can **omit** this parameter if the `OPENAI_API_KEY` environment variable is set and contains a valid key. By default, the [OpenAI()][src.openai.OpenAI] client attempts to read the `OPENAI_API_KEY` env var upon instantiation.
 
-To stream responses from the API, include `stream=True` in your call to [Completions.create()][src.openai.resources.chat.completions.Completions.create] method call:
+### Streaming helpers
+
+The SDK also includes helpers to process streams and handle the incoming events.
 
 ```python
-from openai import OpenAI
-
-client = OpenAI()
-
-stream = client.chat.completions.create(
-    model="gpt-4",
-    messages=[{"role": "user", "content": "Say this is a test"}],
-    stream=True, # (1)
-)
-for chunk in stream:
-    print(chunk.choices[0].delta.content or "", end="")
+with client.beta.threads.runs.create_and_stream(
+    thread_id=thread.id,
+    assistant_id=assistant.id,
+    instructions="Please address the user as Jane Doe. The user has a premium account.",
+) as stream:
+    for event in stream:
+        # Print the text from text delta events
+        if event.type == "thread.message.delta" and event.data.delta.content:
+            print(event.data.delta.content[0].text)
 ```
 
-1. :material-chat: This enables response streaming through Server Side Events (SSE).
+More information on streaming helpers can be found in the dedicated documentation: [helpers.md](./helpers.md)
 
 ## Asynchronous client
 
@@ -431,6 +431,41 @@ with client.chat.completions.with_streaming_response.create(
 The context manager is required so that the response will reliably be closed.
 
 <!-- ---8<--- [end:debugging] -->
+
+### Making custom/undocumented requests
+
+This library is typed for convenient access the documented API.
+
+If you need to access undocumented endpoints, params, or response properties, the library can still be used.
+
+#### Undocumented endpoints
+
+To make requests to undocumented endpoints, you can make requests using `client.get`, `client.post`, and other
+http verbs. Options on the client will be respected (such as retries) will be respected when making this
+request.
+
+```py
+import httpx
+
+response = client.post(
+    "/foo",
+    cast_to=httpx.Response,
+    body={"my_param": True},
+)
+
+print(response.headers.get("x-foo"))
+```
+
+#### Undocumented params
+
+If you want to explicitly send an extra param, you can do so with the `extra_query`, `extra_body`, and `extra_headers` request
+options.
+
+#### Undocumented properties
+
+To access undocumented response properties, you can access the extra fields like `response.unknown_prop`. You
+can also get all the extra fields on the Pydantic model as a dict with
+[`response.model_extra`](https://docs.pydantic.dev/latest/api/base_model/#pydantic.BaseModel.model_extra).
 
 ### Configuring the HTTP client
 
