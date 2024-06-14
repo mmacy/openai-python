@@ -2,7 +2,7 @@
 
 # --8<-- [start:openai]
 The [openai](https://pypi.org/project/openai/) package is the core library to install in Python projects that need
-to call the [OpenAI REST API](https://platform.openai.com/docs/api-reference). It inclues modules for working with OpenAI
+to call the [OpenAI REST API](https://platform.openai.com/docs/api-reference). It includes modules for working with OpenAI
 resources that provide access to its AI [models](https://platform.openai.com/docs/models),
 including large language models (LLMs) like GPT-4 and models for working with images and audio. The `openai` package
 provides both synchronous and asynchronous API clients, options to configure their behavior, and modules that provide
@@ -37,7 +37,7 @@ completion = client.chat.completions.create(
 print(completion.choices[0].message.content)
 ```
 
-For more information about the REST API this package talks to or to find client libraries for other programming
+For more information about the REST API this package talks to, or to find client libraries for other programming
 languages, see:
 
 - [REST API reference documentation](https://platform.openai.com/docs/api-reference) for the OpenAPI REST API (platform.openai.com)
