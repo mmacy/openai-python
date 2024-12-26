@@ -1,0 +1,1 @@
+::: src.openai.types.shared.response_format_json_object

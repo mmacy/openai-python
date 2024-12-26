@@ -1,0 +1,1 @@
+::: src.openai.types.beta.realtime.input_audio_buffer_clear_event

@@ -1,0 +1,1 @@
+::: src.openai.types.beta.vector_stores.file_batch_create_params

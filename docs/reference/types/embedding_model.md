@@ -1,0 +1,1 @@
+::: src.openai.types.embedding_model

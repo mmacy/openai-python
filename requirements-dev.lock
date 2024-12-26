@@ -9,7 +9,6 @@
 #   generate-hashes: false
 
 -e file:.
-    # via file:///-
 annotated-types==0.6.0
     # via pydantic
 anyio==4.1.0
@@ -190,5 +189,3 @@ websockets==14.1
     # via openai
 zipp==3.17.0
     # via importlib-metadata
-setuptools==68.2.2
-    # via nodeenv

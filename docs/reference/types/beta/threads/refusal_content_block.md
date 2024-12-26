@@ -1,0 +1,1 @@
+::: src.openai.types.beta.threads.refusal_content_block

@@ -1,0 +1,1 @@
+::: src.openai.types.chat.parsed_function_tool_call

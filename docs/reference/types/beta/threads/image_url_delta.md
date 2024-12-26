@@ -1,0 +1,1 @@
+::: src.openai.types.beta.threads.image_url_delta

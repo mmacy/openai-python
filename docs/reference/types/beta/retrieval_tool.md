@@ -1,1 +1,0 @@
-::: src.openai.types.beta.retrieval_tool

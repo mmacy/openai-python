@@ -1,0 +1,1 @@
+::: src.openai.types.audio.speech_model

@@ -1,0 +1,1 @@
+::: src.openai.types.beta.assistant_response_format_option

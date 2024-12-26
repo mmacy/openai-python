@@ -1,0 +1,1 @@
+::: src.openai.types.beta.realtime.response_audio_transcript_delta_event

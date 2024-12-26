@@ -1,0 +1,1 @@
+::: src.openai.types.beta.vector_store_deleted

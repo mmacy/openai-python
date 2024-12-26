@@ -1,0 +1,1 @@
+::: src.openai.types.beta.realtime.conversation_item_delete_event_param

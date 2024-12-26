@@ -1,0 +1,1 @@
+::: src.openai.types.beta.assistant_tool_choice_function

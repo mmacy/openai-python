@@ -1,0 +1,1 @@
+::: src.openai.types.chat.chat_completion_prediction_content_param

@@ -1,0 +1,1 @@
+::: src.openai.types.beta.realtime.conversation_item_input_audio_transcription_failed_event

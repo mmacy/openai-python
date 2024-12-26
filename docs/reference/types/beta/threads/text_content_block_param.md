@@ -1,0 +1,1 @@
+::: src.openai.types.beta.threads.text_content_block_param

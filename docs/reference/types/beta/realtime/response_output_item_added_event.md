@@ -1,0 +1,1 @@
+::: src.openai.types.beta.realtime.response_output_item_added_event

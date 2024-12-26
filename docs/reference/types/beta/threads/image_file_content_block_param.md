@@ -1,0 +1,1 @@
+::: src.openai.types.beta.threads.image_file_content_block_param

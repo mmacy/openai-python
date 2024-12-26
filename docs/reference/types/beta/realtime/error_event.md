@@ -1,0 +1,1 @@
+::: src.openai.types.beta.realtime.error_event
