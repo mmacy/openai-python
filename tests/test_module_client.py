@@ -16,6 +16,7 @@ def reset_state() -> None:
     openai._reset_client()
     openai.api_key = None or "My API Key"
     openai.organization = None
+    openai.project = None
     openai.base_url = None
     openai.timeout = DEFAULT_TIMEOUT
     openai.max_retries = DEFAULT_MAX_RETRIES
@@ -109,6 +110,7 @@ def fresh_env() -> Iterator[None]:
         _os.environ.clear()
         yield
     finally:
+        _os.environ.clear()
         _os.environ.update(old)
 
 

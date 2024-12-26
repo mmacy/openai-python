@@ -24,7 +24,7 @@ class TestJobs:
     @parametrize
     def test_method_create(self, client: OpenAI) -> None:
         job = client.fine_tuning.jobs.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             training_file="file-abc123",
         )
         assert_matches_type(FineTuningJob, job, path=["response"])
@@ -32,13 +32,43 @@ class TestJobs:
     @parametrize
     def test_method_create_with_all_params(self, client: OpenAI) -> None:
         job = client.fine_tuning.jobs.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             training_file="file-abc123",
             hyperparameters={
                 "batch_size": "auto",
                 "learning_rate_multiplier": "auto",
                 "n_epochs": "auto",
             },
+            integrations=[
+                {
+                    "type": "wandb",
+                    "wandb": {
+                        "project": "my-wandb-project",
+                        "entity": "entity",
+                        "name": "name",
+                        "tags": ["custom-tag"],
+                    },
+                }
+            ],
+            method={
+                "dpo": {
+                    "hyperparameters": {
+                        "batch_size": "auto",
+                        "beta": "auto",
+                        "learning_rate_multiplier": "auto",
+                        "n_epochs": "auto",
+                    }
+                },
+                "supervised": {
+                    "hyperparameters": {
+                        "batch_size": "auto",
+                        "learning_rate_multiplier": "auto",
+                        "n_epochs": "auto",
+                    }
+                },
+                "type": "supervised",
+            },
+            seed=42,
             suffix="x",
             validation_file="file-abc123",
         )
@@ -47,7 +77,7 @@ class TestJobs:
     @parametrize
     def test_raw_response_create(self, client: OpenAI) -> None:
         response = client.fine_tuning.jobs.with_raw_response.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             training_file="file-abc123",
         )
 
@@ -59,7 +89,7 @@ class TestJobs:
     @parametrize
     def test_streaming_response_create(self, client: OpenAI) -> None:
         with client.fine_tuning.jobs.with_streaming_response.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             training_file="file-abc123",
         ) as response:
             assert not response.is_closed
@@ -233,7 +263,7 @@ class TestAsyncJobs:
     @parametrize
     async def test_method_create(self, async_client: AsyncOpenAI) -> None:
         job = await async_client.fine_tuning.jobs.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             training_file="file-abc123",
         )
         assert_matches_type(FineTuningJob, job, path=["response"])
@@ -241,13 +271,43 @@ class TestAsyncJobs:
     @parametrize
     async def test_method_create_with_all_params(self, async_client: AsyncOpenAI) -> None:
         job = await async_client.fine_tuning.jobs.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             training_file="file-abc123",
             hyperparameters={
                 "batch_size": "auto",
                 "learning_rate_multiplier": "auto",
                 "n_epochs": "auto",
             },
+            integrations=[
+                {
+                    "type": "wandb",
+                    "wandb": {
+                        "project": "my-wandb-project",
+                        "entity": "entity",
+                        "name": "name",
+                        "tags": ["custom-tag"],
+                    },
+                }
+            ],
+            method={
+                "dpo": {
+                    "hyperparameters": {
+                        "batch_size": "auto",
+                        "beta": "auto",
+                        "learning_rate_multiplier": "auto",
+                        "n_epochs": "auto",
+                    }
+                },
+                "supervised": {
+                    "hyperparameters": {
+                        "batch_size": "auto",
+                        "learning_rate_multiplier": "auto",
+                        "n_epochs": "auto",
+                    }
+                },
+                "type": "supervised",
+            },
+            seed=42,
             suffix="x",
             validation_file="file-abc123",
         )
@@ -256,7 +316,7 @@ class TestAsyncJobs:
     @parametrize
     async def test_raw_response_create(self, async_client: AsyncOpenAI) -> None:
         response = await async_client.fine_tuning.jobs.with_raw_response.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             training_file="file-abc123",
         )
 
@@ -268,7 +328,7 @@ class TestAsyncJobs:
     @parametrize
     async def test_streaming_response_create(self, async_client: AsyncOpenAI) -> None:
         async with async_client.fine_tuning.jobs.with_streaming_response.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             training_file="file-abc123",
         ) as response:
             assert not response.is_closed

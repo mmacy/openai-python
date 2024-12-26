@@ -14,6 +14,8 @@ from openai.types.beta.threads import (
     Run,
 )
 
+# pyright: reportDeprecated=false
+
 base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 
 
@@ -31,14 +33,39 @@ class TestRuns:
     @parametrize
     def test_method_create_with_all_params_overload_1(self, client: OpenAI) -> None:
         run = client.beta.threads.runs.create(
-            "string",
-            assistant_id="string",
-            additional_instructions="string",
+            thread_id="thread_id",
+            assistant_id="assistant_id",
+            include=["step_details.tool_calls[*].file_search.results[*].content"],
+            additional_instructions="additional_instructions",
+            additional_messages=[
+                {
+                    "content": "string",
+                    "role": "user",
+                    "attachments": [
+                        {
+                            "file_id": "file_id",
+                            "tools": [{"type": "code_interpreter"}],
+                        }
+                    ],
+                    "metadata": {},
+                }
+            ],
             instructions="string",
+            max_completion_tokens=256,
+            max_prompt_tokens=256,
             metadata={},
-            model="string",
+            model="gpt-4o",
+            parallel_tool_calls=True,
+            response_format="auto",
             stream=False,
-            tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            temperature=1,
+            tool_choice="none",
+            tools=[{"type": "code_interpreter"}],
+            top_p=1,
+            truncation_strategy={
+                "type": "auto",
+                "last_messages": 1,
+            },
         )
         assert_matches_type(Run, run, path=["response"])
 
@@ -91,11 +118,36 @@ class TestRuns:
             "string",
             assistant_id="string",
             stream=True,
-            additional_instructions="string",
+            include=["step_details.tool_calls[*].file_search.results[*].content"],
+            additional_instructions="additional_instructions",
+            additional_messages=[
+                {
+                    "content": "string",
+                    "role": "user",
+                    "attachments": [
+                        {
+                            "file_id": "file_id",
+                            "tools": [{"type": "code_interpreter"}],
+                        }
+                    ],
+                    "metadata": {},
+                }
+            ],
             instructions="string",
+            max_completion_tokens=256,
+            max_prompt_tokens=256,
             metadata={},
-            model="string",
-            tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            model="gpt-4o",
+            parallel_tool_calls=True,
+            response_format="auto",
+            temperature=1,
+            tool_choice="none",
+            tools=[{"type": "code_interpreter"}],
+            top_p=1,
+            truncation_strategy={
+                "type": "auto",
+                "last_messages": 1,
+            },
         )
         run_stream.response.close()
 
@@ -340,9 +392,9 @@ class TestRuns:
     @parametrize
     def test_method_submit_tool_outputs_overload_1(self, client: OpenAI) -> None:
         run = client.beta.threads.runs.submit_tool_outputs(
-            "string",
-            thread_id="string",
-            tool_outputs=[{}, {}, {}],
+            run_id="run_id",
+            thread_id="thread_id",
+            tool_outputs=[{}],
         )
         assert_matches_type(Run, run, path=["response"])
 
@@ -353,17 +405,9 @@ class TestRuns:
             thread_id="string",
             tool_outputs=[
                 {
-                    "tool_call_id": "string",
-                    "output": "string",
-                },
-                {
-                    "tool_call_id": "string",
-                    "output": "string",
-                },
-                {
-                    "tool_call_id": "string",
-                    "output": "string",
-                },
+                    "output": "output",
+                    "tool_call_id": "tool_call_id",
+                }
             ],
             stream=False,
         )
@@ -372,9 +416,9 @@ class TestRuns:
     @parametrize
     def test_raw_response_submit_tool_outputs_overload_1(self, client: OpenAI) -> None:
         response = client.beta.threads.runs.with_raw_response.submit_tool_outputs(
-            "string",
-            thread_id="string",
-            tool_outputs=[{}, {}, {}],
+            run_id="run_id",
+            thread_id="thread_id",
+            tool_outputs=[{}],
         )
 
         assert response.is_closed is True
@@ -385,9 +429,9 @@ class TestRuns:
     @parametrize
     def test_streaming_response_submit_tool_outputs_overload_1(self, client: OpenAI) -> None:
         with client.beta.threads.runs.with_streaming_response.submit_tool_outputs(
-            "string",
-            thread_id="string",
-            tool_outputs=[{}, {}, {}],
+            run_id="run_id",
+            thread_id="thread_id",
+            tool_outputs=[{}],
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -403,14 +447,14 @@ class TestRuns:
             client.beta.threads.runs.with_raw_response.submit_tool_outputs(
                 "string",
                 thread_id="",
-                tool_outputs=[{}, {}, {}],
+                tool_outputs=[{}],
             )
 
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `run_id` but received ''"):
             client.beta.threads.runs.with_raw_response.submit_tool_outputs(
-                "",
-                thread_id="string",
-                tool_outputs=[{}, {}, {}],
+                run_id="",
+                thread_id="thread_id",
+                tool_outputs=[{}],
             )
 
     @parametrize
@@ -419,7 +463,7 @@ class TestRuns:
             "string",
             thread_id="string",
             stream=True,
-            tool_outputs=[{}, {}, {}],
+            tool_outputs=[{}],
         )
         run_stream.response.close()
 
@@ -429,7 +473,7 @@ class TestRuns:
             "string",
             thread_id="string",
             stream=True,
-            tool_outputs=[{}, {}, {}],
+            tool_outputs=[{}],
         )
 
         assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -442,7 +486,7 @@ class TestRuns:
             "string",
             thread_id="string",
             stream=True,
-            tool_outputs=[{}, {}, {}],
+            tool_outputs=[{}],
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -459,7 +503,7 @@ class TestRuns:
                 "string",
                 thread_id="",
                 stream=True,
-                tool_outputs=[{}, {}, {}],
+                tool_outputs=[{}],
             )
 
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `run_id` but received ''"):
@@ -467,7 +511,7 @@ class TestRuns:
                 "",
                 thread_id="string",
                 stream=True,
-                tool_outputs=[{}, {}, {}],
+                tool_outputs=[{}],
             )
 
 
@@ -485,14 +529,39 @@ class TestAsyncRuns:
     @parametrize
     async def test_method_create_with_all_params_overload_1(self, async_client: AsyncOpenAI) -> None:
         run = await async_client.beta.threads.runs.create(
-            "string",
-            assistant_id="string",
-            additional_instructions="string",
+            thread_id="thread_id",
+            assistant_id="assistant_id",
+            include=["step_details.tool_calls[*].file_search.results[*].content"],
+            additional_instructions="additional_instructions",
+            additional_messages=[
+                {
+                    "content": "string",
+                    "role": "user",
+                    "attachments": [
+                        {
+                            "file_id": "file_id",
+                            "tools": [{"type": "code_interpreter"}],
+                        }
+                    ],
+                    "metadata": {},
+                }
+            ],
             instructions="string",
+            max_completion_tokens=256,
+            max_prompt_tokens=256,
             metadata={},
-            model="string",
+            model="gpt-4o",
+            parallel_tool_calls=True,
+            response_format="auto",
             stream=False,
-            tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            temperature=1,
+            tool_choice="none",
+            tools=[{"type": "code_interpreter"}],
+            top_p=1,
+            truncation_strategy={
+                "type": "auto",
+                "last_messages": 1,
+            },
         )
         assert_matches_type(Run, run, path=["response"])
 
@@ -545,11 +614,36 @@ class TestAsyncRuns:
             "string",
             assistant_id="string",
             stream=True,
-            additional_instructions="string",
+            include=["step_details.tool_calls[*].file_search.results[*].content"],
+            additional_instructions="additional_instructions",
+            additional_messages=[
+                {
+                    "content": "string",
+                    "role": "user",
+                    "attachments": [
+                        {
+                            "file_id": "file_id",
+                            "tools": [{"type": "code_interpreter"}],
+                        }
+                    ],
+                    "metadata": {},
+                }
+            ],
             instructions="string",
+            max_completion_tokens=256,
+            max_prompt_tokens=256,
             metadata={},
-            model="string",
-            tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            model="gpt-4o",
+            parallel_tool_calls=True,
+            response_format="auto",
+            temperature=1,
+            tool_choice="none",
+            tools=[{"type": "code_interpreter"}],
+            top_p=1,
+            truncation_strategy={
+                "type": "auto",
+                "last_messages": 1,
+            },
         )
         await run_stream.response.aclose()
 
@@ -794,9 +888,9 @@ class TestAsyncRuns:
     @parametrize
     async def test_method_submit_tool_outputs_overload_1(self, async_client: AsyncOpenAI) -> None:
         run = await async_client.beta.threads.runs.submit_tool_outputs(
-            "string",
-            thread_id="string",
-            tool_outputs=[{}, {}, {}],
+            run_id="run_id",
+            thread_id="thread_id",
+            tool_outputs=[{}],
         )
         assert_matches_type(Run, run, path=["response"])
 
@@ -807,17 +901,9 @@ class TestAsyncRuns:
             thread_id="string",
             tool_outputs=[
                 {
-                    "tool_call_id": "string",
-                    "output": "string",
-                },
-                {
-                    "tool_call_id": "string",
-                    "output": "string",
-                },
-                {
-                    "tool_call_id": "string",
-                    "output": "string",
-                },
+                    "output": "output",
+                    "tool_call_id": "tool_call_id",
+                }
             ],
             stream=False,
         )
@@ -826,9 +912,9 @@ class TestAsyncRuns:
     @parametrize
     async def test_raw_response_submit_tool_outputs_overload_1(self, async_client: AsyncOpenAI) -> None:
         response = await async_client.beta.threads.runs.with_raw_response.submit_tool_outputs(
-            "string",
-            thread_id="string",
-            tool_outputs=[{}, {}, {}],
+            run_id="run_id",
+            thread_id="thread_id",
+            tool_outputs=[{}],
         )
 
         assert response.is_closed is True
@@ -839,9 +925,9 @@ class TestAsyncRuns:
     @parametrize
     async def test_streaming_response_submit_tool_outputs_overload_1(self, async_client: AsyncOpenAI) -> None:
         async with async_client.beta.threads.runs.with_streaming_response.submit_tool_outputs(
-            "string",
-            thread_id="string",
-            tool_outputs=[{}, {}, {}],
+            run_id="run_id",
+            thread_id="thread_id",
+            tool_outputs=[{}],
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -857,14 +943,14 @@ class TestAsyncRuns:
             await async_client.beta.threads.runs.with_raw_response.submit_tool_outputs(
                 "string",
                 thread_id="",
-                tool_outputs=[{}, {}, {}],
+                tool_outputs=[{}],
             )
 
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `run_id` but received ''"):
             await async_client.beta.threads.runs.with_raw_response.submit_tool_outputs(
-                "",
-                thread_id="string",
-                tool_outputs=[{}, {}, {}],
+                run_id="",
+                thread_id="thread_id",
+                tool_outputs=[{}],
             )
 
     @parametrize
@@ -873,7 +959,7 @@ class TestAsyncRuns:
             "string",
             thread_id="string",
             stream=True,
-            tool_outputs=[{}, {}, {}],
+            tool_outputs=[{}],
         )
         await run_stream.response.aclose()
 
@@ -883,7 +969,7 @@ class TestAsyncRuns:
             "string",
             thread_id="string",
             stream=True,
-            tool_outputs=[{}, {}, {}],
+            tool_outputs=[{}],
         )
 
         assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -896,7 +982,7 @@ class TestAsyncRuns:
             "string",
             thread_id="string",
             stream=True,
-            tool_outputs=[{}, {}, {}],
+            tool_outputs=[{}],
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -913,7 +999,7 @@ class TestAsyncRuns:
                 "string",
                 thread_id="",
                 stream=True,
-                tool_outputs=[{}, {}, {}],
+                tool_outputs=[{}],
             )
 
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `run_id` but received ''"):
@@ -921,5 +1007,5 @@ class TestAsyncRuns:
                 "",
                 thread_id="string",
                 stream=True,
-                tool_outputs=[{}, {}, {}],
+                tool_outputs=[{}],
             )

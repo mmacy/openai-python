@@ -31,25 +31,31 @@ class TestThreads:
         thread = client.beta.threads.create(
             messages=[
                 {
+                    "content": "string",
                     "role": "user",
-                    "content": "x",
-                    "file_ids": ["string"],
+                    "attachments": [
+                        {
+                            "file_id": "file_id",
+                            "tools": [{"type": "code_interpreter"}],
+                        }
+                    ],
                     "metadata": {},
-                },
-                {
-                    "role": "user",
-                    "content": "x",
-                    "file_ids": ["string"],
-                    "metadata": {},
-                },
-                {
-                    "role": "user",
-                    "content": "x",
-                    "file_ids": ["string"],
-                    "metadata": {},
-                },
+                }
             ],
             metadata={},
+            tool_resources={
+                "code_interpreter": {"file_ids": ["string"]},
+                "file_search": {
+                    "vector_store_ids": ["string"],
+                    "vector_stores": [
+                        {
+                            "chunking_strategy": {"type": "auto"},
+                            "file_ids": ["string"],
+                            "metadata": {},
+                        }
+                    ],
+                },
+            },
         )
         assert_matches_type(Thread, thread, path=["response"])
 
@@ -123,6 +129,10 @@ class TestThreads:
         thread = client.beta.threads.update(
             "string",
             metadata={},
+            tool_resources={
+                "code_interpreter": {"file_ids": ["string"]},
+                "file_search": {"vector_store_ids": ["string"]},
+            },
         )
         assert_matches_type(Thread, thread, path=["response"])
 
@@ -207,33 +217,54 @@ class TestThreads:
         thread = client.beta.threads.create_and_run(
             assistant_id="string",
             instructions="string",
+            max_completion_tokens=256,
+            max_prompt_tokens=256,
             metadata={},
-            model="string",
+            model="gpt-4o",
+            parallel_tool_calls=True,
+            response_format="auto",
             stream=False,
+            temperature=1,
             thread={
                 "messages": [
                     {
+                        "content": "string",
                         "role": "user",
-                        "content": "x",
-                        "file_ids": ["string"],
+                        "attachments": [
+                            {
+                                "file_id": "file_id",
+                                "tools": [{"type": "code_interpreter"}],
+                            }
+                        ],
                         "metadata": {},
-                    },
-                    {
-                        "role": "user",
-                        "content": "x",
-                        "file_ids": ["string"],
-                        "metadata": {},
-                    },
-                    {
-                        "role": "user",
-                        "content": "x",
-                        "file_ids": ["string"],
-                        "metadata": {},
-                    },
+                    }
                 ],
                 "metadata": {},
+                "tool_resources": {
+                    "code_interpreter": {"file_ids": ["string"]},
+                    "file_search": {
+                        "vector_store_ids": ["string"],
+                        "vector_stores": [
+                            {
+                                "chunking_strategy": {"type": "auto"},
+                                "file_ids": ["string"],
+                                "metadata": {},
+                            }
+                        ],
+                    },
+                },
             },
-            tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            tool_choice="none",
+            tool_resources={
+                "code_interpreter": {"file_ids": ["string"]},
+                "file_search": {"vector_store_ids": ["string"]},
+            },
+            tools=[{"type": "code_interpreter"}],
+            top_p=1,
+            truncation_strategy={
+                "type": "auto",
+                "last_messages": 1,
+            },
         )
         assert_matches_type(Run, thread, path=["response"])
 
@@ -275,32 +306,53 @@ class TestThreads:
             assistant_id="string",
             stream=True,
             instructions="string",
+            max_completion_tokens=256,
+            max_prompt_tokens=256,
             metadata={},
-            model="string",
+            model="gpt-4o",
+            parallel_tool_calls=True,
+            response_format="auto",
+            temperature=1,
             thread={
                 "messages": [
                     {
+                        "content": "string",
                         "role": "user",
-                        "content": "x",
-                        "file_ids": ["string"],
+                        "attachments": [
+                            {
+                                "file_id": "file_id",
+                                "tools": [{"type": "code_interpreter"}],
+                            }
+                        ],
                         "metadata": {},
-                    },
-                    {
-                        "role": "user",
-                        "content": "x",
-                        "file_ids": ["string"],
-                        "metadata": {},
-                    },
-                    {
-                        "role": "user",
-                        "content": "x",
-                        "file_ids": ["string"],
-                        "metadata": {},
-                    },
+                    }
                 ],
                 "metadata": {},
+                "tool_resources": {
+                    "code_interpreter": {"file_ids": ["string"]},
+                    "file_search": {
+                        "vector_store_ids": ["string"],
+                        "vector_stores": [
+                            {
+                                "chunking_strategy": {"type": "auto"},
+                                "file_ids": ["string"],
+                                "metadata": {},
+                            }
+                        ],
+                    },
+                },
             },
-            tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            tool_choice="none",
+            tool_resources={
+                "code_interpreter": {"file_ids": ["string"]},
+                "file_search": {"vector_store_ids": ["string"]},
+            },
+            tools=[{"type": "code_interpreter"}],
+            top_p=1,
+            truncation_strategy={
+                "type": "auto",
+                "last_messages": 1,
+            },
         )
         thread_stream.response.close()
 
@@ -343,25 +395,31 @@ class TestAsyncThreads:
         thread = await async_client.beta.threads.create(
             messages=[
                 {
+                    "content": "string",
                     "role": "user",
-                    "content": "x",
-                    "file_ids": ["string"],
+                    "attachments": [
+                        {
+                            "file_id": "file_id",
+                            "tools": [{"type": "code_interpreter"}],
+                        }
+                    ],
                     "metadata": {},
-                },
-                {
-                    "role": "user",
-                    "content": "x",
-                    "file_ids": ["string"],
-                    "metadata": {},
-                },
-                {
-                    "role": "user",
-                    "content": "x",
-                    "file_ids": ["string"],
-                    "metadata": {},
-                },
+                }
             ],
             metadata={},
+            tool_resources={
+                "code_interpreter": {"file_ids": ["string"]},
+                "file_search": {
+                    "vector_store_ids": ["string"],
+                    "vector_stores": [
+                        {
+                            "chunking_strategy": {"type": "auto"},
+                            "file_ids": ["string"],
+                            "metadata": {},
+                        }
+                    ],
+                },
+            },
         )
         assert_matches_type(Thread, thread, path=["response"])
 
@@ -435,6 +493,10 @@ class TestAsyncThreads:
         thread = await async_client.beta.threads.update(
             "string",
             metadata={},
+            tool_resources={
+                "code_interpreter": {"file_ids": ["string"]},
+                "file_search": {"vector_store_ids": ["string"]},
+            },
         )
         assert_matches_type(Thread, thread, path=["response"])
 
@@ -519,33 +581,54 @@ class TestAsyncThreads:
         thread = await async_client.beta.threads.create_and_run(
             assistant_id="string",
             instructions="string",
+            max_completion_tokens=256,
+            max_prompt_tokens=256,
             metadata={},
-            model="string",
+            model="gpt-4o",
+            parallel_tool_calls=True,
+            response_format="auto",
             stream=False,
+            temperature=1,
             thread={
                 "messages": [
                     {
+                        "content": "string",
                         "role": "user",
-                        "content": "x",
-                        "file_ids": ["string"],
+                        "attachments": [
+                            {
+                                "file_id": "file_id",
+                                "tools": [{"type": "code_interpreter"}],
+                            }
+                        ],
                         "metadata": {},
-                    },
-                    {
-                        "role": "user",
-                        "content": "x",
-                        "file_ids": ["string"],
-                        "metadata": {},
-                    },
-                    {
-                        "role": "user",
-                        "content": "x",
-                        "file_ids": ["string"],
-                        "metadata": {},
-                    },
+                    }
                 ],
                 "metadata": {},
+                "tool_resources": {
+                    "code_interpreter": {"file_ids": ["string"]},
+                    "file_search": {
+                        "vector_store_ids": ["string"],
+                        "vector_stores": [
+                            {
+                                "chunking_strategy": {"type": "auto"},
+                                "file_ids": ["string"],
+                                "metadata": {},
+                            }
+                        ],
+                    },
+                },
             },
-            tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            tool_choice="none",
+            tool_resources={
+                "code_interpreter": {"file_ids": ["string"]},
+                "file_search": {"vector_store_ids": ["string"]},
+            },
+            tools=[{"type": "code_interpreter"}],
+            top_p=1,
+            truncation_strategy={
+                "type": "auto",
+                "last_messages": 1,
+            },
         )
         assert_matches_type(Run, thread, path=["response"])
 
@@ -587,32 +670,53 @@ class TestAsyncThreads:
             assistant_id="string",
             stream=True,
             instructions="string",
+            max_completion_tokens=256,
+            max_prompt_tokens=256,
             metadata={},
-            model="string",
+            model="gpt-4o",
+            parallel_tool_calls=True,
+            response_format="auto",
+            temperature=1,
             thread={
                 "messages": [
                     {
+                        "content": "string",
                         "role": "user",
-                        "content": "x",
-                        "file_ids": ["string"],
+                        "attachments": [
+                            {
+                                "file_id": "file_id",
+                                "tools": [{"type": "code_interpreter"}],
+                            }
+                        ],
                         "metadata": {},
-                    },
-                    {
-                        "role": "user",
-                        "content": "x",
-                        "file_ids": ["string"],
-                        "metadata": {},
-                    },
-                    {
-                        "role": "user",
-                        "content": "x",
-                        "file_ids": ["string"],
-                        "metadata": {},
-                    },
+                    }
                 ],
                 "metadata": {},
+                "tool_resources": {
+                    "code_interpreter": {"file_ids": ["string"]},
+                    "file_search": {
+                        "vector_store_ids": ["string"],
+                        "vector_stores": [
+                            {
+                                "chunking_strategy": {"type": "auto"},
+                                "file_ids": ["string"],
+                                "metadata": {},
+                            }
+                        ],
+                    },
+                },
             },
-            tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            tool_choice="none",
+            tool_resources={
+                "code_interpreter": {"file_ids": ["string"]},
+                "file_search": {"vector_store_ids": ["string"]},
+            },
+            tools=[{"type": "code_interpreter"}],
+            top_p=1,
+            truncation_strategy={
+                "type": "auto",
+                "last_messages": 1,
+            },
         )
         await thread_stream.response.aclose()
 

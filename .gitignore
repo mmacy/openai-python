@@ -1,3 +1,4 @@
+.prism.log
 .vscode
 _dev
 
@@ -9,12 +10,10 @@ dist
 .venv
 .idea
 
+site/
+.DS_Store
+
 .env
 .envrc
 codegen.log
-
-# Ignore the MkDocs build artifact directory
-site/
-
-# Random ignores
-.DS_Store
+Brewfile.lock.json
